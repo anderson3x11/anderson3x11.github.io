@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="left">
-            <img src="logo.jpg" alt="Your Image" class="profile-img">
-            <div class="socials">
-                <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-            </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anderson HQ</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <img src="logo.jpg" alt="Logo" />
+            <h1>Anderson's HQ</h1>
+            <p></p>
+            <nav>
+                <ul>
+                <li><a href="https://www.root-me.org/Aube-643003">RootMe Profile</a></li>
+                </ul>
+                <hr>
+                <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/' | relative_url }}">CTF</a></li>
+                <li><a href="{{ '/' | relative_url }}">RootMe</a></li>
+                <li><a href="{{ '/' | relative_url }}">Hack The Box</a></li>
+                </ul>
+                <hr>
+                <ul>
+                <li><a href="{{ '/' | relative_url }}">Linkedin</a></li>
+                <li><a href="{{ '/' | relative_url }}">Github</a></li>
+                </ul>
+            </nav>
+            </header>
+            <section>
+                <img src="output.gif" width="500" height="500" alt="Animated GIF">
+                <p></p>
+                <p>Wake up, Neo. The Matrix has you... Follow the white rabbit. Knock knock, Neo.</p>
+            </section>
+            <!--
+            <footer>
+                <p>This project was made by <a href="https://github.com/thomascrecy">Thomas</a></p>
+            </footer>
+            -->
         </div>
-        <div class="right">
-            <img src="output.gif" width="500" height="500" alt="Animated GIF">
-            <div class="projects">
-                <a href="https://github.com/yourproject1" target="_blank">Project 1</a>
-                <a href="https://github.com/yourproject2" target="_blank">Project 2</a>
-                <a href="https://github.com/yourproject3" target="_blank">Project 3</a>
-            </div>
-        </div>
-    </div>
-</body>
+        <script>
+            const canvas = document.createElement("canvas");
+            document.body.appendChild(canvas);
+            const ctx = canvas.getContext("2d");
+            
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const columns = Math.floor(canvas.width / 20);
+            const drops = Array(columns).fill(0);
+            const characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
+            
+            function drawMatrix() {
+                ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                ctx.fillStyle = "#0f0";
+                ctx.font = "20px 'Fira Code', monospace";
+                
+                drops.forEach((y, index) => {
+                    const text = characters[Math.floor(Math.random() * characters.length)];
+                    const x = index * 20;
+                    ctx.fillText(text, x, y);
+                    
+                    if (y > canvas.height || Math.random() > 0.975) {
+                        drops[index] = 0;
+                    } else {
+                        drops[index] += 20;
+                    }
+                });
+            }
+            
+            setInterval(drawMatrix, 50);
+            
+            window.addEventListener("resize", () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                drops.length = Math.floor(canvas.width / 20);
+                drops.fill(0);
+            });
+        </script>            
+    </body>
 </html>
