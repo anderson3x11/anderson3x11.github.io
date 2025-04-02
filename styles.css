@@ -36,6 +36,7 @@ canvas {
     overflow: hidden;
     background-color: #000000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: #4caf50 2px solid;
 }
 
 /* Sidebar (Header) */
@@ -47,6 +48,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-right: #4caf4f9f 1px solid;
 }
 
 header img {
@@ -113,7 +115,7 @@ section img {
 }
 
 section p {
-    margin-top: 20px;
+    margin-top: 70px;
     font-size: 16px;
     text-align: center;
 }
