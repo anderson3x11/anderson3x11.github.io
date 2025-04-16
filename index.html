@@ -14,13 +14,13 @@
             <h1>Anderson's HQ</h1>
             <nav>
                 <ul>
-                    <li><a href="https://anderson3x11.github.io/">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                 </ul>
                 <hr>
                 <ul>
-                <li><a href="https://anderson3x11.github.io/ctf">CTF</a></li>
-                <li><a href="https://anderson3x11.github.io/writeups">Writeups</a></li>
-                <li><a href="https://anderson3x11.github.io/projects">Projects</a></li>
+                <li><a href="#ctf">CTF</a></li>
+                <li><a href="#writeups">Writeups</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="https://github.com/anderson3x11/The-Necronomicon-Of-Rick-And-Rooty">The Necronomicon</a></li>
                 </ul>
                 <hr>
@@ -32,11 +32,9 @@
                 </ul>
             </nav>
             </header>
-            <section>
-                <img src="/css/output.gif" width="500" height="500" alt="Animated GIF">
-                <p></p>
-                <p>Wake up, Neo. The Matrix has you... Follow the white rabbit. Knock knock, Neo.</p>
-            </section>
+            <section id="content">
+                <!-- This will get replaced dynamically -->
+              </section>
             <footer>
                 <p>This project is still in development, please be kind. Or else...</a></p>
             </footer>
@@ -81,6 +79,29 @@
                 drops.length = Math.floor(canvas.width / 20);
                 drops.fill(0);
             });
-        </script>            
+        </script>
+        <script>
+            const content = document.getElementById("content");
+        
+            async function loadContent(route) {
+                content.classList.remove("visible");
+                try {
+                    const res = await fetch(`/partials/${route}.html`);
+                    const html = await res.text();
+                    content.innerHTML = html;
+                } catch {
+                    content.innerHTML = "<p>404 — Page not found</p>";
+                }
+                requestAnimationFrame(() => content.classList.add("visible"));
+            }
+        
+            function handleHashChange() {
+                const route = location.hash.slice(1) || "home";
+                loadContent(route);
+            }
+        
+            window.addEventListener("hashchange", handleHashChange);
+            window.addEventListener("DOMContentLoaded", handleHashChange);
+        </script>
     </body>
 </html>
