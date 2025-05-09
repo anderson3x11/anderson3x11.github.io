@@ -1,106 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Anderson HQ</title>
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="icon" type="image/png" href="/css/favicon.png">
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-                <img src="/css/logo.jpg" alt="Logo" />
-            <h1>Anderson's HQ</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                </ul>
-                <hr>
-                <ul>
-                <li><a href="#ctf">CTF</a></li>
-                <li><a href="#writeups">Writeups</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="https://github.com/anderson3x11/The-Necronomicon-Of-Rick-And-Rooty">The Necronomicon</a></li>
-                </ul>
-                <hr>
-                <ul>
-                    <li><a href="https://www.root-me.org/Jayro-924191">RootMe</a></li>
-                    <li><a href="https://app.hackthebox.com/profile/2206719">Hack The Box</a></li>
-                <li><a href="https://www.linkedin.com/in/thomas-crecy-728b99219/">Linkedin</a></li>
-                <li><a href="https://github.com/anderson3x11">Github</a></li>
-                </ul>
-            </nav>
-            </header>
-            <section id="content">
-              </section>
-            <footer>
-                <p>This project is still in development, please be kind. Or else...</a></p>
-            </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anderson HQ</title>
+    <link rel="icon" type="image/png" href="/css/favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex min-h-screen font-sans bg-zinc-900 text-white">
+    <!-- Sidebar -->
+    <aside
+      class="w-64 bg-zinc-800 p-6 flex flex-col space-y-6 text-sm text-zinc-300"
+    >
+      <div class="flex items-center space-x-4">
+        <img
+          src="/css/logo.png"
+          alt="Profile Picture"
+          class="w-16 h-16 rounded-full border-2 border-zinc-600"
+        />
+        <div>
+          <div class="text-lg font-bold text-white">Anderson</div>
+          <div class="text-xs text-zinc-400">Cybersecurity Student</div>
         </div>
-        <script>
-            const canvas = document.createElement("canvas");
-            document.body.appendChild(canvas);
-            const ctx = canvas.getContext("2d");
-            
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            
-            const columns = Math.floor(canvas.width / 20);
-            const drops = Array(columns).fill(0);
-            const characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
-            
-            function drawMatrix() {
-                ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                
-                ctx.fillStyle = "#0f0";
-                ctx.font = "20px 'Fira Code', monospace";
-                
-                drops.forEach((y, index) => {
-                    const text = characters[Math.floor(Math.random() * characters.length)];
-                    const x = index * 20;
-                    ctx.fillText(text, x, y);
-                    
-                    if (y > canvas.height || Math.random() > 0.975) {
-                        drops[index] = 0;
-                    } else {
-                        drops[index] += 20;
-                    }
-                });
+      </div>
+
+      <nav class="flex flex-col space-y-2">
+        <!-- Home Section -->
+        <div>
+          <a
+            href="#home"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md rounded-md bg-zinc-700 text-white"
+          >
+            <i class="bx bx-compass"></i> Home
+          </a>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="mt-4">
+          <div class="text-zinc-500 uppercase text-xs mb-1">Resources</div>
+          <a
+            href="#ctf"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bx-briefcase-alt"></i> CTF
+          </a>
+          <a
+            href="#writeups"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bx-wrench"></i> Writeups
+          </a>
+          <a
+            href="#projects"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bx-code-block"></i> Projects
+          </a>
+          <a
+            href="https://github.com/anderson3x11/The-Necronomicon-Of-Rick-And-Rooty"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bx-grid-alt"></i> The Necronomicon
+          </a>
+        </div>
+
+        <!-- Connect Section -->
+        <div class="mt-4">
+          <div class="text-zinc-500 uppercase text-xs mb-1">Connect</div>
+          <a
+            href="https://www.root-me.org/Jayro-924191"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bx-news"></i> RootMe
+          </a>
+          <a
+            href="https://app.hackthebox.com/profile/2206719"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bx-shield"></i> Hack The Box
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thomas-crecy-728b99219/"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bxl-linkedin-square"></i> Linkedin
+          </a>
+          <a
+            href="https://github.com/anderson3x11"
+            class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
+          >
+            <i class="bx bxl-github"></i> Github
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <main id="content" class="flex-1 p-6">
+    </main>
+
+    <script>
+      async function loadContent(page) {
+        try {
+          const res = await fetch(`partials/${page}.html`);
+          if (!res.ok) throw new Error("Page not found");
+          const html = await res.text();
+          document.getElementById("content").innerHTML = html;
+        } catch (err) {
+          document.getElementById("content").innerHTML =
+            "<p class='text-red-500'>Error loading page.</p>";
+        }
+      }
+
+      function setActiveLink(page) {
+        document.querySelectorAll("nav a").forEach((link) => {
+          link.classList.remove("bg-zinc-700", "text-white");
+          link.classList.add("text-zinc-300");
+          if (link.getAttribute("href") === `#${page}`) {
+            link.classList.add("bg-zinc-700", "text-white");
+            link.classList.remove("text-zinc-300");
+          }
+        });
+      }
+
+      async function handleRoute() {
+        const page = location.hash.replace("#", "") || "home";
+        await loadContent(page);
+        setActiveLink(page);
+
+        if (page === "home") {
+          startAsciiAnimation();
+        }
+      }
+      async function startAsciiAnimation() {
+        try {
+          const res = await fetch("partials/ascii.txt");
+          const text = await res.text();
+
+          const frames = text.split("===").map((f) => f.trim());
+          const ascii = document.getElementById("ascii-animation");
+
+          if (!ascii) return;
+
+          let frame = 0;
+          const frameDuration = 200; 
+          let lastTime = performance.now();
+
+          function animate(time) {
+            if (!ascii) return; 
+            if (time - lastTime >= frameDuration) {
+              ascii.textContent = frames[frame];
+              frame = (frame + 1) % frames.length;
+              lastTime = time;
             }
-            
-            setInterval(drawMatrix, 50);
-            
-            window.addEventListener("resize", () => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                drops.length = Math.floor(canvas.width / 20);
-                drops.fill(0);
-            });
-        </script>
-        <script>
-            const content = document.getElementById("content");
-        
-            async function loadContent(route) {
-                content.classList.remove("visible");
-                try {
-                    const res = await fetch(`/partials/${route}.html`);
-                    const html = await res.text();
-                    content.innerHTML = html;
-                } catch {
-                    content.innerHTML = "<p>404 — Page not found</p>";
-                }
-                requestAnimationFrame(() => content.classList.add("visible"));
-            }
-        
-            function handleHashChange() {
-                const route = location.hash.slice(1) || "home";
-                loadContent(route);
-            }
-        
-            window.addEventListener("hashchange", handleHashChange);
-            window.addEventListener("DOMContentLoaded", handleHashChange);
-        </script>
-    </body>
+            requestAnimationFrame(animate);
+          }
+
+          requestAnimationFrame(animate);
+        } catch (err) {
+          console.error("Failed to load ASCII animation:", err);
+        }
+      }
+
+      window.addEventListener("hashchange", handleRoute);
+      window.addEventListener("DOMContentLoaded", handleRoute);
+    </script>
+  </body>
 </html>
