@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anderson HQ</title>
     <link rel="icon" type="image/png" href="/css/favicon.svg" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      tailwind.config = {
+        plugins: [tailwindcssTypography],
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   </head>
   <body class="flex min-h-screen font-sans bg-zinc-900 text-white">
     <!-- Sidebar -->
     <aside
-      class="w-64 bg-zinc-800 p-6 flex flex-col space-y-6 text-sm text-zinc-300"
+      class="fixed top-0 left-0 h-screen w-64 bg-zinc-800 p-6 flex flex-col space-y-6 text-sm text-zinc-300 overflow-y-auto"
     >
       <div class="flex items-center space-x-4">
-        <img
-          src="/css/logo.png"
-          alt="Profile Picture"
-          class="w-16 h-16 rounded-full border-2 border-zinc-600"
-        />
-        <div>
-          <div class="text-lg font-bold text-white">Anderson</div>
-          <div class="text-xs text-zinc-400">Cybersecurity Student</div>
-        </div>
+        <img src="/css/logo2.png" alt="Logo" />
       </div>
 
       <nav class="flex flex-col space-y-2">
@@ -35,7 +34,7 @@
             href="#home"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md rounded-md bg-zinc-700 text-white"
           >
-            <i class="bx bx-compass"></i> Home
+            <i class="fa-solid fa-house"></i> Home
           </a>
         </div>
 
@@ -46,72 +45,84 @@
             href="#ctf"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bx-briefcase-alt"></i> CTF
+            <i class="fa-solid fa-flag"></i> CTF
           </a>
           <a
             href="#writeups"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bx-wrench"></i> Writeups
+            <i class="fa-solid fa-file"></i> Writeups
           </a>
           <a
             href="#projects"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bx-code-block"></i> Projects
+            <i class="fa-solid fa-diagram-project"></i> Projects
           </a>
           <a
-            href="https://github.com/anderson3x11/The-Necronomicon-Of-Rick-And-Rooty"
+            href="#necronomicon"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bx-grid-alt"></i> The Necronomicon
+            <i class="fa-solid fa-book"></i> The Necronomicon
           </a>
         </div>
 
-        <!-- Connect Section -->
+        <!-- Social Section -->
         <div class="mt-4">
-          <div class="text-zinc-500 uppercase text-xs mb-1">Connect</div>
+          <div class="text-zinc-500 uppercase text-xs mb-1">Socials</div>
           <a
             href="https://www.root-me.org/Jayro-924191"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bx-news"></i> RootMe
+            <i class="fa-solid fa-skull"></i> RootMe
           </a>
           <a
             href="https://app.hackthebox.com/profile/2206719"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bx-shield"></i> Hack The Box
+            <i class="fa-solid fa-box-open"></i> Hack The Box
           </a>
           <a
             href="https://www.linkedin.com/in/thomas-crecy-728b99219/"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bxl-linkedin-square"></i> Linkedin
+            <i class="fa-brands fa-linkedin"></i> Linkedin
           </a>
           <a
             href="https://github.com/anderson3x11"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md"
           >
-            <i class="bx bxl-github"></i> Github
+            <i class="fa-brands fa-github"></i> Github
           </a>
         </div>
       </nav>
     </aside>
 
-    <main id="content" class="flex-1 p-6">
-    </main>
+    <main id="content" class="flex-1 p-6 ml-64"></main>
 
     <script>
       async function loadContent(page) {
-        try {
-          const res = await fetch(`partials/${page}.html`);
-          if (!res.ok) throw new Error("Page not found");
-          const html = await res.text();
-          document.getElementById("content").innerHTML = html;
-        } catch (err) {
-          document.getElementById("content").innerHTML =
-            "<p class='text-red-500'>Error loading page.</p>";
+        const contentElement = document.getElementById("content");
+
+        if (page === "necronomicon") {
+          try {
+            const response = await fetch(
+              "https://raw.githubusercontent.com/anderson3x11/The-Necronomicon-Of-Rick-And-Rooty/main/README.md"
+            );
+            if (!response.ok) throw new Error("Failed to load README");
+            const markdown = await response.text();
+            const html = marked.parse(markdown);
+            contentElement.innerHTML = `
+        <section class="prose prose-invert max-w-none mx-auto p-4">
+          ${html}
+        </section>`;
+          } catch (error) {
+            contentElement.innerHTML = `<p class="text-red-500">Failed to load Necronomicon. ${error.message}</p>`;
+          }
+        } else {
+          const response = await fetch(`partials/${page}.html`);
+          const html = await response.text();
+          contentElement.innerHTML = html;
         }
       }
 
@@ -146,11 +157,11 @@
           if (!ascii) return;
 
           let frame = 0;
-          const frameDuration = 200; 
+          const frameDuration = 200;
           let lastTime = performance.now();
 
           function animate(time) {
-            if (!ascii) return; 
+            if (!ascii) return;
             if (time - lastTime >= frameDuration) {
               ascii.textContent = frames[frame];
               frame = (frame + 1) % frames.length;
