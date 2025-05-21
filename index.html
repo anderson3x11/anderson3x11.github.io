@@ -24,17 +24,19 @@
       class="fixed top-0 left-0 h-screen w-64 bg-zinc-800 p-6 flex flex-col space-y-6 text-sm text-zinc-300 overflow-y-auto"
     >
       <div class="flex items-center space-x-4">
-        <img src="/css/logo2.png" alt="Logo" />
+        <a href="#home">
+          <img src="/css/logo2.png" alt="Logo" />
+        </a>
       </div>
 
       <nav class="flex flex-col space-y-2">
         <!-- Home Section -->
         <div>
           <a
-            href="#home"
+            href="#me"
             class="flex items-center gap-2 px-3 py-2 hover:bg-zinc-700 rounded-md rounded-md bg-zinc-700 text-white"
           >
-            <i class="fa-solid fa-house"></i> Home
+            <i class="fa-solid fa-circle-user"></i> About Me
           </a>
         </div>
 
@@ -184,6 +186,19 @@
 
       window.addEventListener("hashchange", handleRoute);
       window.addEventListener("DOMContentLoaded", handleRoute);
+    </script>
+    <script>
+      async function loadWriteup(slug) {
+        const contentElement = document.getElementById("content");
+        try {
+          const res = await fetch(`/writeups/${slug}.html`);
+          const html = await res.text();
+          contentElement.innerHTML = html;
+          window.location.hash = "writeups";
+        } catch (err) {
+          contentElement.innerHTML = `<p class="text-red-500">Failed to load writeup: ${err.message}</p>`;
+        }
+      }
     </script>
   </body>
 </html>
