@@ -1,5 +1,25 @@
-<section class="flex justify-center items-center h-full">
-  <div class="text-green-400 font-mono text-sm">
-    <pre id="ascii-animation" class="font-mono whitespace-pre text-green-400  p-4 text-sm"></pre>
+<section class="flex flex-col justify-center items-center h-full space-y-12">
+  <!-- Zen circle animation -->
+  <div class="relative">
+    <!-- Outer rotating circles -->
+    <div
+      class="absolute -inset-5 border border-gray-400/20 rounded-full circle-rotate"
+    ></div>
+    <div
+      class="absolute -inset-8 border border-gray-400/10 rounded-full circle-rotate-reverse"
+    ></div>
+    <!-- Main circle -->
+    <div
+      class="w-32 h-32 rounded-full border-2 border-gray-400/50 circle-breathe"
+    ></div>
+  </div>
+
+  <!-- Terminal style prompt -->
+  <div
+    class="typing-container overflow-hidden whitespace-nowrap w-[28ch] animate-[typing_2s_steps(25),blink_0.5s_step-end_infinite_alternate] border-r-[10px] border-gray-400"
+  >
+    <span class="text-gray-400">~/anderson3x11</span>
+    <span class="text-gray-300">$ </span>
+    <span class="text-white">echo "zen"</span>
   </div>
 </section>
