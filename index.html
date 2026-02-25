@@ -1,110 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>anderson3x11</title>
-    <link rel="icon" type="image/png" href="assets/images/fav.png" />
-    <!-- Font Awesome for Icons-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    <!-- Tailwind CSS-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-
-    <!-- Classic css (for circle anim) -->
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anderson HQ</title>
+  <link rel="icon" type="image/png" href="assets/images/fav.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inconsolata:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <body class="flex min-h-screen font-mono bg-primary text-gray-300">
-    <!-- Sidebar/Navbar -->
-    <aside
-      class="fixed top-0 left-0 h-screen w-64 sidebar-nav p-6 flex flex-col text-sm text-gray-400">
-      <!-- Logo/Home -->
-      <div class="flex items-center mb-16">
-        <a href="#home"
-          class="text-xl font-light tracking-wider">~/anderson3x11</a>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#hero">anderson</a>
+  <ul>
+    <li><a href="#about">about</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#ctf">ctf</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <p class="hero-prompt">whoami</p>
+  <h1>Hi, I'm <em>Anderson</em><span class="cursor"></span></h1>
+  <p class="hero-sub">
+    Cybersecurity student based in France.
+    Learning by doing dev, challenges, and building a solid foundation in security.
+    <br>Open to internships and junior roles.</br>
+  </p>
+  <div class="hero-tags">
+    <span class="tag">penetration testing</span>
+    <span class="tag">web</span>
+    <span class="tag">ctf competitions</span>
+    <span class="tag">bash / linux</span>
+  </div>
+  <div class="hero-cta">
+    <a class="btn" href="#contact">get in touch</a>
+    <a class="btn btn-ghost" href="#projects">see my work</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <p class="section-label">about me</p>
+    <h2>Background</h2>
+    <div class="divider"></div>
+    <p>
+      I started in IT through development, building small projects and learning how 
+      software works from the inside out. At some point I discovered cybersecurity 
+      and everything clicked. I switched focus and haven't regreted since.
+    </p>
+    <p>
+      I'm now a cybersecurity student exploring all areas of the field : web security, 
+      network analysis, cryptography, binary exploitation. Still early, but learning 
+      fast across platforms like Root-Me.
+    </p>
+    <p>
+      The dev background stuck with me. I still write tools and side projects 
+      in Python, Bash, and JS. I find that <strong>building things</strong> is 
+      the best way to learn.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="reveal">
+    <p class="section-label">skills &amp; tools</p>
+    <h2>What I work with</h2>
+    <div class="divider"></div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h3>Offensive</h3>
+        <ul>
+          <li>Web exploitation</li>
+          <li>Penetration testing</li>
+          <li>Reverse engineering</li>
+          <li>OSINT</li>
+        </ul>
       </div>
+      <div class="skill-block">
+        <h3>Tools</h3>
+        <ul>
+          <li>Burp Suite</li>
+          <li>Nmap</li>
+          <li>Wireshark</li>
+          <li>Gobuster</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Programming</h3>
+        <ul>
+          <li>Python</li>
+          <li>Bash</li>
+          <li>JavaScript</li>
+          <li>Lua (Neovim)</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Environment</h3>
+        <ul>
+          <li>Linux</li>
+          <li>Windows</li>
+          <li>GitHub</li>
+          <li>Neovim</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Main Navigation -->
-      <nav class="flex-1 flex flex-col justify-between">
-        <div class="space-y-16">
-          <!-- About Me Section -->
-          <div>
-            <a
-              href="#me"
-              class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-              <i class="fa-solid fa-circle-user"></i> About Me
-            </a>
-          </div>
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <p class="section-label">projects</p>
+    <h2>Things I've built</h2>
+    <div class="divider"></div>
+    <div class="project-list">
 
-          <!-- Resources Section -->
-          <div>
-            <div class="text-gray-500 uppercase text-xs mb-3 tracking-wider">
-              Resources
-            </div>
-            <div class="space-y-2">
-              <a
-                href="#ctf"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-solid fa-flag"></i> CTF
-              </a>
-              <a
-                href="#writeups"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-solid fa-file"></i> Writeups
-              </a>
-              <a
-                href="#projects"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-solid fa-diagram-project"></i> Projects
-              </a>
-              <a
-                href="https://github.com/anderson3x11/The-Necronomicon-Of-Rick-And-Rooty"
-                target="_blank"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-solid fa-book"></i> Necronomicon
-              </a>
-            </div>
-          </div>
-
-          <!-- Socials Section -->
-          <div>
-            <div class="text-gray-500 uppercase text-xs mb-3 tracking-wider">
-              Socials
-            </div>
-            <div class="space-y-2">
-              <a
-                href="https://www.root-me.org/Jayro-924191"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-solid fa-skull"></i> RootMe
-              </a>
-              <a
-                href="https://app.hackthebox.com/profile/2206719"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-solid fa-box-open"></i> Hack The Box
-              </a>
-              <a
-                href="https://www.linkedin.com/in/thomas-crecy-728b99219/"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-brands fa-linkedin"></i> Linkedin
-              </a>
-              <a
-                href="https://github.com/anderson3x11"
-                class="flex items-center gap-2 px-3 py-2 hover:bg-white/5 rounded-md transition-all duration-300">
-                <i class="fa-brands fa-github"></i> Github
-              </a>
-            </div>
-          </div>
+      <a class="project-item" href="https://github.com/anderson3x11/theme-selector.nvim" target="_blank">
+        <div>
+          <div class="project-name">theme-selector.nvim</div>
+          <div class="project-desc">A Neovim plugin that lets you switch themes on the fly.</div>
         </div>
-      </nav>
-    </aside>
+        <span class="project-lang">→</span>
+      </a>
 
-    <!-- Main Content Area -->
-    <main id="content" class="flex-1 p-6 ml-64"></main>
+      <a class="project-item" href="https://github.com/anderson3x11/respawn" target="_blank">
+        <div>
+          <div class="project-name">respawn</div>
+          <div class="project-desc">Arch Linux setup automation tool with a Bash script.</div>
+        </div>
+        <span class="project-lang">→</span>
+      </a>
 
-    <!-- Scripts -->
-    <script src="/assets/js/main.js"></script>
-  </body>
+      <a class="project-item" href="https://github.com/anderson3x11/beekeep" target="_blank">
+        <div>
+          <div class="project-name">beekeep</div>
+          <div class="project-desc">A small browser-based incremental game built to learn JavaScript fundamentals.</div>
+        </div>
+        <span class="project-lang">→</span>
+      </a>
+
+      <a class="project-item" href="https://github.com/anderson3x11/Useful-Resources-of-Dr-Banarby" target="_blank">
+        <div>
+          <div class="project-name">Useful Resources of Dr Banarby</div>
+          <div class="project-desc">A curated reference of IT security tools and resources. The place to look before reinventing the wheel.</div>
+        </div>
+        <span class="project-lang">→</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTF -->
+<section id="ctf">
+  <div class="reveal">
+    <p class="section-label">ctf &amp; writeups</p>
+    <h2>Platforms & challenges</h2>
+    <div class="divider"></div>
+    <div class="ctf-platforms">
+
+      <a class="ctf-card" href="https://app.hackthebox.com/profile/2206719" target="_blank">
+        <h3>HackTheBox</h3>
+        <p>Machines, challenges, and pro-labs covering the full offensive security spectrum.</p>
+        <div class="ctf-handle">profile →</div>
+      </a>
+
+      <a class="ctf-card" href="https://www.root-me.org/Anderson-924191" target="_blank">
+        <h3>Root-Me</h3>
+        <p>Web, network, cryptography, and binary exploitation challenges.</p>
+        <div class="ctf-handle">profile →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <p class="section-label">contact</p>
+    <h2>Get in touch</h2>
+    <div class="divider"></div>
+    <div class="contact-links">
+      <a class="contact-link" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-val">→</span>
+      </a>
+      <a class="contact-link" href="https://github.com/anderson3x11" target="_blank">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-val">→</span>
+      </a>
+      <a class="contact-link" href="https://app.hackthebox.com/profile/2206719" target="_blank">
+        <span class="contact-link-label">HackTheBox</span>
+        <span class="contact-link-val">→</span>
+      </a>
+      <a class="contact-link" href="https://www.root-me.org/Jayro-924191" target="_blank">
+        <span class="contact-link-label">Root-Me</span>
+        <span class="contact-link-val">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>anderson3x11</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
 </html>
