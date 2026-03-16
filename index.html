@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="assets/images/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inconsolata:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   </head>
 <body>
@@ -30,7 +31,7 @@
   <p class="hero-sub">
     Cybersecurity student based in France.
     Learning by doing dev, challenges, and building a solid foundation in security.
-    <br>Open to internships and junior roles.</br>
+    <br><span class="hero-highlight">Open to internships and junior roles.</span>
   </p>
   <div class="hero-tags">
     <span class="tag">penetration testing</span>
@@ -74,43 +75,68 @@
     <p class="section-label">skills &amp; tools</p>
     <h2>What I work with</h2>
     <div class="divider"></div>
-    <div class="skills-grid">
-      <div class="skill-block">
-        <h3>Offensive</h3>
-        <ul>
-          <li>Web exploitation</li>
-          <li>Penetration testing</li>
-          <li>Reverse engineering</li>
-          <li>OSINT</li>
-        </ul>
+    <div class="tech-grid">
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#306998"><i class="devicon-python-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Python</span><span class="tech-desc">Scripting & automation</span></div>
       </div>
-      <div class="skill-block">
-        <h3>Tools</h3>
-        <ul>
-          <li>Burp Suite</li>
-          <li>Nmap</li>
-          <li>Wireshark</li>
-          <li>Gobuster</li>
-        </ul>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#2b3539"><i class="devicon-bash-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Bash</span><span class="tech-desc">Shell scripting</span></div>
       </div>
-      <div class="skill-block">
-        <h3>Programming</h3>
-        <ul>
-          <li>Python</li>
-          <li>Bash</li>
-          <li>JavaScript</li>
-          <li>Lua (Neovim)</li>
-        </ul>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#3b3820"><i class="devicon-javascript-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">JavaScript</span><span class="tech-desc">Web development</span></div>
       </div>
-      <div class="skill-block">
-        <h3>Environment</h3>
-        <ul>
-          <li>Linux</li>
-          <li>Windows</li>
-          <li>GitHub</li>
-          <li>Neovim</li>
-        </ul>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2634"><i class="devicon-mysql-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">SQL</span><span class="tech-desc">Databases & injection</span></div>
       </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2634"><i class="devicon-linux-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Linux</span><span class="tech-desc">Primary OS</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2a3a"><i class="devicon-windows11-original"></i></div>
+        <div class="tech-info"><span class="tech-name">Windows</span><span class="tech-desc">Secondary OS</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a1a2e"><i class="devicon-github-original"></i></div>
+        <div class="tech-info"><span class="tech-name">GitHub</span><span class="tech-desc">Version control</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2a1e"><svg viewBox="0 0 24 24" fill="#8ec07c" width="26" height="26"><path d="M2.25 1.5a.75.75 0 0 0-.75.75v16.5H0V2.25A2.25 2.25 0 0 1 2.25 0h20.095c1.002 0 1.504 1.212.795 1.92L10.764 14.298h3.486V12.75h1.5v1.922a1.125 1.125 0 0 1-1.125 1.125H9.264l-2.578 2.578h11.689V9h1.5v9.375a1.5 1.5 0 0 1-1.5 1.5H5.185L2.562 22.5H21.75a.75.75 0 0 0 .75-.75V5.25H24v16.5A2.25 2.25 0 0 1 21.75 24H1.655C.653 24 .151 22.788.86 22.08L13.19 9.75H9.75v1.5h-1.5V9.375A1.125 1.125 0 0 1 9.375 8.25h5.314l2.625-2.625H5.625V15h-1.5V5.625a1.5 1.5 0 0 1 1.5-1.5h13.19L21.438 1.5z"/></svg></div>
+        <div class="tech-info"><span class="tech-name">Zed</span><span class="tech-desc">Code editor</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#3a1e0e"><svg viewBox="0 0 24 24" fill="#fe8019" width="26" height="26"><path d="M0 0v24h24V0Zm11.063 3.357h1.874v2.756L10.41 9.2h2.527v3.748h4.579l-4.578 5.592v2.104h-1.876v-2.758l2.528-3.086h-2.527V11.05h-4.58l4.58-5.592Z"/></svg></div>
+        <div class="tech-info"><span class="tech-name">Burp Suite</span><span class="tech-desc">Web proxy</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2e3a"><img src="assets/images/nmap.svg" alt="Nmap" width="26" height="26"></div>
+        <div class="tech-info"><span class="tech-name">Nmap</span><span class="tech-desc">Network scanner</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2e2e"><svg viewBox="0 0 24 24" fill="#8ec07c" width="26" height="26"><path d="m2.95 0c-1.62 0-2.95 1.32-2.95 2.95v18.1c0 1.63 1.32 2.95 2.95 2.95h18.1c1.62 0 2.95-1.32 2.95-2.95v-18.1c-.00024-1.63-1.32-2.95-2.95-2.95zm0 1.09h18.1c1.04 0 1.85.818 1.85 1.86v14h-5.27c-.335-.796-2.57-6.47.283-10.9a.516.517 0 0 0-.443-.794c-5.24.0827-8.2 3.19-9.74 6.21-1.35 2.64-1.63 4.91-1.69 5.53h-4.95v-14c0-1.04.817-1.86 1.85-1.86zm13.6 5.24c-2.62 5.24.248 11.4.248 11.4a.516.517 0 0 0 .469.301h5.62v3.05c0 1.04-.817 1.86-1.85 1.86h-18.1c-1.04 0-1.85-.818-1.85-1.86v-3.05h5.39a.516.517 0 0 0 .514-.477s.226-2.8 1.66-5.62c1.34-2.62 3.67-5.17 7.91-5.57z"/></svg></div>
+        <div class="tech-info"><span class="tech-name">Wireshark</span><span class="tech-desc">Packet analysis</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon" style="background:#1a2e2e"><img src="assets/images/ffuf.svg" alt="ffuf" width="26" height="26"></div>
+        <div class="tech-info"><span class="tech-name">ffuf</span><span class="tech-desc">Web fuzzer</span></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -121,46 +147,46 @@
     <p class="section-label">projects</p>
     <h2>Things I've built</h2>
     <div class="divider"></div>
-    <div class="project-list">
+    <div class="card-grid">
 
-    <a class="project-item" href="https://pitstoppd.vercel.app/" target="_blank">
-        <div>
-        <div class="project-name">Pitstoppd</div>
-        <div class="project-desc">A Letterboxd inspired app for Formula 1 Grand Prix.</div>
+      <a class="card" href="https://pitstoppd.vercel.app/" target="_blank">
+        <div class="card-icon" style="background:#1a1a2e"><img src="assets/images/pitstoppd-logo.svg" alt="Pitstoppd" width="26" height="26"></div>
+        <div class="card-info">
+          <span class="card-name">Pitstoppd</span>
+          <span class="card-desc">A Letterboxd inspired app for Formula 1 Grand Prix.</span>
         </div>
-        <span class="project-lang">→</span>
-    </a>
-
-    <a class="project-item" href="https://github.com/anderson3x11/theme-selector.nvim" target="_blank">
-        <div>
-            <div class="project-name">theme-selector.nvim</div>
-            <div class="project-desc">A Neovim plugin that lets you switch themes on the fly.</div>
-        </div>
-        <span class="project-lang">→</span>
-    </a>
-
-      <a class="project-item" href="https://github.com/anderson3x11/respawn" target="_blank">
-        <div>
-          <div class="project-name">respawn</div>
-          <div class="project-desc">Arch Linux setup automation tool with a Bash script.</div>
-        </div>
-        <span class="project-lang">→</span>
       </a>
 
-      <a class="project-item" href="https://github.com/anderson3x11/beekeep" target="_blank">
-        <div>
-          <div class="project-name">beekeep</div>
-          <div class="project-desc">A small browser-based incremental game built to learn JavaScript fundamentals.</div>
+      <a class="card" href="https://github.com/anderson3x11/theme-selector.nvim" target="_blank">
+        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#ebdbb2"></i></div>
+        <div class="card-info">
+          <span class="card-name">theme-selector.nvim</span>
+          <span class="card-desc">A Neovim plugin that lets you switch themes on the fly.</span>
         </div>
-        <span class="project-lang">→</span>
       </a>
 
-      <a class="project-item" href="https://github.com/anderson3x11/Useful-Resources-of-Dr-Banarby" target="_blank">
-        <div>
-          <div class="project-name">Useful Resources of Dr Banarby</div>
-          <div class="project-desc">A curated reference of IT security tools and resources. The place to look before reinventing the wheel.</div>
+      <a class="card" href="https://github.com/anderson3x11/respawn" target="_blank">
+        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#ebdbb2"></i></div>
+        <div class="card-info">
+          <span class="card-name">respawn</span>
+          <span class="card-desc">Arch Linux setup automation tool with a Bash script.</span>
         </div>
-        <span class="project-lang">→</span>
+      </a>
+
+      <a class="card" href="https://github.com/anderson3x11/beekeep" target="_blank">
+        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#ebdbb2"></i></div>
+        <div class="card-info">
+          <span class="card-name">beekeep</span>
+          <span class="card-desc">A browser-based incremental game to learn JavaScript.</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/anderson3x11/Useful-Resources-of-Dr-Banarby" target="_blank">
+        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#ebdbb2"></i></div>
+        <div class="card-info">
+          <span class="card-name">Useful Resources of Dr Banarby</span>
+          <span class="card-desc">A curated reference of IT security tools and resources.</span>
+        </div>
       </a>
 
     </div>
@@ -173,20 +199,23 @@
     <p class="section-label">ctf &amp; writeups</p>
     <h2>Platforms & challenges</h2>
     <div class="divider"></div>
-    <div class="ctf-platforms">
+    <div class="card-grid">
       <!--
-      <a class="ctf-card" href="https://app.hackthebox.com/profile/2206719" target="_blank">
-        <h3>HackTheBox</h3>
-        <p>Machines, challenges, and pro-labs covering the full offensive security spectrum.</p>
-        <div class="ctf-handle">profile →</div>
+      <a class="card" href="https://app.hackthebox.com/profile/2206719" target="_blank">
+        <div class="card-icon" style="background:#1a2e1a"><svg viewBox="0 0 24 24" fill="#8ec07c" width="26" height="26"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg></div>
+        <div class="card-info">
+          <span class="card-name">HackTheBox</span>
+          <span class="card-desc">Machines, challenges, and pro-labs.</span>
+        </div>
       </a>
       -->
-      <a class="ctf-card" href="https://www.root-me.org/Anderson-924191" target="_blank">
-        <h3>Root-Me</h3>
-        <p>Web, network, cryptography, and binary exploitation challenges.</p>
-        <div class="ctf-handle">profile →</div>
+      <a class="card" href="https://www.root-me.org/Anderson-924191" target="_blank">
+        <div class="card-icon" style="background:#a89984"><img src="assets/images/Root-Me.svg" alt="Root-Me" width="26" height="26"></div>
+        <div class="card-info">
+          <span class="card-name">Root-Me</span>
+          <span class="card-desc">Web, network, cryptography, and binary exploitation challenges.</span>
+        </div>
       </a>
-
     </div>
   </div>
 </section>
@@ -197,18 +226,20 @@
     <p class="section-label">contact</p>
     <h2>Get in touch</h2>
     <div class="divider"></div>
-    <div class="contact-links">
-      <a class="contact-link" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank">
-        <span class="contact-link-label">LinkedIn</span>
-        <span class="contact-link-val">→</span>
+    <div class="card-grid">
+      <a class="card" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank">
+        <div class="card-icon" style="background:#0a2a4a"><i class="devicon-linkedin-plain" style="font-size:1.5rem;color:#83a598"></i></div>
+        <div class="card-info">
+          <span class="card-name">LinkedIn</span>
+          <span class="card-desc">Professional profile</span>
+        </div>
       </a>
-      <a class="contact-link" href="https://github.com/anderson3x11" target="_blank">
-        <span class="contact-link-label">GitHub</span>
-        <span class="contact-link-val">→</span>
-      </a>
-      <a class="contact-link" href="https://www.root-me.org/Jayro-924191" target="_blank">
-        <span class="contact-link-label">Root-Me</span>
-        <span class="contact-link-val">→</span>
+      <a class="card" href="https://github.com/anderson3x11" target="_blank">
+        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#ebdbb2"></i></div>
+        <div class="card-info">
+          <span class="card-name">GitHub</span>
+          <span class="card-desc">Code & projects</span>
+        </div>
       </a>
     </div>
   </div>
