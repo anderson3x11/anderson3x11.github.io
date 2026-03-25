@@ -13,6 +13,9 @@
     --blue: #83a598;
     --purple: #d3869b;
     --accent: #fabd2f;
+    --blob-color: 250, 189, 47;
+    --blob-x: -100;
+    --blob-y: -100;
 }
 
 *,
@@ -25,6 +28,7 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: default;
 }
 
 body {
@@ -36,15 +40,36 @@ body {
     overflow-x: hidden;
 }
 
+/* ── Cursor glow blob ── */
+.blob {
+    position: fixed;
+    transform: translate3d(calc(var(--blob-x) * 1px), calc(var(--blob-y) * 1px), 0);
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+    filter: blur(4vmin);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(var(--blob-color), 0.35) 0%,
+        rgba(var(--blob-color), 0.25) 100%
+    );
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 0;
+}
+
 /* ── Noise texture overlay ── */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    width: 100vw;
+    height: 100vh;
+    background: transparent url("../images/noise.png") 0 0;
+    background-size: 320px 320px;
+    mix-blend-mode: luminosity;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.4;
 }
 
 /* ── Nav ── */
