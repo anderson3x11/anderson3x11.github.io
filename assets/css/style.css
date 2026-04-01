@@ -133,6 +133,7 @@ section {
 
 /* ── Hero ── */
 #hero {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -224,6 +225,26 @@ h1 em {
     animation: fadeUp 0.6s ease forwards 1s;
 }
 
+.scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--fg-dim);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 1.4s, bounce 2s ease-in-out infinite 1.4s;
+    transition: color 0.3s;
+}
+
+.scroll-hint:hover {
+    color: var(--accent);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(6px); }
+}
+
 .btn {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.78rem;
@@ -269,6 +290,21 @@ h1 em {
 .section-label::before {
     content: "// ";
     color: var(--fg-dim);
+}
+
+.subsection-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.65rem;
+    color: var(--fg-dim);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 400;
+}
+
+.subsection-label::before {
+    content: "— ";
+    color: var(--accent);
 }
 
 h2 {
