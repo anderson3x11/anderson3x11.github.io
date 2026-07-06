@@ -1,21 +1,19 @@
-/* ── Gruvbox palette ── */
+/* ── Palette ── */
 :root {
-    --bg: #1d2021;
-    --bg1: #282828;
-    --bg2: #32302f;
-    --bg3: #3c3836;
-    --fg: #ebdbb2;
-    --fg-dim: #a89984;
-    --yellow: #fabd2f;
-    --orange: #fe8019;
-    --red: #fb4934;
-    --aqua: #8ec07c;
-    --blue: #83a598;
-    --purple: #d3869b;
-    --accent: #fabd2f;
-    --blob-color: 250, 189, 47;
-    --blob-x: -100;
-    --blob-y: -100;
+    --bg: #0d0f14;
+    --bg1: #14171e;
+    --bg2: #1b1f28;
+    --bg3: #2a2f3a;
+    --fg: #e8eaf0;
+    --fg-soft: #c3c8d4;
+    --fg-dim: #8b92a3;
+    --yellow: #e5b567;
+    --orange: #e08a5b;
+    --red: #e06c75;
+    --aqua: #34d1bf;
+    --blue: #5b9dff;
+    --purple: #b98cff;
+    --accent: #2ec27e;
 }
 
 *,
@@ -34,28 +32,17 @@ html {
 body {
     background: var(--bg);
     color: var(--fg);
-    font-family: "Inconsolata", monospace;
+    font-family: "Inter", system-ui, sans-serif;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-/* ── Cursor glow blob ── */
-.blob {
-    position: fixed;
-    transform: translate3d(calc(var(--blob-x) * 1px), calc(var(--blob-y) * 1px), 0);
-    width: 15vmin;
-    height: 15vmin;
-    border-radius: 50%;
-    filter: blur(4vmin);
-    background: radial-gradient(
-        ellipse at center,
-        rgba(var(--blob-color), 0.35) 0%,
-        rgba(var(--blob-color), 0.25) 100%
-    );
-    mix-blend-mode: difference;
-    pointer-events: none;
-    z-index: 0;
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
 }
 
 /* ── Noise texture overlay ── */
@@ -144,7 +131,7 @@ section {
 .hero-prompt {
     font-family: "JetBrains Mono", monospace;
     font-size: 0.8rem;
-    color: var(--aqua);
+    color: var(--accent);
     margin-bottom: 1.2rem;
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.2s;
@@ -164,7 +151,6 @@ h1 {
     color: var(--fg);
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.4s;
-    white-space: nowrap;
 }
 
 h1 em {
@@ -175,7 +161,7 @@ h1 em {
 .hero-sub {
     margin-top: 1.5rem;
     font-size: 1.05rem;
-    color: var(--fg-dim);
+    color: var(--fg-soft);
     max-width: 700px;
     opacity: 0;
     animation: fadeUp 0.6s ease forwards 0.6s;
@@ -199,22 +185,23 @@ h1 em {
 }
 
 .tag {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.72rem;
-    padding: 0.3rem 0.75rem;
-    border: 1px solid var(--bg3);
-    border-radius: 2px;
-    color: var(--fg-dim);
-    letter-spacing: 0.06em;
-    background: var(--bg1);
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.35rem 0.9rem;
+    border-radius: 100px;
+    color: var(--fg-soft);
+    background: var(--bg3);
+    border: 1px solid #3a4150;
     transition:
+        background 0.2s,
         border-color 0.2s,
         color 0.2s;
 }
 
 .tag:hover {
     border-color: var(--accent);
-    color: var(--accent);
+    color: var(--fg);
 }
 
 .hero-cta {
@@ -268,13 +255,13 @@ h1 em {
 }
 
 .btn-ghost {
-    border-color: var(--aqua);
-    color: var(--aqua);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .btn-ghost:hover {
-    background: var(--bg3);
-    color: var(--fg);
+    background: var(--accent);
+    color: var(--bg);
 }
 
 /* ── Section titles ── */
@@ -324,7 +311,7 @@ h2 {
 
 /* ── About ── */
 #about p {
-    color: var(--fg-dim);
+    color: var(--fg-soft);
     font-size: 1.02rem;
     max-width: 620px;
     margin-bottom: 1rem;
@@ -396,7 +383,7 @@ h2 {
 
 .tech-desc {
     font-size: 0.75rem;
-    color: var(--fg-dim);
+    color: var(--fg-soft);
 }
 
 /* ── Shared card grid ── */
@@ -449,7 +436,116 @@ h2 {
 
 .card-desc {
     font-size: 0.75rem;
+    color: var(--fg-soft);
+}
+
+/* ── Projects ── */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg1);
+    border: 1px solid var(--bg3);
+    border-radius: 10px;
+    padding: 1.4rem;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.project:hover {
+    background: var(--bg2);
+    border-color: var(--fg-dim);
+    transform: translateY(-2px);
+}
+
+.project-head {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.project-icon i {
+    font-size: 1.6rem;
+    color: var(--fg);
+}
+
+.project-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin-right: auto;
+    min-width: 0;
+}
+
+.project-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--fg);
+}
+
+.project-cat {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.8rem;
     color: var(--fg-dim);
+}
+
+.project-status {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.status-poc {
+    color: var(--fg-dim);
+}
+
+.project-desc {
+    color: var(--fg-soft);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+    flex-grow: 1;
+}
+
+.stack {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: auto;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.stack li {
+    color: var(--accent);
+}
+
+.stack li:not(:last-child)::after {
+    content: "•";
+    color: var(--fg-dim);
+    margin: 0 0.5rem;
 }
 
 /* ── Footer ── */
@@ -460,7 +556,7 @@ footer {
     padding: 2.5rem;
     font-family: "JetBrains Mono", monospace;
     font-size: 0.72rem;
-    color: var(--bg3);
+    color: var(--fg-dim);
     border-top: 1px solid var(--bg2);
 }
 
@@ -511,6 +607,9 @@ footer {
 @media (max-width: 900px) {
     .tech-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
 
