@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 384" role="img" aria-label="Hermes sample output">
+  <title>Hermes sample output</title>
+  <style>
+    .bg { fill: #0e1116; }
+    .fg { fill: #d7dce2; }
+    .dim { fill: #6e7681; }
+    .cyan { fill: #38d3ee; }
+    .green { fill: #4ade80; }
+    .red { fill: #f87171; }
+    .yellow { fill: #facc15; }
+    text { font-family: "Cascadia Mono", "Cascadia Code", Consolas, "Liberation Mono", Menlo, monospace; font-size: 14px; }
+    .b { font-weight: 700; }
+  </style>
+  <rect class="bg" width="840" height="384" rx="10"/>
+  <g xml:space="preserve">
+    <text x="24" y="40"><tspan class="cyan b">Hermes</tspan><tspan class="fg">  </tspan><tspan class="dim">·</tspan><tspan class="fg">  </tspan><tspan class="cyan">434</tspan><tspan class="fg"> </tspan><tspan class="dim">sites</tspan><tspan class="fg">  </tspan><tspan class="dim">·</tspan><tspan class="fg">  </tspan><tspan class="cyan">1</tspan><tspan class="fg"> </tspan><tspan class="dim">target</tspan><tspan class="fg">  </tspan><tspan class="dim">·</tspan><tspan class="fg">  </tspan><tspan class="dim">c=</tspan><tspan class="cyan">20</tspan><tspan class="fg">  </tspan><tspan class="dim">t=</tspan><tspan class="cyan">10s</tspan><tspan class="fg">  </tspan><tspan class="dim">retries=</tspan><tspan class="cyan">2</tspan></text>
+    <text x="24" y="68"><tspan class="cyan">▸</tspan><tspan class="fg"> </tspan><tspan class="cyan b">trismegistus</tspan></text>
+    <text x="24" y="96"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">GitHub</tspan><tspan class="fg">: https://www.github.com/trismegistus</tspan></text>
+    <text x="24" y="124"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">Reddit</tspan><tspan class="fg">: https://www.reddit.com/user/trismegistus</tspan></text>
+    <text x="24" y="152"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">last.fm</tspan><tspan class="fg">: https://last.fm/user/trismegistus</tspan></text>
+    <text x="24" y="180"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">Keybase</tspan><tspan class="fg">: https://keybase.io/trismegistus</tspan></text>
+    <text x="24" y="208"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">Lichess</tspan><tspan class="fg">: https://lichess.org/@/trismegistus</tspan></text>
+    <text x="24" y="236"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">Steam Community (User)</tspan><tspan class="fg">: https://steamcommunity.com/id/trismegistus/</tspan></text>
+    <text x="24" y="264"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">Trello</tspan><tspan class="fg">: https://trello.com/trismegistus</tspan></text>
+    <text x="24" y="292"><tspan class="fg">[</tspan><tspan class="green">+</tspan><tspan class="fg">] </tspan><tspan class="green">About.me</tspan><tspan class="fg">: https://about.me/trismegistus</tspan></text>
+    <text x="24" y="344"><tspan class="green">✓</tspan><tspan class="fg"> </tspan><tspan class="fg b">trismegistus</tspan><tspan class="fg"> </tspan><tspan class="dim">·</tspan><tspan class="fg"> </tspan><tspan class="green">8</tspan><tspan class="fg"> </tspan><tspan class="dim">found</tspan><tspan class="fg"> </tspan><tspan class="dim">·</tspan><tspan class="fg"> </tspan><tspan class="red">21</tspan><tspan class="fg"> </tspan><tspan class="dim">errored</tspan><tspan class="fg"> </tspan><tspan class="dim">·</tspan><tspan class="fg"> </tspan><tspan class="yellow">2</tspan><tspan class="fg"> </tspan><tspan class="dim">skipped</tspan><tspan class="fg"> </tspan><tspan class="dim">·</tspan><tspan class="fg"> </tspan><tspan class="dim">0 NSFW</tspan><tspan class="fg"> </tspan><tspan class="dim">·</tspan><tspan class="fg"> </tspan><tspan class="dim">434 total</tspan></text>
+  </g>
+</svg>
