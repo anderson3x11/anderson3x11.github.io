@@ -26,16 +26,23 @@
   </head>
 <body>
 
+<canvas id="ascii-bg" aria-hidden="true"></canvas>
+
 <!-- NAV -->
-<nav>
-  <a class="nav-brand" href="#hero">anderson</a>
-  <ul>
-    <li><a href="#about">about</a></li>
-    <li><a href="#skills">skills</a></li>
-    <li><a href="#projects">projects</a></li>
-    <li><a href="#ctf">ctf</a></li>
-    <li><a href="#contact">contact</a></li>
-  </ul>
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#hero" aria-label="Home">
+      <img src="assets/images/fav.png" alt="" width="22" height="22">
+    </a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#ctf">CTF</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Get in touch</a>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -457,6 +464,13 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Nav turns into a floating pill once you scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 </script>
+<script src="assets/js/ascii-bg.js"></script>
 </body>
 </html>

@@ -45,17 +45,14 @@ a:focus-visible {
     border-radius: 3px;
 }
 
-/* ── Noise texture overlay ── */
-body::before {
-    content: "";
+/* ── ASCII background ── */
+#ascii-bg {
     position: fixed;
     inset: 0;
-    width: 100vw;
-    height: 100vh;
-    background: transparent url("../images/noise.png") 0 0;
-    background-size: 320px 320px;
-    mix-blend-mode: luminosity;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
+    user-select: none;
     z-index: 0;
 }
 
@@ -66,47 +63,88 @@ nav {
     left: 0;
     right: 0;
     z-index: 100;
+    padding: 1.1rem 2rem;
+}
+
+/* Aligned with the section container so the scrolled pill matches the content */
+.nav-inner {
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.2rem 4rem;
-    background: rgba(29, 32, 33, 0.85);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--bg3);
+    gap: 2rem;
+    padding: 0.45rem;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+nav.scrolled .nav-inner {
+    background: rgba(20, 23, 30, 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-color: var(--bg3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
 .nav-brand {
-    font-family: "JetBrains Mono", monospace;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--accent);
-    text-decoration: none;
-    letter-spacing: 0.05em;
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: var(--accent);
+    flex-shrink: 0;
+    transition: filter 0.2s;
 }
 
-.nav-brand span {
-    color: var(--fg-dim);
-    font-weight: 300;
+.nav-brand:hover {
+    filter: brightness(1.1);
+}
+
+.nav-brand img {
+    display: block;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.8rem;
+    margin-right: auto;
 }
 
-nav a {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.78rem;
-    color: var(--fg-dim);
+nav ul a {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--fg-soft);
     text-decoration: none;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     transition: color 0.2s;
 }
 
-nav a:hover {
-    color: var(--accent);
+nav ul a:hover {
+    color: var(--fg);
+}
+
+.nav-cta {
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 0.55rem 1.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: filter 0.2s;
+}
+
+.nav-cta:hover {
+    filter: brightness(1.1);
 }
 
 /* ── Sections ── */
@@ -631,10 +669,16 @@ footer {
 
 @media (max-width: 640px) {
     nav {
-        padding: 1rem 1.5rem;
+        padding: 0.8rem 1rem;
     }
     nav ul {
-        gap: 1.4rem;
+        gap: 1.1rem;
+    }
+    nav ul a {
+        font-size: 0.82rem;
+    }
+    .nav-cta {
+        display: none;
     }
     section {
         padding: 5.5rem 1.4rem 3rem;
