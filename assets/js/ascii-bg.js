@@ -80,7 +80,7 @@
 
     ctx.clearRect(0, 0, w, h);
     for (let l = 1; l < CHARS.length; l++) {
-      ctx.fillStyle = "rgba(232, 234, 240, " + ALPHAS[l] + ")";
+      ctx.fillStyle = "rgba(242, 236, 225, " + ALPHAS[l] + ")";
       const ch = CHARS[l];
       for (let cy = 0; cy < rows; cy++) {
         for (let cx = 0; cx < cols; cx++) {

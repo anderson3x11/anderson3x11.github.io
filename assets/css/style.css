@@ -1,19 +1,13 @@
-/* ── Palette ── */
+/* ── Palette : matte black & cream ── */
 :root {
-    --bg: #0d0f14;
-    --bg1: #14171e;
-    --bg2: #1b1f28;
-    --bg3: #2a2f3a;
-    --fg: #e8eaf0;
-    --fg-soft: #c3c8d4;
-    --fg-dim: #8b92a3;
-    --yellow: #e5b567;
-    --orange: #e08a5b;
-    --red: #e06c75;
-    --aqua: #34d1bf;
-    --blue: #5b9dff;
-    --purple: #b98cff;
-    --accent: #2ec27e;
+    --bg: #0c0c0b;
+    --bg1: #141312;
+    --bg2: #1c1b19;
+    --bg3: #2b2926;
+    --fg: #f2ece1;
+    --fg-soft: #cdc4b4;
+    --fg-dim: #8f8879;
+    --accent: #d9c08c;
 }
 
 *,
@@ -76,18 +70,22 @@ nav {
     padding: 0.45rem;
     border: 1px solid transparent;
     border-radius: 14px;
+    transform-origin: top center;
     transition:
         background 0.3s ease,
         border-color 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
+/* The floating pill sits slightly larger than the inline nav */
 nav.scrolled .nav-inner {
-    background: rgba(20, 23, 30, 0.72);
+    background: rgba(20, 19, 18, 0.72);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-color: var(--bg3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    transform: scale(1.04);
 }
 
 .nav-brand {
@@ -95,8 +93,6 @@ nav.scrolled .nav-inner {
     place-items: center;
     width: 38px;
     height: 38px;
-    border-radius: 10px;
-    background: var(--accent);
     flex-shrink: 0;
     transition: filter 0.2s;
 }
@@ -145,6 +141,42 @@ nav ul a:hover {
 
 .nav-cta:hover {
     filter: brightness(1.1);
+}
+
+/* ── Language switch ── */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.2rem;
+    border: 1px solid var(--bg3);
+    border-radius: 100px;
+    flex-shrink: 0;
+}
+
+.lang-switch button {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--fg-dim);
+    background: transparent;
+    border: 0;
+    border-radius: 100px;
+    padding: 0.25rem 0.6rem;
+    cursor: pointer;
+    transition:
+        color 0.2s,
+        background 0.2s;
+}
+
+.lang-switch button:hover {
+    color: var(--fg);
+}
+
+.lang-switch button.is-active {
+    color: var(--bg);
+    background: var(--accent);
 }
 
 /* ── Sections ── */
@@ -196,6 +228,20 @@ h1 em {
     color: var(--accent);
 }
 
+.hero-alias {
+    margin-top: 0.7rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    color: var(--fg-dim);
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.5s;
+}
+
+.hero-alias strong {
+    font-weight: 600;
+    color: var(--fg-soft);
+}
+
 .hero-sub {
     margin-top: 1.5rem;
     font-size: 1.05rem;
@@ -230,7 +276,7 @@ h1 em {
     border-radius: 100px;
     color: var(--fg-soft);
     background: var(--bg3);
-    border: 1px solid #3a4150;
+    border: 1px solid #3a3733;
     transition:
         background 0.2s,
         border-color 0.2s,
@@ -392,11 +438,13 @@ h2 {
     justify-content: center;
     flex-shrink: 0;
     font-size: 1.5rem;
+    background: var(--bg3);
+    color: var(--fg);
 }
 
 .tech-icon i {
     font-size: 1.5rem;
-    color: var(--fg);
+    color: inherit;
 }
 
 .tech-icon-text {
@@ -456,6 +504,8 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background: var(--bg3);
+    color: var(--fg);
 }
 
 .card-info {
@@ -532,11 +582,18 @@ h2 {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background: var(--bg3);
+    color: var(--fg);
 }
 
 .project-icon i {
     font-size: 1.6rem;
-    color: var(--fg);
+    color: inherit;
+}
+
+/* Tiles holding a dark-on-transparent logo need a light backing */
+.icon--light {
+    background: var(--fg);
 }
 
 .project-titles {
@@ -671,11 +728,18 @@ footer {
     nav {
         padding: 0.8rem 1rem;
     }
+    .nav-inner {
+        gap: 0.8rem;
+    }
     nav ul {
-        gap: 1.1rem;
+        gap: 0.9rem;
     }
     nav ul a {
-        font-size: 0.82rem;
+        font-size: 0.78rem;
+    }
+    .lang-switch button {
+        font-size: 0.62rem;
+        padding: 0.2rem 0.4rem;
     }
     .nav-cta {
         display: none;

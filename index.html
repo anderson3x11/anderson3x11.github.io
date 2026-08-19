@@ -3,26 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anderson · Web Developer &amp; Cybersecurity</title>
-  <meta name="description" content="Thomas Crecy — junior web developer specializing in cybersecurity, based in France. Building web apps and security tooling with React, Next.js, Python and Go. Open to CDI / CDD." />
-  <link rel="icon" type="image/png" href="assets/images/fav.png" />
+  <title>Thomas C. · Web Developer &amp; Cybersecurity</title>
+  <meta name="description" content="Thomas C. (anderson3x11), junior web developer specializing in cybersecurity, based in France. Building web apps and security tooling with React, Next.js, Python and Go. Open to CDI / CDD." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://anderson3x11.github.io/" />
-  <meta property="og:title" content="Thomas Crecy · Web Developer & Cybersecurity" />
+  <meta property="og:title" content="Thomas C. · Web Developer & Cybersecurity" />
   <meta property="og:description" content="Junior web developer specializing in cybersecurity, based in France. Open to CDI / CDD." />
-  <meta property="og:image" content="https://anderson3x11.github.io/assets/images/fav.png" />
+  <meta property="og:image" content="https://anderson3x11.github.io/assets/images/logo.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Thomas Crecy · Web Developer & Cybersecurity" />
+  <meta name="twitter:title" content="Thomas C. · Web Developer & Cybersecurity" />
   <meta name="twitter:description" content="Junior web developer specializing in cybersecurity, based in France. Open to CDI / CDD." />
-  <meta name="twitter:image" content="https://anderson3x11.github.io/assets/images/fav.png" />
+  <meta name="twitter:image" content="https://anderson3x11.github.io/assets/images/logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/i18n.js" defer></script>
   </head>
 <body>
 
@@ -32,37 +33,42 @@
 <nav id="nav">
   <div class="nav-inner">
     <a class="nav-brand" href="#hero" aria-label="Home">
-      <img src="assets/images/fav.png" alt="" width="22" height="22">
+      <img src="assets/images/logo.svg" alt="" width="34" height="34">
     </a>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#ctf">CTF</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#ctf" data-i18n="nav.ctf">CTF</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <a class="nav-cta" href="#contact">Get in touch</a>
+    <div class="lang-switch" role="group" aria-label="Language / Langue">
+      <button type="button" data-lang-btn="en">EN</button>
+      <button type="button" data-lang-btn="fr">FR</button>
+    </div>
+    <a class="nav-cta" href="#contact" data-i18n="nav.cta">Get in touch</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <p class="hero-prompt">whoami</p>
-  <h1>Hi, I'm <em>Anderson</em><span class="cursor"></span></h1>
+  <h1 data-i18n="hero.title">Hi, I'm <em>Thomas</em><span class="cursor"></span></h1>
+  <p class="hero-alias">aka <strong>anderson3x11</strong></p>
   <p class="hero-sub">
-    Junior web developer specializing in cybersecurity, based in France.
-    I learn by doing, across dev, security, and personal projects like Shoryu and Pitstoppd.
-    <br><span class="hero-highlight">Open to full-time and fixed-term roles (CDI / CDD).</span>
+    <span data-i18n="hero.sub">Junior web developer specializing in cybersecurity, based in France.
+    I learn by doing, across dev, security, and personal projects like Shoryu and Pitstoppd.</span>
+    <br><span class="hero-highlight" data-i18n="hero.highlight">Open to full-time and fixed-term roles (CDI / CDD).</span>
   </p>
   <div class="hero-tags">
-    <span class="tag">web development</span>
-    <span class="tag">react / next.js</span>
-    <span class="tag">typescript / node</span>
-    <span class="tag">cybersecurity</span>
+    <span class="tag" data-i18n="hero.tag1">web development</span>
+    <span class="tag" data-i18n="hero.tag2">react / next.js</span>
+    <span class="tag" data-i18n="hero.tag3">typescript / node</span>
+    <span class="tag" data-i18n="hero.tag4">cybersecurity</span>
   </div>
   <div class="hero-cta">
-    <a class="btn" href="#contact">get in touch</a>
-    <a class="btn btn-ghost" href="#projects">see my work</a>
+    <a class="btn" href="#contact" data-i18n="hero.cta1">get in touch</a>
+    <a class="btn btn-ghost" href="#projects" data-i18n="hero.cta2">see my work</a>
   </div>
   <a href="#about" class="scroll-hint" aria-label="Scroll down">
     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -74,23 +80,23 @@
 <!-- ABOUT -->
 <section id="about">
   <div class="reveal">
-    <p class="section-label">about me</p>
-    <h2>Background</h2>
+    <p class="section-label" data-i18n="about.label">about me</p>
+    <h2 data-i18n="about.title">Background</h2>
     <div class="divider"></div>
-    <p>
+    <p data-i18n="about.p1">
       I'm a junior web developer with a specialization in cybersecurity. I started in
       IT through development, building small projects and learning how software works
       from the inside out, then found that security scratched the same itch and made
       everything click.
     </p>
-    <p>
-      I'm currently finishing a Bachelor in Computer Science at Ynov (2023–2026),
-      specializing in cybersecurity, after an earlier data analyst program. I'm
+    <p data-i18n="about.p2">
+      I hold a Bachelor in Computer Science from Ynov (2023–2026),
+      specializing in cybersecurity, earned after an earlier data analyst program. I'm
       comfortable on both sides of the stack : front and back with React, Next.js,
       Node, and TypeScript, and on security topics like web, network, and binary
       exploitation.
     </p>
-    <p>
+    <p data-i18n="about.p3">
       The dev background stuck with me. I still write tools and side projects in
       Python, Go, JavaScript, and Bash, from Shoryu and Pitstoppd to smaller CLI
       tools. I find that <strong>building things</strong> is the best way to learn.
@@ -101,108 +107,108 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="reveal">
-    <p class="section-label">skills &amp; tools</p>
-    <h2>What I work with</h2>
+    <p class="section-label" data-i18n="skills.label">skills &amp; tools</p>
+    <h2 data-i18n="skills.title">What I work with</h2>
     <div class="divider"></div>
-    <h3 class="subsection-label">languages</h3>
+    <h3 class="subsection-label" data-i18n="skills.languages">languages</h3>
     <div class="tech-grid">
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#306998"><i class="devicon-python-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">Python</span><span class="tech-desc">Scripting & automation</span></div>
+        <div class="tech-icon"><i class="devicon-python-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Python</span><span class="tech-desc" data-i18n="skills.python">Scripting &amp; automation</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#2b3539"><i class="devicon-bash-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">Bash</span><span class="tech-desc">Shell scripting</span></div>
+        <div class="tech-icon"><i class="devicon-bash-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Bash</span><span class="tech-desc" data-i18n="skills.bash">Shell scripting</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#3b3820"><i class="devicon-javascript-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">JavaScript</span><span class="tech-desc">Web development</span></div>
+        <div class="tech-icon"><i class="devicon-javascript-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">JavaScript</span><span class="tech-desc" data-i18n="skills.js">Web development</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#235a97"><i class="devicon-typescript-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">TypeScript</span><span class="tech-desc">Typed JavaScript</span></div>
+        <div class="tech-icon"><i class="devicon-typescript-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">TypeScript</span><span class="tech-desc" data-i18n="skills.ts">Typed JavaScript</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#16404a"><i class="devicon-go-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">Go</span><span class="tech-desc">Tooling & backends</span></div>
+        <div class="tech-icon"><i class="devicon-go-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Go</span><span class="tech-desc" data-i18n="skills.go">Tooling &amp; backends</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#2b2d42"><i class="devicon-php-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">PHP</span><span class="tech-desc">Web scripting</span></div>
+        <div class="tech-icon"><i class="devicon-php-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">PHP</span><span class="tech-desc" data-i18n="skills.php">Web scripting</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a1a40"><i class="devicon-lua-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">Lua</span><span class="tech-desc">Neovim plugins</span></div>
+        <div class="tech-icon"><i class="devicon-lua-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Lua</span><span class="tech-desc" data-i18n="skills.lua">Neovim plugins</span></div>
       </div>
 
     </div>
-    <h3 class="subsection-label">frameworks &amp; data</h3>
+    <h3 class="subsection-label" data-i18n="skills.frameworks">frameworks &amp; data</h3>
     <div class="tech-grid">
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1e2e1a"><i class="devicon-nodejs-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">Node.js</span><span class="tech-desc">Backend runtime</span></div>
+        <div class="tech-icon"><i class="devicon-nodejs-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Node.js</span><span class="tech-desc" data-i18n="skills.node">Backend runtime</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#16323a"><i class="devicon-react-original"></i></div>
-        <div class="tech-info"><span class="tech-name">React</span><span class="tech-desc">UI library</span></div>
+        <div class="tech-icon"><i class="devicon-react-original"></i></div>
+        <div class="tech-info"><span class="tech-name">React</span><span class="tech-desc" data-i18n="skills.react">UI library</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a1a1a"><svg viewBox="0 0 24 24" fill="#e8eaf0" width="26" height="26"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.462-.054z"/></svg></div>
-        <div class="tech-info"><span class="tech-name">Next.js</span><span class="tech-desc">React framework</span></div>
+        <div class="tech-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.462-.054z"/></svg></div>
+        <div class="tech-info"><span class="tech-name">Next.js</span><span class="tech-desc" data-i18n="skills.next">React framework</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a2634"><i class="devicon-mysql-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">SQL</span><span class="tech-desc">Databases & injection</span></div>
+        <div class="tech-icon"><i class="devicon-mysql-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">SQL</span><span class="tech-desc" data-i18n="skills.sql">Databases &amp; injection</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a2e3a"><i class="devicon-postgresql-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">PostgreSQL</span><span class="tech-desc">Relational databases</span></div>
+        <div class="tech-icon"><i class="devicon-postgresql-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">PostgreSQL</span><span class="tech-desc" data-i18n="skills.postgres">Relational databases</span></div>
       </div>
 
     </div>
-    <h3 class="subsection-label">tooling &amp; security</h3>
+    <h3 class="subsection-label" data-i18n="skills.tooling">tooling &amp; security</h3>
     <div class="tech-grid">
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a2634"><i class="devicon-linux-plain"></i></div>
-        <div class="tech-info"><span class="tech-name">Linux</span><span class="tech-desc">Primary OS</span></div>
+        <div class="tech-icon"><i class="devicon-linux-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Linux</span><span class="tech-desc" data-i18n="skills.linux">Primary OS</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a1a2e"><i class="devicon-github-original"></i></div>
-        <div class="tech-info"><span class="tech-name">GitHub</span><span class="tech-desc">Version control</span></div>
+        <div class="tech-icon"><i class="devicon-github-original"></i></div>
+        <div class="tech-info"><span class="tech-name">GitHub</span><span class="tech-desc" data-i18n="skills.github">Version control</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#3a1e0e"><svg viewBox="0 0 24 24" fill="#e8eaf0" width="26" height="26"><path d="M0 0v24h24V0Zm11.063 3.357h1.874v2.756L10.41 9.2h2.527v3.748h4.579l-4.578 5.592v2.104h-1.876v-2.758l2.528-3.086h-2.527V11.05h-4.58l4.58-5.592Z"/></svg></div>
-        <div class="tech-info"><span class="tech-name">Burp Suite</span><span class="tech-desc">Web proxy</span></div>
+        <div class="tech-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M0 0v24h24V0Zm11.063 3.357h1.874v2.756L10.41 9.2h2.527v3.748h4.579l-4.578 5.592v2.104h-1.876v-2.758l2.528-3.086h-2.527V11.05h-4.58l4.58-5.592Z"/></svg></div>
+        <div class="tech-info"><span class="tech-name">Burp Suite</span><span class="tech-desc" data-i18n="skills.burp">Web proxy</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a2e3a"><img src="assets/images/nmap.svg" alt="Nmap" width="26" height="26"></div>
-        <div class="tech-info"><span class="tech-name">Nmap</span><span class="tech-desc">Network scanner</span></div>
+        <div class="tech-icon icon--light"><img src="assets/images/nmap.svg" alt="Nmap" width="26" height="26"></div>
+        <div class="tech-info"><span class="tech-name">Nmap</span><span class="tech-desc" data-i18n="skills.nmap">Network scanner</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a2e2e"><svg viewBox="0 0 24 24" fill="#e8eaf0" width="26" height="26"><path d="m2.95 0c-1.62 0-2.95 1.32-2.95 2.95v18.1c0 1.63 1.32 2.95 2.95 2.95h18.1c1.62 0 2.95-1.32 2.95-2.95v-18.1c-.00024-1.63-1.32-2.95-2.95-2.95zm0 1.09h18.1c1.04 0 1.85.818 1.85 1.86v14h-5.27c-.335-.796-2.57-6.47.283-10.9a.516.517 0 0 0-.443-.794c-5.24.0827-8.2 3.19-9.74 6.21-1.35 2.64-1.63 4.91-1.69 5.53h-4.95v-14c0-1.04.817-1.86 1.85-1.86zm13.6 5.24c-2.62 5.24.248 11.4.248 11.4a.516.517 0 0 0 .469.301h5.62v3.05c0 1.04-.817 1.86-1.85 1.86h-18.1c-1.04 0-1.85-.818-1.85-1.86v-3.05h5.39a.516.517 0 0 0 .514-.477s.226-2.8 1.66-5.62c1.34-2.62 3.67-5.17 7.91-5.57z"/></svg></div>
-        <div class="tech-info"><span class="tech-name">Wireshark</span><span class="tech-desc">Packet analysis</span></div>
+        <div class="tech-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="m2.95 0c-1.62 0-2.95 1.32-2.95 2.95v18.1c0 1.63 1.32 2.95 2.95 2.95h18.1c1.62 0 2.95-1.32 2.95-2.95v-18.1c-.00024-1.63-1.32-2.95-2.95-2.95zm0 1.09h18.1c1.04 0 1.85.818 1.85 1.86v14h-5.27c-.335-.796-2.57-6.47.283-10.9a.516.517 0 0 0-.443-.794c-5.24.0827-8.2 3.19-9.74 6.21-1.35 2.64-1.63 4.91-1.69 5.53h-4.95v-14c0-1.04.817-1.86 1.85-1.86zm13.6 5.24c-2.62 5.24.248 11.4.248 11.4a.516.517 0 0 0 .469.301h5.62v3.05c0 1.04-.817 1.86-1.85 1.86h-18.1c-1.04 0-1.85-.818-1.85-1.86v-3.05h5.39a.516.517 0 0 0 .514-.477s.226-2.8 1.66-5.62c1.34-2.62 3.67-5.17 7.91-5.57z"/></svg></div>
+        <div class="tech-info"><span class="tech-name">Wireshark</span><span class="tech-desc" data-i18n="skills.wireshark">Packet analysis</span></div>
       </div>
 
       <div class="tech-card">
-        <div class="tech-icon" style="background:#1a2e2e"><img src="assets/images/ffuf.svg" alt="ffuf" width="26" height="26"></div>
-        <div class="tech-info"><span class="tech-name">ffuf</span><span class="tech-desc">Web fuzzer</span></div>
+        <div class="tech-icon"><img src="assets/images/ffuf.svg" alt="ffuf" width="26" height="26"></div>
+        <div class="tech-info"><span class="tech-name">ffuf</span><span class="tech-desc" data-i18n="skills.ffuf">Web fuzzer</span></div>
       </div>
 
     </div>
@@ -212,21 +218,21 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="reveal">
-    <p class="section-label">projects</p>
-    <h2>Things I've built</h2>
+    <p class="section-label" data-i18n="projects.label">projects</p>
+    <h2 data-i18n="projects.title">Things I've built</h2>
     <div class="divider"></div>
     <div class="project-grid">
 
       <a class="project" href="https://www.shoryu.site/" target="_blank" rel="noopener noreferrer">
         <img class="project-shot" src="assets/images/Shoryu-demo.png" alt="Shoryu app screenshot" loading="lazy">
         <div class="project-head">
-          <div class="project-icon" style="background:#1a1a2e"><img src="assets/images/shoryu.png" alt="Shoryu" width="28" height="28"></div>
+          <div class="project-icon"><img src="assets/images/shoryu.png" alt="Shoryu" width="28" height="28"></div>
           <div class="project-titles">
             <h3 class="project-name">Shoryu</h3>
-            <span class="project-cat">Web app · Fighting games</span>
+            <span class="project-cat" data-i18n="projects.shoryu.cat">Web app · Fighting games</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.shoryu.desc">
           A stats platform for Street Fighter 6. Player profiles with LP/MR history,
           global leaderboards, tournament results, and matchup charts, all pulled
           live from the Buckler API and rendered into clean, sortable views.
@@ -239,14 +245,14 @@
       <a class="project" href="https://pitstoppd.vercel.app/" target="_blank" rel="noopener noreferrer">
         <img class="project-shot" src="assets/images/Pitstoppd-demo.png" alt="Pitstoppd app screenshot" loading="lazy">
         <div class="project-head">
-          <div class="project-icon" style="background:#1a1a2e"><img src="assets/images/pitstoppd-logo.svg" alt="Pitstoppd" width="28" height="28"></div>
+          <div class="project-icon"><img src="assets/images/pitstoppd-logo.svg" alt="Pitstoppd" width="28" height="28"></div>
           <div class="project-titles">
             <h3 class="project-name">Pitstoppd</h3>
-            <span class="project-cat">Web app · Formula 1</span>
+            <span class="project-cat" data-i18n="projects.pitstoppd.cat">Web app · Formula 1</span>
           </div>
           <span class="project-status status-poc">poc</span>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.pitstoppd.desc">
           A Letterboxd-style companion for Formula 1. Log every Grand Prix, rate and
           review the races, and keep a running diary of the season. A working
           proof of concept, not actively maintained and with no real users yet.
@@ -259,13 +265,13 @@
       <a class="project" href="https://github.com/anderson3x11/hermes" target="_blank" rel="noopener noreferrer">
         <img class="project-shot project-shot--term" src="assets/images/hermes-demo.svg" alt="Hermes CLI demo" loading="lazy">
         <div class="project-head">
-          <div class="project-icon" style="background:#1a1a2e"><img src="assets/images/hermes-logo.png" alt="Hermes" width="28" height="28"></div>
+          <div class="project-icon"><img src="assets/images/hermes-logo.png" alt="Hermes" width="28" height="28"></div>
           <div class="project-titles">
             <h3 class="project-name">Hermes</h3>
-            <span class="project-cat">CLI tool · OSINT</span>
+            <span class="project-cat" data-i18n="projects.hermes.cat">CLI tool · OSINT</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.hermes.desc">
           A fast, concurrent username hunter written in Go. Give it a handle and it
           checks availability across dozens of sites in seconds, using goroutines to
           fan out requests in parallel.
@@ -278,13 +284,13 @@
       <a class="project" href="https://github.com/anderson3x11/fcbt" target="_blank" rel="noopener noreferrer">
         <img class="project-shot project-shot--term" src="assets/images/fcbt-demo.png" alt="FCBT CLI demo" loading="lazy">
         <div class="project-head">
-          <div class="project-icon" style="background:#1a1a2e"><img src="assets/images/fcbt-logo.svg" alt="FCBT" width="28" height="28"></div>
+          <div class="project-icon"><img src="assets/images/fcbt-logo.svg" alt="FCBT" width="28" height="28"></div>
           <div class="project-titles">
             <h3 class="project-name">FCBT</h3>
-            <span class="project-cat">CLI tool · Password manager</span>
+            <span class="project-cat" data-i18n="projects.fcbt.cat">CLI tool · Password manager</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.fcbt.desc">
           A local-first password manager with a no-nonsense CLI. Vaults are sealed
           with AES-256 and a key derived from your master password through a salted
           KDF, so nothing is ever stored or transmitted in plaintext.
@@ -296,13 +302,13 @@
 
       <a class="project" href="https://github.com/anderson3x11/theme-selector.nvim" target="_blank" rel="noopener noreferrer">
         <div class="project-head">
-          <div class="project-icon" style="background:#1a2e1a"><i class="devicon-neovim-plain"></i></div>
+          <div class="project-icon"><i class="devicon-neovim-plain"></i></div>
           <div class="project-titles">
             <h3 class="project-name">theme-selector.nvim</h3>
-            <span class="project-cat">Neovim plugin</span>
+            <span class="project-cat" data-i18n="projects.nvim.cat">Neovim plugin</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.nvim.desc">
           A small Neovim plugin for switching colorschemes without leaving the editor.
           Browse installed themes in a picker and preview each one live as you move
           through the list.
@@ -314,13 +320,13 @@
 
       <a class="project" href="https://github.com/anderson3x11/respawn" target="_blank" rel="noopener noreferrer">
         <div class="project-head">
-          <div class="project-icon" style="background:#2b3539"><i class="devicon-bash-plain"></i></div>
+          <div class="project-icon"><i class="devicon-bash-plain"></i></div>
           <div class="project-titles">
             <h3 class="project-name">respawn</h3>
-            <span class="project-cat">Automation script</span>
+            <span class="project-cat" data-i18n="projects.respawn.cat">Automation script</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.respawn.desc">
           A post-install automation script for Arch Linux. One run bootstraps a fresh
           system: installs your package set, pulls AUR builds through yay, and deploys
           dotfiles and config so a reinstall takes minutes, not hours.
@@ -332,13 +338,13 @@
 
       <a class="project" href="https://github.com/anderson3x11/beekeep" target="_blank" rel="noopener noreferrer">
         <div class="project-head">
-          <div class="project-icon" style="background:#3b3820"><i class="devicon-javascript-plain"></i></div>
+          <div class="project-icon"><i class="devicon-javascript-plain"></i></div>
           <div class="project-titles">
             <h3 class="project-name">beekeep</h3>
-            <span class="project-cat">Browser game</span>
+            <span class="project-cat" data-i18n="projects.beekeep.cat">Browser game</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.beekeep.desc">
           A browser-based incremental game built from scratch to learn JavaScript.
           No frameworks, just the DOM, timers, and game-loop logic, growing a little
           bee empire one upgrade at a time.
@@ -350,13 +356,13 @@
 
       <a class="project" href="https://github.com/anderson3x11/Useful-Resources-of-Dr-Banarby" target="_blank" rel="noopener noreferrer">
         <div class="project-head">
-          <div class="project-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="color:#e8eaf0"></i></div>
+          <div class="project-icon"><i class="devicon-github-original"></i></div>
           <div class="project-titles">
             <h3 class="project-name">Dr Banarby's Resources</h3>
-            <span class="project-cat">Reference</span>
+            <span class="project-cat" data-i18n="projects.banarby.cat">Reference</span>
           </div>
         </div>
-        <p class="project-desc">
+        <p class="project-desc" data-i18n="projects.banarby.desc">
           A curated, categorized reference of IT-security tooling, cheatsheets, and
           learning material. A living bookmark list for pentesting, CTFs, and
           self-study.
@@ -373,14 +379,14 @@
 <!-- CTF -->
 <section id="ctf">
   <div class="reveal">
-    <p class="section-label">ctf &amp; writeups</p>
-    <h2>Challenges & Writeups</h2>
+    <p class="section-label" data-i18n="ctf.label">ctf &amp; writeups</p>
+    <h2 data-i18n="ctf.title">Challenges &amp; Writeups</h2>
     <div class="divider"></div>
-    <h3 class="subsection-label">platforms</h3>
+    <h3 class="subsection-label" data-i18n="ctf.platforms">platforms</h3>
     <div class="card-grid">
       <!--
       <a class="card" href="https://app.hackthebox.com/profile/2206719" target="_blank">
-        <div class="card-icon" style="background:#1a2e1a"><svg viewBox="0 0 24 24" fill="#e8eaf0" width="26" height="26"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg></div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg></div>
         <div class="card-info">
           <span class="card-name">HackTheBox</span>
           <span class="card-desc">Machines, challenges, and pro-labs.</span>
@@ -388,15 +394,15 @@
       </a>
       -->
       <a class="card" href="https://www.root-me.org/Anderson-924191" target="_blank">
-        <div class="card-icon" style="background:#cbd0da"><img src="assets/images/Root-Me.svg" alt="Root-Me" width="26" height="26"></div>
+        <div class="card-icon icon--light"><img src="assets/images/Root-Me.svg" alt="Root-Me" width="26" height="26"></div>
         <div class="card-info">
           <span class="card-name">Root-Me</span>
-          <span class="card-desc">Web, network, cryptography, and binary exploitation challenges.</span>
+          <span class="card-desc" data-i18n="ctf.rootme.desc">Web, network, cryptography, and binary exploitation challenges.</span>
         </div>
       </a>
       <!--
       <a class="card" href="https://tryhackme.com/p/anderson3x11" target="_blank">
-        <div class="card-icon" style="background:#cbd0da"><img src="assets/images/Root-Me.svg" alt="Root-Me" width="26" height="26"></div>
+        <div class="card-icon icon--light"><img src="assets/images/Root-Me.svg" alt="Root-Me" width="26" height="26"></div>
         <div class="card-info">
           <span class="card-name">TryHackMe</span>
           <span class="card-desc">Web, network, cryptography, and binary exploitation challenges.</span>
@@ -404,13 +410,13 @@
       </a>
       -->
     </div>
-    <h3 class="subsection-label">writeups</h3>
+    <h3 class="subsection-label" data-i18n="ctf.writeups">writeups</h3>
     <div class="card-grid">
       <a class="card" href="https://github.com/anderson3x11/voynich" target="_blank">
-        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#e8eaf0"></i></div>
+        <div class="card-icon"><i class="devicon-github-original" style="font-size:1.5rem"></i></div>
         <div class="card-info">
           <span class="card-name">voynich</span>
-          <span class="card-desc">CTF writeups and challenge breakdowns from Root-Me and beyond..</span>
+          <span class="card-desc" data-i18n="ctf.voynich.desc">CTF writeups and challenge breakdowns from Root-Me and beyond.</span>
         </div>
       </a>
     </div>
@@ -420,29 +426,29 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="reveal">
-    <p class="section-label">contact</p>
-    <h2>Get in touch</h2>
+    <p class="section-label" data-i18n="contact.label">contact</p>
+    <h2 data-i18n="contact.title">Get in touch</h2>
     <div class="divider"></div>
     <div class="card-grid">
       <a class="card" href="mailto:crecy.thomas@gmail.com">
-        <div class="card-icon" style="background:#1e2233"><svg viewBox="0 0 24 24" fill="none" stroke="#e8eaf0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></div>
         <div class="card-info">
           <span class="card-name">Email</span>
           <span class="card-desc">crecy.thomas@gmail.com</span>
         </div>
       </a>
       <a class="card" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank">
-        <div class="card-icon" style="background:#0a2a4a"><i class="devicon-linkedin-plain" style="font-size:1.5rem;color:#e8eaf0"></i></div>
+        <div class="card-icon"><i class="devicon-linkedin-plain" style="font-size:1.5rem"></i></div>
         <div class="card-info">
           <span class="card-name">LinkedIn</span>
-          <span class="card-desc">Professional profile</span>
+          <span class="card-desc" data-i18n="contact.linkedin.desc">Professional profile</span>
         </div>
       </a>
       <a class="card" href="https://github.com/anderson3x11" target="_blank">
-        <div class="card-icon" style="background:#1a1a2e"><i class="devicon-github-original" style="font-size:1.5rem;color:#e8eaf0"></i></div>
+        <div class="card-icon"><i class="devicon-github-original" style="font-size:1.5rem"></i></div>
         <div class="card-info">
           <span class="card-name">GitHub</span>
-          <span class="card-desc">Code & projects</span>
+          <span class="card-desc" data-i18n="contact.github.desc">Code &amp; projects</span>
         </div>
       </a>
     </div>
@@ -450,7 +456,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer>anderson3x11</footer>
+<footer>Thomas C. · anderson3x11</footer>
 
 <script>
   // Scroll reveal
