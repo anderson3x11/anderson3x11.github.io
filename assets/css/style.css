@@ -316,36 +316,24 @@ h1 em {
     50%      { transform: translateX(-50%) translateY(6px); }
 }
 
+/* Same shape as .nav-cta, scaled up for the hero */
 .btn {
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
     text-decoration: none;
-    padding: 0.65rem 1.5rem;
+    padding: 0.7rem 1.5rem;
+    color: var(--bg);
+    background: var(--accent);
     border: 1px solid var(--accent);
-    color: var(--accent);
-    background: transparent;
-    border-radius: 2px;
-    transition:
-        background 0.2s,
-        color 0.2s;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: filter 0.2s;
     cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--accent);
-    color: var(--bg);
-}
-
-.btn-ghost {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-.btn-ghost:hover {
-    background: var(--accent);
-    color: var(--bg);
+    filter: brightness(1.1);
 }
 
 /* ── Section titles ── */
@@ -438,13 +426,32 @@ h2 {
     justify-content: center;
     flex-shrink: 0;
     font-size: 1.5rem;
-    background: var(--bg3);
+    background: color-mix(in srgb, var(--tint, var(--fg)) 22%, var(--bg3));
     color: var(--fg);
 }
 
 .tech-icon i {
     font-size: 1.5rem;
     color: inherit;
+}
+
+.tech-icon img {
+    display: block;
+}
+
+/* Logos that ship as pure black artwork, flipped to read on the dark tile */
+.tech-icon--invert img {
+    filter: invert(1);
+}
+
+/* Single-colour logos drawn too dark to read against the tile */
+.tech-icon--boost img {
+    filter: brightness(1.8) saturate(1.1);
+}
+
+/* Glyph logos painted in their brand colour */
+.tech-icon--brand i {
+    color: var(--tint);
 }
 
 .tech-icon-text {
