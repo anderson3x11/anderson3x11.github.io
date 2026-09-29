@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anderson3x11.dev/cascades-site/sitemap.xml
