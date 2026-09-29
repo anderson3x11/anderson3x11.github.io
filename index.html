@@ -98,8 +98,8 @@
     </p>
     <p data-i18n="about.p3">
       The dev background stuck with me. I still write tools and side projects in
-      Python, Go, JavaScript, and Bash, from Shoryu and Pitstoppd to smaller CLI
-      tools. I find that <strong>building things</strong> is the best way to learn.
+      Python, Go, Rust, JavaScript, and Bash, from Cascades, Shoryu and Pitstoppd to
+      smaller CLI tools. I find that <strong>building things</strong> is the best way to learn.
     </p>
   </div>
 </section>
@@ -139,6 +139,11 @@
       </div>
 
       <div class="tech-card">
+        <div class="tech-icon tech-icon--brand" style="--tint:#dea584"><i class="devicon-rust-original"></i></div>
+        <div class="tech-info"><span class="tech-name">Rust</span><span class="tech-desc" data-i18n="skills.rust">Desktop app backends</span></div>
+      </div>
+
+      <div class="tech-card">
         <div class="tech-icon tech-icon--boost" style="--tint:#777bb3"><img src="assets/images/tech/php-original.svg" alt="PHP" width="26" height="26" loading="lazy"></div>
         <div class="tech-info"><span class="tech-name">PHP</span><span class="tech-desc" data-i18n="skills.php">Web scripting</span></div>
       </div>
@@ -165,6 +170,16 @@
       <div class="tech-card">
         <div class="tech-icon" style="--tint:#e5e5e5"><svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.462-.054z"/></svg></div>
         <div class="tech-info"><span class="tech-name">Next.js</span><span class="tech-desc" data-i18n="skills.next">React framework</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon tech-icon--brand" style="--tint:#ff3e00"><i class="devicon-svelte-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Svelte</span><span class="tech-desc" data-i18n="skills.svelte">UI framework</span></div>
+      </div>
+
+      <div class="tech-card">
+        <div class="tech-icon tech-icon--brand" style="--tint:#ffc131"><i class="devicon-tauri-plain"></i></div>
+        <div class="tech-info"><span class="tech-name">Tauri</span><span class="tech-desc" data-i18n="skills.tauri">Desktop apps</span></div>
       </div>
 
       <div class="tech-card">
@@ -222,6 +237,26 @@
     <h2 data-i18n="projects.title">Things I've built</h2>
     <div class="divider"></div>
     <div class="project-grid">
+
+      <a class="project" href="https://anderson3x11.github.io/cascades-site/" target="_blank" rel="noopener noreferrer">
+        <img class="project-shot" src="assets/images/cascades-demo.png" alt="Cascades app screenshot" loading="lazy">
+        <div class="project-head">
+          <div class="project-icon"><img src="assets/images/cascades-logo.svg" alt="Cascades" width="28" height="28"></div>
+          <div class="project-titles">
+            <h3 class="project-name">Cascades</h3>
+            <span class="project-cat" data-i18n="projects.cascades.cat">Desktop app · Note-taking</span>
+          </div>
+        </div>
+        <p class="project-desc" data-i18n="projects.cascades.desc">
+          A light text editor for taking notes, for Windows, macOS and Linux. Indented
+          lines get linked by drawn cascades while the file stays plain text. Every
+          feature is an extension on the same API as plugins, and new versions arrive
+          as signed in-app updates.
+        </p>
+        <ul class="stack">
+          <li>Tauri</li><li>Rust</li><li>Svelte</li><li>TypeScript</li><li>CodeMirror</li>
+        </ul>
+      </a>
 
       <a class="project" href="https://github.com/anderson3x11/nooks" target="_blank" rel="noopener noreferrer">
         <img class="project-shot" src="assets/images/nooks-demo.png" alt="Nooks app screenshot" loading="lazy">
