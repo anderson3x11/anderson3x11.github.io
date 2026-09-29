@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Hermes · Thomas C." data-en="Hermes · Thomas C.">Hermes · Thomas C.</title>
+  <meta name="description" content="Hermes: a fast, concurrent OSINT username hunter written in Go. 400+ sites checked in parallel." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">03</span>Hermes</h1>
+    <p class="lede">
+      <span class="fr">Un outil OSINT en ligne de commande : on lui donne un pseudo, il vérifie plus de 400 sites en parallèle et liste les comptes trouvés.</span>
+      <span class="en">A command-line OSINT tool: give it a username, it checks over 400 sites in parallel and lists the accounts it finds.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">CLI, binaire unique</span><span class="en">CLI, single binary</span></dd></div>
+      <div><dt class="m">Stack</dt><dd><span class="fr">Go, bibliothèque standard uniquement</span><span class="en">Go, standard library only</span></dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Open source (MIT)</span><span class="en">Open source (MIT)</span></dd></div>
+      <div><dt class="m"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://github.com/anderson3x11/hermes" target="_blank" rel="noopener">GitHub</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img class="term" src="../assets/images/hermes-demo.svg" alt="Hermes">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">Pourquoi</span><span class="en">Why</span></h2>
+    <div class="body">
+      <p class="fr">Retrouver les comptes liés à un pseudo, c'est souvent la première étape d'une enquête OSINT. Sherlock le fait déjà en Python. Je voulais la même chose en un seul binaire, sans dépendances, et apprendre la concurrence en Go au passage. La liste de sites de départ vient de Sherlock.</p>
+      <p class="en">Finding the accounts tied to a username is often the first step of an OSINT investigation. Sherlock already does it in Python. I wanted the same thing as a single binary with no dependencies, and to learn Go concurrency along the way. The starting site list comes from Sherlock.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Comment ça marche</span><span class="en">How it works</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Trois façons de savoir si un compte existe.</strong> Chaque site déclare sa méthode dans <code>sites.json</code> : le code HTTP, l'URL après redirection (renvoyé vers une page d'erreur, le compte n'existe pas), ou un message dans la page comme « user not found ». La lecture du corps est limitée à 1 Mo.</p>
+      <p class="en"><strong>Three ways to tell if an account exists.</strong> Each site declares its method in <code>sites.json</code>: the HTTP status, the URL after redirects (sent to an error page means no account), or a message in the page such as "user not found". Reading the body is capped at 1 MB.</p>
+      <pre><code><span class="c">// main.go, simplified</span>
+switch site.ErrorType {
+case "status_code":  <span class="c">// 2xx: the account exists</span>
+    found = resp.StatusCode &gt;= 200 &amp;&amp; resp.StatusCode &lt; 300
+case "response_url": <span class="c">// redirected to the error page: it doesn't</span>
+    found = resp.Request.URL.String() != errorURL
+case "message":      <span class="c">// "user not found" in the first MB of the page</span>
+    found = !containsAny(body, site.ErrorMsg)
+}</code></pre>
+      <p class="fr"><strong>Concurrence bornée.</strong> Une goroutine par site, mais un canal bufferisé sert de sémaphore : 20 requêtes en même temps par défaut, réglable avec <code>-c</code>. Les erreurs passagères (5xx, 429, réseau) sont retentées.</p>
+      <p class="en"><strong>Bounded concurrency.</strong> One goroutine per site, with a buffered channel as a semaphore: 20 requests at once by default, tunable with <code>-c</code>. Transient errors (5xx, 429, network) are retried.</p>
+      <p class="fr"><strong>Fait pour les rapports.</strong> Plusieurs pseudos d'un coup ou depuis un fichier, listes d'exclusion, filtre NSFW, et sortie en texte, JSON, CSV ou Markdown.</p>
+      <p class="en"><strong>Built for reports.</strong> Several usernames at once or from a file, exclusion lists, an NSFW filter, and output as text, JSON, CSV or Markdown.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">Twitter/X, Instagram, LinkedIn ou Discord renvoient des résultats peu fiables à cause de leurs protections anti-bot. Plutôt que d'afficher des faux positifs, Hermes les ignore et les documente dans <code>BROKEN_SITES.md</code>, avec les URLs pour vérifier à la main.</p>
+      <p class="en">Twitter/X, Instagram, LinkedIn or Discord return unreliable results because of their anti-bot protections. Rather than show false positives, Hermes skips them and documents them in <code>BROKEN_SITES.md</code>, with URLs to check by hand.</p>
+    </div>
+  </section>
+
+  <a class="next" href="cascades.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Cascades →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>

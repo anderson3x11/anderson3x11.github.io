@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Shoryu · Thomas C." data-en="Shoryu · Thomas C.">Shoryu · Thomas C.</title>
+  <meta name="description" content="Shoryu: Street Fighter 6 player stats, rankings and matchup charts, built with Next.js, TypeScript and Supabase." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">02</span>Shoryu</h1>
+    <p class="lede">
+      <span class="fr">Les stats Street Fighter 6 que le site officiel ne montre pas bien : profils joueurs, classements, matchups et fiches personnages.</span>
+      <span class="en">The Street Fighter 6 stats the official site doesn't show well: player profiles, rankings, matchups and character pages.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>Next.js 16, TypeScript, Tailwind, Supabase, Recharts</dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">En production, open source (MIT)</span><span class="en">In production, open source (MIT)</span></dd></div>
+      <div><dt class="m"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://www.shoryu.site/" target="_blank" rel="noopener">shoryu.site</a> · <a href="https://github.com/anderson3x11/shoryu" target="_blank" rel="noopener">GitHub</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/Shoryu-demo.png" alt="Shoryu" width="1920" height="1080">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">Le problème</span><span class="en">The problem</span></h2>
+    <div class="body">
+      <p class="fr">Capcom n'a pas d'API publique pour Street Fighter 6. Les données existent sur Buckler's Boot Camp, le site officiel, mais elles sont éparpillées et on n'y voit pas l'évolution d'un joueur dans le temps.</p>
+      <p class="en">Capcom has no public API for Street Fighter 6. The data exists on Buckler's Boot Camp, the official site, but it's scattered and you can't see how a player evolves over time.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
+    <div class="body">
+      <ul class="fr">
+        <li>Profils joueurs : historique LP / MR, matchs, matchups par personnage, rivaux.</li>
+        <li>Le haut du classement Master et les taux d'utilisation des personnages par rang.</li>
+        <li>Une page par personnage : frame data, combos, matchups, patch notes.</li>
+        <li>Résultats des tournois Tier 1, profils des joueurs pros.</li>
+        <li>Streetdle, un jeu quotidien pour deviner un personnage.</li>
+      </ul>
+      <ul class="en">
+        <li>Player profiles: LP / MR history, matches, per-character matchups, rivals.</li>
+        <li>The top of the Master ranking and character usage rates per rank.</li>
+        <li>A page per character: frame data, combos, matchups, patch notes.</li>
+        <li>Tier 1 tournament results, pro player profiles.</li>
+        <li>Streetdle, a daily guess-the-character game.</li>
+      </ul>
+      <p class="fr">Tout est pensé mobile d'abord et fonctionne dès 375 px de large.</p>
+      <p class="en">Everything is mobile first and works from 375 px wide.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Lire ce que Buckler rend déjà.</strong> Plutôt que deviner des endpoints non documentés, Shoryu lit le JSON <code>__NEXT_DATA__</code> embarqué dans les pages de Buckler, avec un cookie de session. Toutes les requêtes passent par une file qui les espace, pour ne jamais inonder le site de Capcom.</p>
+      <p class="en"><strong>Read what Buckler already renders.</strong> Instead of guessing undocumented endpoints, Shoryu reads the <code>__NEXT_DATA__</code> JSON embedded in Buckler's pages, with a session cookie. Every request goes through a pacing queue so Capcom's site never gets flooded.</p>
+      <p class="fr"><strong>Cacher pour limiter le trafic.</strong> Supabase garde les données et leur historique :</p>
+      <p class="en"><strong>Cache to keep traffic low.</strong> Supabase stores the data and its history:</p>
+      <table class="list">
+        <tr><td><span class="fr">Profils</span><span class="en">Profiles</span></td><td><span class="fr">À la visite, au plus toutes les 12 h</span><span class="en">On visit, at most every 12 h</span></td></tr>
+        <tr><td><span class="fr">Matchs</span><span class="en">Matches</span></td><td><span class="fr">À la demande, stockés au fur et à mesure</span><span class="en">On demand, stored incrementally</span></td></tr>
+        <tr><td><span class="fr">Classement, usage</span><span class="en">Ranking, usage</span></td><td><span class="fr">Tâche planifiée toutes les 12 h</span><span class="en">Scheduled job every 12 h</span></td></tr>
+        <tr><td><span class="fr">Tournois</span><span class="en">Tournaments</span></td><td><span class="fr">Liquipedia, GitHub Action chaque semaine</span><span class="en">Liquipedia, weekly GitHub Action</span></td></tr>
+      </table>
+      <p class="fr"><strong>Next.js côté serveur.</strong> App Router et Server Components : les données sont récupérées sur le serveur, le cookie Buckler et la clé Supabase ne quittent jamais le back.</p>
+      <p class="en"><strong>Server-side Next.js.</strong> App Router and Server Components: data is fetched on the server, so the Buckler cookie and the Supabase key never leave the back end.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">Tout dépend d'un cookie de session Buckler qui expire régulièrement. Quand les profils reviennent vides, il faut en récupérer un nouveau à la main.</p>
+      <p class="en">Everything depends on a Buckler session cookie that expires regularly. When profiles come back empty, a fresh one has to be grabbed by hand.</p>
+    </div>
+  </section>
+
+  <a class="next" href="hermes.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Hermes →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>

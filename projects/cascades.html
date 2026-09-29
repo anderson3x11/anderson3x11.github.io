@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Cascades · Thomas C." data-en="Cascades · Thomas C.">Cascades · Thomas C.</title>
+  <meta name="description" content="Cascades: a light note-taking text editor for Windows, macOS and Linux, built with Tauri, Rust and Svelte." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">01</span>Cascades</h1>
+    <p class="lede">
+      <span class="fr">Un éditeur de texte léger pour prendre des notes, qui ouvre aussi n'importe quel fichier texte ou code. La simplicité de Notepad++, la personnalisation de Vim.</span>
+      <span class="en">A light text editor for taking notes that still opens any text or code file. The simplicity of Notepad++, the customization of Vim.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">App desktop, Windows · macOS · Linux</span><span class="en">Desktop app, Windows · macOS · Linux</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>Tauri 2, Rust, Svelte 5, TypeScript, CodeMirror 6</dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Version 1.0, open source (MIT)</span><span class="en">Version 1.0, open source (MIT)</span></dd></div>
+      <div><dt class="m"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://anderson3x11.dev/cascades-site/" target="_blank" rel="noopener">Site</a> · <a href="https://github.com/anderson3x11/cascades" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/anderson3x11/cascades/releases/latest" target="_blank" rel="noopener"><span class="fr">Télécharger</span><span class="en">Download</span></a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/cascades-demo.png" alt="Cascades" width="1920" height="1140">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    <div class="body">
+      <p class="fr">J'écris mes notes ligne par ligne, et j'indente une ligne quand elle découle de celle du dessus. Aucun éditeur ne montrait ce lien. Cascades le dessine.</p>
+      <p class="en">I write notes line by line, and indent a line when it follows from the one above. No editor showed that link. Cascades draws it.</p>
+      <img src="../assets/images/cascades/cascades.gif" alt="" width="760" height="330" loading="lazy" style="border:1px solid var(--line)">
+      <p class="fr">Le fichier ne contient que des tabulations : les traits sont tracés à l'affichage, jamais écrits. Copier le texte copie les tabulations, et le fichier reste lisible partout. Chaque ligne parent se replie, la branche courante est surlignée, et il y a huit styles de traits.</p>
+      <p class="en">The file only holds tabs: the lines are drawn on screen, never written. Copying text copies the tabs, and the file stays readable anywhere. Every parent line folds, the current branch is highlighted, and there are eight line styles.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
+    <div class="body">
+      <ul class="fr">
+        <li>Onglets, jusqu'à quatre vues côte à côte, et une session restaurée au démarrage, onglets non enregistrés compris.</li>
+        <li>Listes intelligentes, paires de parenthèses, tableaux Markdown alignés au Tab, correcteur orthographique.</li>
+        <li>Aperçu Markdown, HTML, CSV et JSON à côté de l'éditeur. Images et PDF dans un onglet.</li>
+        <li>Recherche et remplacement dans tout un dossier, encodages et fins de ligne conservés.</li>
+        <li>Sept thèmes, une touche leader, une palette de commandes, des raccourcis modifiables.</li>
+      </ul>
+      <ul class="en">
+        <li>Tabs, up to four side-by-side views, and a session restored on start, unsaved tabs included.</li>
+        <li>Smart lists, auto pairs, Markdown tables aligned with Tab, spell checking.</li>
+        <li>Markdown, HTML, CSV and JSON preview next to the editor. Images and PDFs in a tab.</li>
+        <li>Search and replace across a folder, encodings and line endings kept on save.</li>
+        <li>Seven themes, a leader key, a command palette, remappable shortcuts.</li>
+      </ul>
+      <div class="pair">
+        <img src="../assets/images/cascades/preview.png" alt="" width="1920" height="1140" loading="lazy">
+        <img src="../assets/images/cascades/preferences.png" alt="" width="1920" height="1140" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Tout est une extension.</strong> Chaque fonctionnalité s'active avec <code>activate(ctx)</code> et ne peut importer que <code>src/api</code>, une règle de lint l'impose. Les fonctions de base passent donc par la même API que les plugins, qui est testée en permanence. Un fichier <code>init.js</code> reçoit le même objet <code>ctx</code>.</p>
+      <p class="en"><strong>Everything is an extension.</strong> Every feature is activated with <code>activate(ctx)</code> and may only import <code>src/api</code>, enforced by a lint rule. Built-in features go through the same API as plugins, so that API is tested all the time. An <code>init.js</code> file gets the same <code>ctx</code> object.</p>
+      <pre><code><span class="c">// init.js, loaded on start like any extension</span>
+export default function (ctx) {
+  ctx.commands.register('user.hello', () => ctx.dialogs.alert('Hello'));
+  ctx.keybindings.register({ key: 'Leader H', command: 'user.hello' });
+}</code></pre>
+      <p class="fr"><strong>Tauri plutôt qu'Electron.</strong> Le backend Rust gère les fichiers, les encodages, la recherche et le correcteur. Résultat : un installeur de 2,8 Mo, 6 Mo installé, une interface prête en 120 ms environ. Le PDF, le rendu Markdown et les langages ne se chargent qu'au premier usage.</p>
+      <p class="en"><strong>Tauri over Electron.</strong> The Rust backend handles files, encodings, search and spell checking. The result: a 2.8 MB installer, 6 MB installed, an interface ready in about 120 ms. PDF, Markdown rendering and languages load on first use only.</p>
+      <p class="fr"><strong>Mises à jour intégrées.</strong> L'app propose chaque nouvelle version au démarrage et l'installe elle-même, avec des mises à jour signées.</p>
+      <p class="en"><strong>Built-in updates.</strong> The app offers each new version at start and installs it itself, with signed updates.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">Les installeurs ne sont pas encore signés avec un certificat payant : Windows et macOS affichent un avertissement à la première installation.</p>
+      <p class="en">The installers are not signed with a paid certificate yet: Windows and macOS show a warning on first install.</p>
+    </div>
+  </section>
+
+  <a class="next" href="shoryu.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Shoryu →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>
