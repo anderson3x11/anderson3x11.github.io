@@ -144,7 +144,7 @@ code, pre { font-variant-ligatures: none; }
 pre code { background: none; border: 0; padding: 0; font-size: inherit; }
 pre .c { color: #8f8d86; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.pair img { border: 1px solid var(--line); }
+.pair img, .block .body > img { border: 1px solid var(--line); }
 .next { display: flex; justify-content: space-between; align-items: end; padding: 40px 0; border-bottom: 1px solid var(--ink); text-decoration: none; }
 .next strong { font: 800 clamp(2rem, 5vw, 3.5rem)/1 Rubik; letter-spacing: -.04em; }
 .next:hover strong { color: var(--red); }
