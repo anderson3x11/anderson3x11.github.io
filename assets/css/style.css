@@ -5,12 +5,24 @@
   --line: #cfcdc6;
   --red: #D41515;
   --mute: #55544f;
+  --code-bg: #141414;
+  --on-red: #F4F4F0;        /* text on red hover backgrounds, same in both themes */
+  --on-red-accent: #141414; /* red accents turn black on red backgrounds */
   --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #121211;
+  --paper-hi: #1b1b19;
+  --ink: #ECEAE3;
+  --line: #34332f;
+  --mute: #a3a097;
+  --code-bg: #0a0a09;
 }
 
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--paper); color: var(--ink); font: 400 16px/1.55 Rubik, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+body { background: var(--paper); color: var(--ink); font: 400 16px/1.55 Rubik, system-ui, sans-serif; -webkit-font-smoothing: antialiased; transition: background .3s, color .3s; }
 a { color: inherit; }
 img { display: block; max-width: 100%; height: auto; }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
@@ -27,11 +39,14 @@ html[data-lang="fr"] .en, html[data-lang="en"] .fr { display: none !important; }
 nav { display: flex; justify-content: space-between; align-items: stretch; gap: 16px; margin: 0 -10px 0 -14px; border-bottom: 1px solid var(--ink); font-size: 14px; }
 nav .links, .lang { display: flex; align-items: stretch; }
 /* Each item fills the nav height; the red hover box spans it top to bottom */
-nav a, .lang button { display: flex; align-items: center; padding: 18px 14px; text-decoration: none; transition: background .2s, color .2s; }
+nav a, .lang button, .theme { display: flex; align-items: center; padding: 18px 14px; text-decoration: none; transition: background .2s, color .2s; }
 nav .brand { font-weight: 800; letter-spacing: -.01em; }
 .lang button { font: 500 12px Rubik, system-ui, sans-serif; letter-spacing: .04em; background: none; border: 0; padding: 18px 10px; color: var(--mute); cursor: pointer; }
 .lang button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; }
-nav a:hover, .lang button:hover { background: var(--red); color: var(--paper); text-decoration-color: var(--paper); }
+.theme { background: none; border: 0; padding: 18px 10px; color: var(--ink); cursor: pointer; }
+.theme svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+:root:not([data-theme="dark"]) .theme .glass { fill: currentColor; } /* lit bulb in light mode */
+nav a:hover, .lang button:hover, .theme:hover { background: var(--red); color: var(--on-red); text-decoration-color: var(--on-red); }
 
 /* Home hero */
 .hero { display: grid; grid-template-columns: repeat(12, 1fr); align-items: center; padding: 56px 0 48px; border-bottom: 1px solid var(--ink); }
@@ -77,10 +92,10 @@ nav a:hover, .lang button:hover { background: var(--red); color: var(--paper); t
 .others span:not(.m) { color: var(--mute); }
 
 /* Inverted hover: red background, white text, red accents turn black */
-.grid > a:hover, .others a:hover, .contact a:hover { background: var(--red); color: var(--paper); }
-:is(.grid > a, .others a, .contact a):hover :is(p, span, .m) { color: var(--paper); }
+.grid > a:hover, .others a:hover, .contact a:hover { background: var(--red); color: var(--on-red); }
+:is(.grid > a, .others a, .contact a):hover :is(p, span, .m) { color: var(--on-red); }
 :is(.grid > a, .others a, .contact a):hover .num,
-.grid > a:hover .link::after { color: var(--ink); }
+.grid > a:hover .link::after { color: var(--on-red-accent); }
 :is(.grid > a, .others a, .contact a) :is(p, span, .num), .link::after { transition: color .2s; }
 
 /* About / contact */
@@ -124,7 +139,7 @@ footer a:hover { color: var(--red); }
 .block li::before { content: ""; position: absolute; left: 0; top: .7em; width: 8px; height: 1px; background: var(--red); }
 .block strong { font-weight: 700; }
 code { font: 400 .88em var(--mono); background: var(--paper-hi); border: 1px solid var(--line); padding: 0 4px; }
-pre { font: 400 13px/1.6 var(--mono); background: var(--ink); color: #e8e6df; padding: 20px; overflow-x: auto; max-width: 100%; }
+pre { font: 400 13px/1.6 var(--mono); background: var(--code-bg); border: 1px solid var(--line); color: #e8e6df; padding: 20px; overflow-x: auto; max-width: 100%; }
 code, pre { font-variant-ligatures: none; }
 pre code { background: none; border: 0; padding: 0; font-size: inherit; }
 pre .c { color: #8f8d86; }
