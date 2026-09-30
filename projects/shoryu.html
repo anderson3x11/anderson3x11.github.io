@@ -33,13 +33,14 @@
     <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
     <h1><span class="num">02</span>Shoryu</h1>
     <p class="lede">
-      <span class="fr">Les stats Street Fighter 6 que le site officiel ne montre pas bien : profils joueurs, classements, matchups et fiches personnages.</span>
-      <span class="en">The Street Fighter 6 stats the official site doesn't show well: player profiles, rankings, matchups and character pages.</span>
+      <span class="fr">Les stats Street Fighter 6, enfin lisibles : recherche par pseudo, profils joueurs, classements, matchups et fiches personnages.</span>
+      <span class="en">Street Fighter 6 stats, made readable: search by username, player profiles, rankings, matchups and character pages.</span>
     </p>
     <dl class="facts">
       <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
       <div><dt class="m">Stack</dt><dd>Next.js 16, TypeScript, Tailwind, Supabase, Recharts</dd></div>
       <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">En production, open source (MIT)</span><span class="en">In production, open source (MIT)</span></dd></div>
+      <div><dt class="m">Audience</dt><dd><span class="fr">1 500+ visiteurs par mois, 59 pays (sept. 2026)</span><span class="en">1,500+ visitors a month, 59 countries (Sept. 2026)</span></dd></div>
       <div><dt class="m"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://www.shoryu.site/" target="_blank" rel="noopener">shoryu.site</a> · <a href="https://github.com/anderson3x11/shoryu" target="_blank" rel="noopener">GitHub</a></dd></div>
     </dl>
   </header>
@@ -49,10 +50,12 @@
   </figure>
 
   <section class="block">
-    <h2><span class="fr">Le problème</span><span class="en">The problem</span></h2>
+    <h2><span class="fr">Le point de départ</span><span class="en">Where it started</span></h2>
     <div class="body">
-      <p class="fr">Capcom n'a pas d'API publique pour Street Fighter 6. Les données existent sur Buckler's Boot Camp, le site officiel, mais elles sont éparpillées et on n'y voit pas l'évolution d'un joueur dans le temps.</p>
-      <p class="en">Capcom has no public API for Street Fighter 6. The data exists on Buckler's Boot Camp, the official site, but it's scattered and you can't see how a player evolves over time.</p>
+      <p class="fr">Les données existent sur Buckler's Boot Camp, le site officiel de Capcom, mais elles sont difficiles à lire et il n'y a pas de recherche : pour trouver un joueur, il faut connaître son identifiant et le taper dans l'adresse. Et pas d'API publique non plus.</p>
+      <p class="fr">Avant Shoryu, je me servais beaucoup de <a href="https://sfbuff.site/" target="_blank" rel="noopener">SFBUFF</a>, un site open source qui permet déjà de chercher un joueur par son pseudo et d'analyser ses matchs. Très utile, mais il me manquait beaucoup de choses. J'ai créé Shoryu pour moi et pour la communauté : une interface plus accueillante, une navigation plus claire, et plus de données.</p>
+      <p class="en">The data exists on Buckler's Boot Camp, Capcom's official site, but it's hard to read and there's no search: to find a player, you need their ID and have to type it in the URL. And no public API either.</p>
+      <p class="en">Before Shoryu, I used <a href="https://sfbuff.site/" target="_blank" rel="noopener">SFBUFF</a> a lot: an open source site that already lets you search a player by username and analyze their matches. Very useful, but a lot was missing for me. I built Shoryu for myself and for the community: a friendlier interface, clearer navigation, and more data.</p>
     </div>
   </section>
 
@@ -61,8 +64,10 @@
     <div class="body">
       <p class="fr">On cherche un pseudo CFN ou un ID et on tombe sur le profil : chaque personnage joué avec ses victoires, défaites et son rang, la répartition des matchs par mode et le temps de jeu. S'y ajoutent les derniers matchs et les rivaux.</p>
       <p class="en">Search a CFN name or ID and you land on the profile: every character played with its wins, losses and rank, matches split by mode and time played. Recent battles and rivals come on top.</p>
-      <p class="fr">L'onglet Stats trace l'historique MR ou LP de chaque personnage, et le taux de victoire contre chaque personnage adverse, filtrable par mode. C'est ce que Buckler ne montre pas.</p>
-      <p class="en">The Stats tab plots the MR or LP history of each character, and the win rate against every opposing character, filterable by mode. That's what Buckler doesn't show.</p>
+      <p class="fr">L'onglet Stats trace l'historique MR ou LP de chaque personnage, et le taux de victoire contre chaque personnage adverse, filtrable par mode. Tout ça se lit d'un coup d'œil.</p>
+      <p class="en">The Stats tab plots the MR or LP history of each character, and the win rate against every opposing character, filterable by mode. All readable at a glance.</p>
+      <p class="fr">C'est la fonctionnalité qui sert le plus : sur les 30 derniers jours, plus de 1 100 profils différents ont été consultés. Le Japon est le premier pays, devant le Brésil et les États-Unis.</p>
+      <p class="en">It's the most used feature: over the last 30 days, more than 1,100 different profiles were viewed. Japan is the top country, ahead of Brazil and the United States.</p>
       <div class="pair">
         <img src="../assets/images/shoryu/profile.webp" alt="Profil joueur : personnages, rangs et matchs par mode" width="1456" height="822" loading="lazy">
         <img src="../assets/images/shoryu/mr-history.webp" alt="Historique MR d'un personnage" width="1456" height="822" loading="lazy">
