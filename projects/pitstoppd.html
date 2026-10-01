@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Pitstoppd · Thomas C." data-en="Pitstoppd · Thomas C.">Pitstoppd · Thomas C.</title>
+  <meta name="description" content="Pitstoppd: Letterboxd for Formula 1 Grands Prix. Rate and review every race since 2000. React, Hono and SQLite." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">04</span>Pitstoppd</h1>
+    <p class="lede">
+      <span class="fr">Un Letterboxd pour la Formule 1 : chaque Grand Prix depuis 2000 a sa fiche, on le note, on le critique, et on suit ce qu'en pensent les autres.</span>
+      <span class="en">Letterboxd for Formula 1: every Grand Prix since 2000 has its page, you rate it, review it, and follow what others thought.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>React 19, Vite, Tailwind 4, Hono, SQLite</dd></div>
+      <div><dt class="m"><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">550+ courses, 130 pilotes, de 2000 à 2026</span><span class="en">550+ races, 130 drivers, 2000 to 2026</span></dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Preuve de concept, terminée</span><span class="en">Proof of concept, complete</span></dd></div>
+      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://pitstoppd.anderson3x11.dev" target="_blank" rel="noopener">pitstoppd.anderson3x11.dev</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/pitstoppd/home.webp" alt="Pitstoppd" width="1456" height="822">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    <div class="body">
+      <p class="fr">Letterboxd a changé la façon de parler de films : on note, on écrit trois lignes, on voit ce qu'en pensent ses amis. Pitstoppd applique la même boucle aux Grands Prix. Chaque course est traitée comme un film, avec une affiche, une note moyenne et des avis.</p>
+      <p class="en">Letterboxd changed how people talk about films: you rate, write three lines, see what your friends thought. Pitstoppd applies the same loop to Grands Prix. Every race is treated like a film, with a poster, an average score and reviews.</p>
+      <p class="fr">Tout se lit sans compte. On n'en demande un qu'au moment d'agir : noter, critiquer, liker ou suivre quelqu'un.</p>
+      <p class="en">Everything can be read without an account. One is only asked for when acting: rating, reviewing, liking or following someone.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Les Grands Prix</span><span class="en">Grands Prix</span></h2>
+    <div class="body">
+      <p class="fr">Chaque course a sa fiche : résultat complet, grille de départ, note moyenne et avis, triés par popularité ou par date. On note de 0,5 à 5 étoiles, une critique par course, et une critique peut être marquée « spoiler » : elle reste masquée jusqu'à ce qu'on clique.</p>
+      <p class="en">Every race has its page: full result, starting grid, average score and reviews, sorted by popularity or date. Ratings go from 0.5 to 5 stars, one review per race, and a review can be flagged as a spoiler: it stays hidden until you click.</p>
+      <div class="pair">
+        <img src="../assets/images/pitstoppd/grand-prix.webp" alt="Fiche d'un Grand Prix" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/pitstoppd/reviews.webp" alt="Avis et résultat de la course" width="1512" height="803" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Saisons, pilotes, profils</span><span class="en">Seasons, drivers, profiles</span></h2>
+    <div class="body">
+      <p class="fr">Chaque saison depuis 2000 avec son champion, les classements pilotes et constructeurs, et la note que lui donnent les fans. Une fiche par pilote avec sa carrière et ses dernières courses. Et des profils à la Letterboxd : pilotes et écurie préférés, répartition des notes, critiques récentes, abonnés et abonnements, avec un fil d'activité de ceux qu'on suit.</p>
+      <p class="en">Every season since 2000 with its champion, driver and constructor standings, and the score fans give it. A page per driver with their career and recent races. And Letterboxd-style profiles: favorite drivers and team, rating distribution, recent reviews, followers and following, with an activity feed of the people you follow.</p>
+      <div class="pair">
+        <img src="../assets/images/pitstoppd/seasons.webp" alt="Toutes les saisons depuis 2000" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/pitstoppd/drivers.webp" alt="Les pilotes de la grille" width="1512" height="804" loading="lazy">
+      </div>
+      <div class="pair">
+        <img src="../assets/images/pitstoppd/driver.webp" alt="Fiche pilote" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/pitstoppd/profile.webp" alt="Profil utilisateur" width="1512" height="803" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>De Supabase à mon propre back-end.</strong> La première version reposait sur Supabase pour l'authentification, la base et le stockage. Je l'ai remplacé par une API Hono et le SQLite intégré à Node (<code>node:sqlite</code>), qui sert aussi le front. Résultat : plus aucun service externe, une seule image Docker et un volume persistant, déployés sur mon serveur avec Coolify.</p>
+      <p class="en"><strong>From Supabase to my own back end.</strong> The first version relied on Supabase for auth, database and storage. I replaced it with a Hono API and Node's built-in SQLite (<code>node:sqlite</code>), which also serves the front. The result: no external service, one Docker image and a persistent volume, deployed on my server with Coolify.</p>
+      <p class="fr"><strong>L'authentification faite à la main, proprement.</strong> Mots de passe hachés avec scrypt et un sel aléatoire, comparés en temps constant. Sessions dans un cookie <code>httpOnly</code>, <code>SameSite=Lax</code>, <code>Secure</code> en production. Les règles métier sont dans la base : une seule note et une seule critique par personne et par course, suppression en cascade quand un compte est supprimé.</p>
+      <p class="en"><strong>Hand-written auth, done properly.</strong> Passwords hashed with scrypt and a random salt, compared in constant time. Sessions in an <code>httpOnly</code>, <code>SameSite=Lax</code> cookie, <code>Secure</code> in production. Business rules live in the database: one rating and one review per person and per race, cascading deletes when an account is removed.</p>
+      <pre><code><span class="c">// server/db.js</span>
+const salt = randomBytes(16).toString('hex')
+return `${salt}:${scryptSync(password, salt, 64).toString('hex')}`
+<span class="c">// check: timingSafeEqual(scryptSync(password, salt, 64), stored)</span></code></pre>
+      <p class="fr"><strong>Des données à jour toutes seules.</strong> Résultats et pilotes viennent de l'API Jolpica-F1 (le successeur d'Ergast), les affiches de TheSportsDB, les photos de Wikipedia. Les données de référence sont chargées dans SQLite au premier démarrage, et une tâche planifiée récupère chaque jour la saison en cours.</p>
+      <p class="en"><strong>Data that updates itself.</strong> Results and drivers come from the Jolpica-F1 API (Ergast's successor), posters from TheSportsDB, photos from Wikipedia. Reference data is loaded into SQLite on first start, and a scheduled task pulls the current season every day.</p>
+      <p class="fr"><strong>Testé de bout en bout.</strong> <code>npm run check</code> démarre l'API sur une base jetable et rejoue tout le parcours : inscription, note, critique, like, abonnement. La CI le lance à chaque push.</p>
+      <p class="en"><strong>Tested end to end.</strong> <code>npm run check</code> starts the API on a throwaway database and replays the whole journey: sign-up, rating, review, like, follow. CI runs it on every push.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">C'est une preuve de concept : les comptes et les avis visibles sur le site sont des données de démonstration. Et les photos des pilotes, chargées depuis Wikipedia, peuvent mettre quelques secondes à apparaître.</p>
+      <p class="en">It's a proof of concept: the accounts and reviews visible on the site are demo data. And driver photos, loaded from Wikipedia, can take a few seconds to show up.</p>
+    </div>
+  </section>
+
+  <a class="next" href="cascades.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Cascades →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>
