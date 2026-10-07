@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="openroomf1 · Thomas C." data-en="openroomf1 · Thomas C.">openroomf1 · Thomas C.</title>
+  <meta name="description" content="openroomf1: post-race Formula 1 analysis. Pace, strategy, teammate duels and a replay of every Grand Prix. Python, FastF1, SvelteKit and ECharts." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">03</span>openroomf1</h1>
+    <p class="lede">
+      <span class="fr">L'analyse d'après-course de la Formule 1, façon salle des opérations : rythme, stratégie, duels entre coéquipiers et replay de chaque Grand Prix.</span>
+      <span class="en">Post-race Formula 1 analysis, styled as an operation room: pace, strategy, teammate duels and a replay of every Grand Prix.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>Python, pandas, FastF1, SvelteKit, ECharts, Docker</dd></div>
+      <div><dt class="m"><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">40 Grands Prix, saisons 2025 et 2026</span><span class="en">40 Grands Prix, 2025 and 2026 seasons</span></dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Maintenu, mis à jour après chaque course</span><span class="en">Maintained, updated after every race</span></dd></div>
+      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://openroomf1.anderson3x11.dev" target="_blank" rel="noopener">openroomf1.anderson3x11.dev</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/openroomf1/overview.webp" alt="openroomf1" width="1512" height="804">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    <div class="body">
+      <p class="fr">Après une course, les chiffres qui expliquent vraiment le résultat sont éparpillés : temps au tour, relais, arrêts, écarts. openroomf1 les rassemble sur une page par Grand Prix, lisible comme un tableau de bord d'ingénieur.</p>
+      <p class="en">After a race, the numbers that actually explain the result are scattered: lap times, stints, stops, gaps. openroomf1 brings them together on one page per Grand Prix, read like an engineer's dashboard.</p>
+      <p class="fr">Des filtres globaux (pilotes, équipes, plage de tours, pneus) s'appliquent à tous les onglets, et chaque graphique se lit en clair comme en sombre.</p>
+      <p class="en">Global filters (drivers, teams, lap range, tyres) apply to every tab, and every chart works in light and dark mode.</p>
+      <div class="pair">
+        <img src="../assets/images/openroomf1/home.webp" alt="Les Grands Prix de la saison" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/openroomf1/positions.webp" alt="Positions tour par tour" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Rythme et stratégie</span><span class="en">Pace and strategy</span></h2>
+    <div class="body">
+      <p class="fr">La race trace compare chaque pilote à une voiture de référence qui boucle chaque tour au temps médian du peloton : la pluie et les voitures de sécurité ne faussent plus la lecture. On y trouve aussi l'écart à n'importe quel pilote, une heatmap des temps au tour, le tour idéal et les vitesses de pointe.</p>
+      <p class="en">The race trace compares every driver to a reference car that laps at the field's median time: rain and safety cars no longer skew the picture. It also shows the gap to any driver, a lap time heatmap, the ideal lap and top speeds.</p>
+      <p class="fr">Côté stratégie : les relais pneus, les arrêts avec le temps d'immobilisation officiel et les positions avant et après, et la dégradation de chaque relais corrigée de l'effet du carburant.</p>
+      <p class="en">On the strategy side: tyre stints, pit stops with the official stationary time and positions before and after, and the degradation of each stint corrected for fuel load.</p>
+      <div class="pair">
+        <img src="../assets/images/openroomf1/pace.webp" alt="Race trace" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/openroomf1/strategy.webp" alt="Relais pneus et arrêts" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Duels et replay</span><span class="en">Duels and replay</span></h2>
+    <div class="body">
+      <p class="fr">Chaque paire de coéquipiers est comparée : arrivée, grille, tours passés devant, rythme médian, meilleur tour, vitesse. Le replay rejoue toute la course sur le tracé, une position par seconde, avec l'ordre de course, les pneus, les écarts et des raccourcis clavier.</p>
+      <p class="en">Every pair of teammates is compared: finish, grid, laps ahead, median pace, best lap, speed. The replay plays the whole race back on the track map, one position per second, with the running order, tyres, gaps and keyboard shortcuts.</p>
+      <div class="pair">
+        <img src="../assets/images/openroomf1/duels.webp" alt="Duels entre coéquipiers" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/openroomf1/replay.webp" alt="Replay de la course" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Tout est pré-calculé.</strong> Un pipeline Python (FastF1, pandas) récupère les données après la course, calcule les statistiques et écrit des fichiers JSON compacts, environ 1 Mo par Grand Prix. SvelteKit en fait un site entièrement statique : pas de base de données, et le navigateur n'appelle jamais les sources de données.</p>
+      <p class="en"><strong>Everything is computed ahead of time.</strong> A Python pipeline (FastF1, pandas) fetches the data after the race, computes the statistics and writes compact JSON files, about 1 MB per Grand Prix. SvelteKit turns them into a fully static site: no database, and the browser never calls the data sources.</p>
+      <p class="fr"><strong>Un déploiement contraint par la source.</strong> L'archive live timing de la F1 refuse les IP de datacenters, VPS comme runners GitHub Actions. Le pipeline tourne donc chez moi : un script traite la course et pousse les données, et Coolify reconstruit l'image Docker (build statique servi par Caddy) à chaque push.</p>
+      <p class="en"><strong>Deployment shaped by the source.</strong> The F1 live timing archive refuses datacenter IPs, VPS and GitHub Actions runners alike. So the pipeline runs at home: one script processes the race and pushes the data, and Coolify rebuilds the Docker image (a static build served by Caddy) on every push.</p>
+      <p class="fr"><strong>Des données propres.</strong> Les neutralisations sont lues tour par tour pour chaque pilote, pour ne pas écarter à tort les tours des voitures attardées. Les dépassements officiels sont dédoublonnés et débarrassés de leurs artefacts. Le championnat est rattaché aux noms d'équipes FastF1, qui diffèrent de ceux de Jolpica.</p>
+      <p class="en"><strong>Clean data.</strong> Neutralisations are read lap by lap for each driver, so lapped cars don't lose valid laps. Official overtakes are deduplicated and stripped of artifacts. The championship is matched to FastF1's team names, which differ from Jolpica's.</p>
+      <pre><code><span class="c"># deploy/publish.sh, after each race</span>
+uv run python -m pipeline run --season "$SEASON" --latest
+git add data &amp;&amp; git commit -m "Data: $SEASON, latest race" -- data
+git push  <span class="c"># Coolify rebuilds the site</span></code></pre>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">C'est de l'analyse après course, pas du direct : le site est mis à jour le soir du Grand Prix. La F1 ne publie que les radios diffusées à l'antenne, et pas la position de la voiture de sécurité : le replay la place devant le leader pendant les neutralisations.</p>
+      <p class="en">It's post-race analysis, not live: the site is updated on the evening of the Grand Prix. F1 only publishes the radios that were broadcast, and not the safety car's position: the replay places it ahead of the leader during neutralisations.</p>
+    </div>
+  </section>
+
+  <a class="next" href="hermes.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Hermes →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>
