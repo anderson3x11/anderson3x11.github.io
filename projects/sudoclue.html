@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Sudoclue · Thomas C." data-en="Sudoclue · Thomas C.">Sudoclue · Thomas C.</title>
+  <meta name="description" content="Sudoclue: a deduction game in the browser. Place every suspect from the clues and unmask the killer. Procedural grids, daily challenge with a leaderboard, story mode. TypeScript, React, Supabase." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">04</span>Sudoclue</h1>
+    <p class="lede">
+      <span class="fr">Un jeu de déduction dans le navigateur, entre sudoku et Cluedo : on place chaque personne sur le plan d'une maison grâce aux indices, puis on démasque le coupable.</span>
+      <span class="en">A deduction game in the browser, somewhere between sudoku and Cluedo: place every person on a house floor plan from the clues, then unmask the killer.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">Jeu web, en ligne, installable</span><span class="en">Web game, live, installable</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>TypeScript, React, Zustand, Vite, Supabase, Docker</dd></div>
+      <div><dt class="m"><span class="fr">Contenu</span><span class="en">Content</span></dt><dd><span class="fr">Grilles générées à l'infini, 26 types d'indices, 15 enquêtes scénarisées</span><span class="en">Endless generated grids, 26 clue kinds, 15 story cases</span></dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">En ligne, un nouveau défi chaque jour</span><span class="en">Live, a new challenge every day</span></dd></div>
+      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://sudoclue.anderson3x11.dev" target="_blank" rel="noopener">sudoclue.anderson3x11.dev</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/og/sudoclue.webp" alt="Sudoclue" width="1200" height="630">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    <div class="body">
+      <p class="fr">Les livres Murdoku de Manuel Garand mêlent la règle du sudoku (une personne par ligne et par colonne) à une scène de crime vue de dessus : chaque indice place un suspect près d'une plante, dans la cuisine, au nord d'un autre. Le coupable est la seule personne qui était seule avec la victime. Un livre, c'est 80 grilles. Sudoclue en génère autant qu'on veut.</p>
+      <p class="en">Manuel Garand's Murdoku books blend the sudoku rule (one person per row and per column) with a crime scene seen from above: each clue puts a suspect next to a plant, in the kitchen, north of someone else. The culprit is the only person who was alone with the victim. A book holds 80 grids. Sudoclue makes as many as you want.</p>
+      <p class="fr">Trois façons de jouer : une partie libre en quatre difficultés, un mode histoire de 15 enquêtes qui commence par un vrai tutoriel guidé, et un défi du jour, le même pour tout le monde, avec un classement.</p>
+      <p class="en">Three ways to play: free play across four difficulties, a 15-case story mode that opens with a proper guided tutorial, and a daily challenge, the same for everyone, with a leaderboard.</p>
+      <div class="pair">
+        <img src="../assets/images/sudoclue/home.webp" alt="Accueil : défi du jour, histoire, partie libre" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/sudoclue/story.webp" alt="Les enquêtes du mode histoire" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Jouer comme sur papier, en mieux</span><span class="en">Like paper, only better</span></h2>
+    <div class="body">
+      <p class="fr">À gauche, les polaroids des suspects avec leurs indices scotchés dessous. Au centre, le plan. On choisit une personne puis on touche une case pour la noter au crayon, ou on maintient appuyé pour la placer. Croix, drapeaux, annuler à l'infini, carnet de notes : tout ce qu'on ferait avec un crayon, sans gomme.</p>
+      <p class="en">On the left, the suspects' polaroids with their clues taped underneath. In the middle, the floor plan. Pick a person, then tap a square to pencil them in, or press and hold to place them. Crosses, flags, unlimited undo, a notebook: everything you'd do with a pencil, minus the eraser.</p>
+      <p class="fr">Le jeu aide sans tricher : des croix se posent seules sur la ligne et la colonne d'une personne placée, et un indice contredit par la grille passe en rouge. Le bouton d'aide donne trois niveaux de coup de pouce, tirés du raisonnement du solveur.</p>
+      <p class="en">The game helps without cheating: crosses fill the row and column of a placed person by themselves, and a clue the grid contradicts turns red. The hint button gives three levels of nudge, taken from the solver's own reasoning.</p>
+      <div class="pair">
+        <img src="../assets/images/sudoclue/game.webp" alt="Une enquête en cours" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/sudoclue/solved.webp" alt="Affaire résolue" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Un tutoriel qui fait jouer</span><span class="en">A tutorial you actually play</span></h2>
+    <div class="body">
+      <p class="fr">Le commissaire Lebrun guide les premières enquêtes pas à pas. Il surligne les indices, les cases et les suspects concernés, et passe à l'étape suivante dès que le bon placement est fait. Les grilles grandissent ensuite de 3×3 à 8×8, et les indices deviennent plus vagues à chaque chapitre.</p>
+      <p class="en">Superintendent Lebrun walks you through the first cases step by step. He highlights the relevant clues, squares and suspects, and moves on as soon as the right placement is made. Grids then grow from 3×3 to 8×8, and clues get vaguer with every chapter.</p>
+      <div class="pair">
+        <img src="../assets/images/sudoclue/tutorial.webp" alt="Le tutoriel guidé du commissaire Lebrun" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/sudoclue/rules.webp" alt="Les règles illustrées" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Un moteur sans dépendance.</strong> Le cœur est un paquet TypeScript pur, partagé par le site, les scripts et les tests : générateur, solveur exhaustif et solveur « humain ». Le premier garantit qu'une grille n'a qu'une solution. Le second ne s'autorise que des raisonnements de joueur (déduction directe, paires, croisements, hypothèse) : il note la difficulté et alimente l'aide. Une grille qu'il ne sait pas finir est rejetée.</p>
+      <p class="en"><strong>A dependency-free engine.</strong> The core is a pure TypeScript package, shared by the site, the scripts and the tests: generator, exhaustive solver and "human" solver. The first guarantees a grid has exactly one solution. The second only allows itself player-style reasoning (direct deduction, pairs, crossings, one-step guesses): it rates the difficulty and powers the hints. A grid it can't finish gets thrown out.</p>
+      <p class="fr"><strong>Des grilles variées.</strong> Le générateur trace les pièces, meuble chaque pièce selon son type, place les personnes, puis choisit les indices parmi 26 types. Chaque type tiré devient moins probable ensuite, pour éviter cinq « était dans la cuisine » d'affilée. Tout dépend d'une graine : un lien de partie donne la même grille à tout le monde. Sur 200 graines par niveau, 100 % des grilles ont une solution unique et tombent dans la bonne difficulté.</p>
+      <p class="en"><strong>Varied grids.</strong> The generator draws the rooms, furnishes each one by type, places the people, then picks clues among 26 kinds. Every kind drawn becomes less likely afterwards, so you don't get five "was in the kitchen" in a row. Everything hangs on a seed: a game link gives everyone the same grid. Over 200 seeds per level, 100% of grids have a unique solution and land in the right difficulty.</p>
+      <p class="fr"><strong>Un défi du jour qui ne se triche pas trop.</strong> Les défis sont générés à l'avance par une GitHub Action, avec une graine dérivée d'un secret (HMAC), et stockés dans Supabase. Le navigateur ne reçoit que la grille : la solution reste en base, derrière la Row Level Security, et des fonctions Postgres vérifient la réponse et chronomètrent la partie avec l'horloge du serveur. Les joueurs sont des utilisateurs anonymes Supabase : pas de compte, mais un classement.</p>
+      <p class="en"><strong>A daily challenge that's hard to cheat.</strong> Challenges are generated ahead of time by a GitHub Action, from a seed derived from a secret (HMAC), and stored in Supabase. The browser only gets the grid: the solution stays in the database behind Row Level Security, and Postgres functions check the answer and time the run with the server clock. Players are Supabase anonymous users: no account, yet a leaderboard.</p>
+      <p class="fr"><strong>Le reste.</strong> React et Zustand pour l'état (annuler, sauvegarde automatique), un plateau en SVG, la génération dans un Web Worker pour ne jamais figer l'écran, une PWA installable et jouable hors ligne, français et anglais. Les meubles et les portraits ont été générés par planches puis découpés par un script maison (détourage, découpe, réduction). Le site est une image Docker (build statique servi par nginx) que Coolify reconstruit à chaque push.</p>
+      <p class="en"><strong>The rest.</strong> React and Zustand for state (undo, autosave), an SVG board, generation in a Web Worker so the screen never freezes, an installable PWA that plays offline, French and English. Furniture and portraits were generated as sheets, then cut out by a home-made script (keying, slicing, downscaling). The site is a Docker image (a static build served by nginx) that Coolify rebuilds on every push.</p>
+      <pre><code><span class="c"># tools/gen-daily.ts, run every Monday by a GitHub Action</span>
+seed = HMAC(DAILY_SECRET, date)
+{ puzzle, solution } = generate(seed, dailyDifficulty(date))
+insert daily_puzzles(puzzle)      <span class="c"># readable by players</span>
+insert daily_solutions(solution)  <span class="c"># never leaves the database</span></code></pre>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">Le défi du jour ne peut pas être inviolable : la grille est publique, et le solveur pourrait la résoudre côté navigateur. Le serveur garde la solution et le chronomètre, ce qui suffit pour un classement amical. Pas de comptes pour l'instant : la progression vit dans le navigateur, mais les joueurs anonymes pourront être rattachés à un vrai compte sans perdre leur historique.</p>
+      <p class="en">The daily challenge can't be airtight: the grid is public, and the solver could solve it in the browser. The server keeps the solution and the clock, which is enough for a friendly leaderboard. No accounts yet: progress lives in the browser, but anonymous players can later be linked to a real account without losing their history.</p>
+    </div>
+  </section>
+
+  <a class="next" href="hermes.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Hermes →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>
