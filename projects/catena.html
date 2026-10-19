@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Catena · Thomas C." data-en="Catena · Thomas C.">Catena · Thomas C.</title>
+  <meta name="description" content="Catena: a 1v1 card duel in the browser with Balatro-style juice. Draft a deck, chain five cards, watch the numbers cascade. Ranked online matches, friend rooms, cosmetic shop. JavaScript, Node.js, PostgreSQL, WebGL." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">05</span>Catena</h1>
+    <p class="lede">
+      <span class="fr">Un duel de cartes en un contre un dans le navigateur, avec le « juice » de Balatro : on drafte un deck, on enchaîne cinq cartes, et les chiffres explosent en cascade.</span>
+      <span class="en">A one-on-one card duel in the browser, with Balatro's juice: draft a deck, chain five cards, and watch the numbers cascade.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">Jeu web, en ligne, contre le bot ou en PvP</span><span class="en">Web game, live, against the bot or PvP</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>JavaScript, Node.js, PostgreSQL, WebGL, WebAudio, Docker</dd></div>
+      <div><dt class="m"><span class="fr">Contenu</span><span class="en">Content</span></dt><dd><span class="fr">65 cartes en 5 familles, parties classées (Elo) et entre amis, boutique cosmétique</span><span class="en">65 cards in 5 families, ranked (Elo) and friend matches, cosmetic shop</span></dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">En ligne, français et anglais</span><span class="en">Live, French and English</span></dd></div>
+      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://catena.anderson3x11.dev" target="_blank" rel="noopener">catena.anderson3x11.dev</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/og/catena.webp" alt="Catena" width="1200" height="630">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    <div class="body">
+      <p class="fr">Balatro rend chaque coup lisible et jouissif : les jetons tombent, le multiplicateur grimpe, l'écran tremble. Catena reprend cette sensation, mais en duel. Chaque joueur drafte son deck (une carte parmi trois, huit fois), puis à chaque tour pose jusqu'à cinq cartes dans sa chaîne, résolue de gauche à droite : l'ordre compte.</p>
+      <p class="en">Balatro makes every play readable and satisfying: chips drop, the multiplier climbs, the screen shakes. Catena takes that feeling into a duel. Each player drafts a deck (one card out of three, eight times), then each turn lays up to five cards in a chain that resolves left to right: order matters.</p>
+      <p class="fr">Les tours sont simultanés : les deux joueurs construisent en secret, puis les chaînes se révèlent et se résolvent emplacement par emplacement, en alternance. Pas d'attente en PvP, et du suspense à chaque révélation.</p>
+      <p class="en">Turns are simultaneous: both players build in secret, then the chains are revealed and resolved slot by slot, alternating. No waiting in PvP, and suspense at every reveal.</p>
+      <div class="pair">
+        <img src="../assets/images/catena/home.webp" alt="Accueil : contre le bot, partie classée, entre amis" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/catena/draft.webp" alt="La draft : une carte parmi trois" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Des chiffres qui montent</span><span class="en">Numbers that climb</span></h2>
+    <div class="body">
+      <p class="fr">L'attaque vaut Dégâts × Mult × Fièvre. La Fièvre monte à chaque tour (×1, ×1,6, ×2,2...) : les premiers tours sont prudents, les derniers explosifs. Le Bouclier absorbe l'attaque adverse, le Poison ronge à chaque fin de tour. Cinq familles ont chacune leur style : le Feu empile le Mult au prix de ses PV, la Lame enchaîne les Dégâts, le Poison pose des stacks, l'Arcane copie et double, la Garde convertit sa défense en attaque.</p>
+      <p class="en">Attack is Damage × Mult × Fever. The Fever rises every turn (×1, ×1.6, ×2.2...): early turns are careful, late turns explosive. Shield soaks the opponent's attack, Poison eats away at the end of each turn. Five families each have their own style: Fire stacks Mult at the cost of HP, Blade chains Damage, Poison piles stacks, Arcane copies and doubles, Guard turns defense into offense.</p>
+      <p class="fr">Tout est fait pour qu'on sente chaque carte : ressorts sur les cartes, inclinaison 3D au survol, textes flottants, particules, secousse proportionnelle aux dégâts, sons synthétisés dont la hauteur monte pendant la cascade, et un fond animé en shader WebGL qui s'emballe avec les gros coups.</p>
+      <p class="en">Everything is built so you feel each card: springs on the cards, 3D tilt on hover, floating numbers, particles, screen shake scaled to damage, synthesized sounds whose pitch climbs through the cascade, and an animated WebGL shader background that speeds up on big hits.</p>
+      <div class="pair">
+        <img src="../assets/images/catena/board.webp" alt="Construction de la chaîne" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/catena/resolution.webp" alt="Résolution, emplacement par emplacement" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Un vrai site autour du jeu</span><span class="en">A real site around the game</span></h2>
+    <div class="body">
+      <p class="fr">Une page Comment jouer avec des démos animées construites avec les vraies cartes et le vrai moteur, une galerie de toutes les cartes, un classement, un profil avec statistiques et historique. La boutique ne vend que du cosmétique (dos de cartes, finitions foil ou holographiques, couleurs du plateau), payé en pièces gagnées en jouant : tout le monde drafte dans la même réserve, sans pay-to-win.</p>
+      <p class="en">A How to play page with animated demos built from the real cards and the real engine, a gallery of every card, a leaderboard, a profile with stats and history. The shop only sells cosmetics (card backs, foil or holographic finishes, board colors), paid with coins earned by playing: everyone drafts from the same pool, no pay-to-win.</p>
+      <p class="fr">Les 65 illustrations et les dos de cartes ont été générés par grilles, une par famille, puis découpés et convertis par script.</p>
+      <p class="en">The 65 illustrations and the card backs were generated as grids, one per family, then sliced and converted by script.</p>
+      <div class="pair">
+        <img src="../assets/images/catena/cards.webp" alt="La galerie des cartes" width="1512" height="804" loading="lazy">
+        <img src="../assets/images/catena/shop.webp" alt="La boutique et son aperçu" width="1512" height="804" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Un moteur unique.</strong> Les règles tiennent dans un module JavaScript pur, sans DOM, partagé par le jeu, le serveur et un simulateur. Le client anime, le serveur arbitre, et les deux appliquent exactement les mêmes règles.</p>
+      <p class="en"><strong>One engine.</strong> The rules live in a pure JavaScript module, no DOM, shared by the game, the server and a simulator. The client animates, the server referees, and both apply exactly the same rules.</p>
+      <p class="fr"><strong>Équilibré au simulateur.</strong> Un simulateur fait jouer le bot contre lui-même des milliers de fois et mesure le taux de victoire de chaque famille et de chaque carte, la durée des parties et l'attaque par tour. C'est lui qui a montré que la première règle de Fièvre ne produisait aucun crescendo. Six variantes testées plus tard, la règle retenue multiplie l'attaque typique par 3,2 entre le premier et le sixième tour, avec des familles entre 48 et 53 % de victoires.</p>
+      <p class="en"><strong>Balanced by simulation.</strong> A simulator plays the bot against itself thousands of times and measures the win rate of every family and card, game length and attack per turn. It showed that the first Fever rule produced no crescendo at all. Six variants later, the chosen rule multiplies the typical attack by 3.2 between the first and sixth turn, with families between 48 and 53% win rate.</p>
+      <p class="fr"><strong>Un PvP arbitré par le serveur.</strong> Le serveur Node tient les decks, tire les offres, garde les mains secrètes et ne révèle les chaînes que lorsque les deux joueurs ont validé. Les clients suivent la partie en Server-Sent Events et agissent par POST. Un joueur absent est joué par la logique du bot, trois absences valent abandon. Classement Elo, salles entre amis avec un lien à partager.</p>
+      <p class="en"><strong>Server-refereed PvP.</strong> The Node server holds the decks, draws the offers, keeps hands secret and only reveals the chains once both players have locked in. Clients follow the match over Server-Sent Events and act through POST requests. An absent player is played by the bot's logic, three absences count as a forfeit. Elo ranking, friend rooms with a shareable link.</p>
+      <p class="fr"><strong>Le reste.</strong> Aucun build : HTML, CSS et modules ES servis tels quels. PostgreSQL en production, et PGlite (le même moteur en WebAssembly) en local et dans les tests. Comptes avec mots de passe hachés en scrypt, sessions dont seul le hash est stocké, CSP stricte, polices hébergées sur le serveur, e-mails par Brevo. Une image Docker que Coolify reconstruit à chaque push.</p>
+      <p class="en"><strong>The rest.</strong> No build step: HTML, CSS and ES modules served as is. PostgreSQL in production, and PGlite (the same engine in WebAssembly) locally and in tests. Accounts with scrypt-hashed passwords, sessions stored only as hashes, a strict CSP, self-hosted fonts, email through Brevo. A Docker image that Coolify rebuilds on every push.</p>
+      <pre><code><span class="c"># js/rules.js, shared by the client, the server and the simulator</span>
+fever(turn) = 1 + 0.6 * (turn - 1)
+attack      = damage * mult * fever(turn)
+shield      = shield * fever(turn)
+poison      = 8 HP per stack at the end of each turn</code></pre>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">Les parties en ligne vivent en mémoire : un redéploiement interrompt celles en cours (les comptes, pièces et historiques sont en base). Une seule instance du serveur, puisque le matchmaking est en mémoire. Les parties contre le bot tournent dans le navigateur, donc leur résultat est déclaré par le client : ça ne rapporte que des pièces cosmétiques, plafonnées par heure.</p>
+      <p class="en">Online matches live in memory: a redeploy interrupts the ones in progress (accounts, coins and history are in the database). A single server instance, since matchmaking is in memory. Bot matches run in the browser, so their result is reported by the client: they only earn cosmetic coins, capped per hour.</p>
+    </div>
+  </section>
+
+  <a class="next" href="hermes.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Hermes →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>
