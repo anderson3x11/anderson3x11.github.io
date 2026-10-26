@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Mora · Thomas C." data-en="Mora · Thomas C.">Mora · Thomas C.</title>
+  <meta name="description" content="Mora: a Dynamic Island for Windows 10 and 11. Music, timers, a file shelf and clipboard history in a pill at the top of the screen, which never takes your keyboard. C#, WinUI 3." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/zoom.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../">Thomas C.</a>
+    <div class="links">
+      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
+      <a href="../#contact">Contact</a>
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
+      </div>
+      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
+    </div>
+  </nav>
+
+  <header class="case-head">
+    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <h1><span class="num">06</span>Mora</h1>
+    <p class="lede">
+      <span class="fr">Une Dynamic Island pour Windows : la musique, les minuteurs, une étagère de fichiers et l'historique du presse-papiers dans une pilule en haut de l'écran, qui ne prend jamais le clavier.</span>
+      <span class="en">A Dynamic Island for Windows: music, timers, a file shelf and clipboard history in a pill at the top of the screen, which never takes your keyboard.</span>
+    </p>
+    <dl class="facts">
+      <div><dt class="m">Type</dt><dd><span class="fr">App desktop, Windows 10 · 11</span><span class="en">Desktop app, Windows 10 · 11</span></dd></div>
+      <div><dt class="m">Stack</dt><dd>C#, WinUI 3 (Windows App SDK), .NET 10, Win32, Core Audio</dd></div>
+      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Utilisée au quotidien, en développement</span><span class="en">In daily use, in development</span></dd></div>
+      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://github.com/anderson3x11/mora" target="_blank" rel="noopener">GitHub</a></dd></div>
+    </dl>
+  </header>
+
+  <figure class="shot">
+    <img src="../assets/images/og/mora.webp" alt="Mora" width="1200" height="630">
+  </figure>
+
+  <section class="block">
+    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    <div class="body">
+      <p class="fr">Sur Mac, des apps comme NotchNook transforment l'encoche en un petit centre de contrôle. Sur Windows, rien d'équivalent qui respecte deux choses : le clavier et les jeux. Une fenêtre qui vole le focus pendant qu'on tape, ou qui surgit en pleine partie, est pire que pas de fenêtre du tout.</p>
+      <p class="en">On a Mac, apps like NotchNook turn the notch into a small control center. On Windows, nothing equivalent respects two things: the keyboard and games. A window that steals focus while you type, or pops up mid-game, is worse than no window at all.</p>
+      <p class="fr">Mora affiche ce qui se passe maintenant (morceau en cours, minuteur, téléchargement terminé, casque connecté, micro ou caméra utilisés), s'ouvre avec un raccourci, puis s'efface. Son nom vient du malgache « mora mora » : doucement, tranquillement.</p>
+      <p class="en">Mora shows what is happening right now (the current track, a timer, a finished download, headphones connected, the microphone or camera in use), opens with a shortcut, then gets out of the way. Its name comes from the Malagasy "mora mora": easy, gently.</p>
+      <div class="pair">
+        <img src="../assets/images/mora/notch-panel.webp" alt="" width="760" height="230" loading="lazy">
+        <img src="../assets/images/mora/notch-alert.webp" alt="" width="760" height="230" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
+    <div class="body">
+      <ul class="fr">
+        <li>La musique de n'importe quelle app (Spotify, navigateurs, lecteurs), avec une pochette qui prend la forme de la source et une waveform qui suit le son réel.</li>
+        <li>Minuteurs et sessions de concentration, avec une pilule de décompte à côté de l'île.</li>
+        <li>Une étagère : on y glisse des fichiers, même en les tirant vers le haut de l'écran, puis on les ressort dans n'importe quelle app.</li>
+        <li>L'historique du presse-papiers, textes et images, gardé en mémoire uniquement.</li>
+        <li>En jeu, Mora se tait. Un profil par jeu choisit ce qui peut s'afficher, et une carte musique se pilote aux flèches.</li>
+        <li>Trois thèmes, chacun avec sa forme et son mouvement : une île flottante, une encoche de MacBook, une carte Windows 11.</li>
+      </ul>
+      <ul class="en">
+        <li>Music from any app (Spotify, browsers, players), with artwork shaped by the source and a waveform that follows the actual sound.</li>
+        <li>Timers and focus sessions, with a countdown pill beside the island.</li>
+        <li>A shelf: drop files on it, even by dragging them toward the top of the screen, then drag them out into any app.</li>
+        <li>Clipboard history, text and images, kept in memory only.</li>
+        <li>In games, Mora keeps quiet. A profile per game picks what may show, and a music card is driven with the arrow keys.</li>
+        <li>Three themes, each with its own shape and motion: a floating island, a MacBook notch, a Windows 11 card.</li>
+      </ul>
+      <div class="pair">
+        <img src="../assets/images/mora/island-timer.webp" alt="" width="760" height="230" loading="lazy">
+        <img src="../assets/images/mora/fluent-timer.webp" alt="" width="760" height="230" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    <div class="body">
+      <p class="fr"><strong>Ne jamais prendre le clavier.</strong> La fenêtre ne s'active jamais (<code>WS_EX_NOACTIVATE</code>, <code>MA_NOACTIVATE</code>), et une région de fenêtre suit la forme de l'île pour que tout autour reste cliquable. Un test automatique tape plus de 3 000 caractères dans sa propre fenêtre pendant qu'il fait passer l'île par tous ses états : il ne passe que si chaque caractère arrive.</p>
+      <p class="en"><strong>Never take the keyboard.</strong> The window never activates (<code>WS_EX_NOACTIVATE</code>, <code>MA_NOACTIVATE</code>), and a window region follows the island's shape so everything around it stays clickable. An automated test types over 3,000 characters into its own window while it drives the island through every state: it passes only if every character arrives.</p>
+      <p class="fr"><strong>Une forme dessinée par le compositeur.</strong> L'île est un rectangle arrondi de la couche de composition, animé par des ressorts : la redimensionner ne déclenche aucune mise en page XAML. Une ouverture plus une fermeture sont passées de 0,53 s à 0,24 s de CPU.</p>
+      <p class="en"><strong>A shape drawn by the compositor.</strong> The island is a composition rounded rectangle driven by springs: resizing it triggers no XAML layout. An open plus a close went from 0.53 s to 0.24 s of CPU.</p>
+      <p class="fr"><strong>Reconnaître les vrais jeux.</strong> Plein écran ne veut pas dire jeu : la capture de Snipping Tool aussi. Mora croise la liste de jeux de la Game Bar, les dossiers des lanceurs et le plein écran exclusif. Certains jeux, comme League of Legends, désactivent les raccourcis globaux : un hook clavier bas niveau prend le relais, seulement pendant ces jeux.</p>
+      <p class="en"><strong>Telling real games apart.</strong> Fullscreen does not mean game: Snipping Tool's capture is fullscreen too. Mora checks the Game Bar's game list, game launcher folders and exclusive fullscreen. Some games, like League of Legends, disable global hotkeys: a low-level keyboard hook takes over, only while such a game runs.</p>
+      <p class="fr"><strong>Rien n'est capturé.</strong> La waveform lit le niveau de crête des sorties audio, sans jamais enregistrer le son. Le micro et la caméra se détectent par les sessions de capture audio et le moniteur d'activité caméra de Windows.</p>
+      <p class="en"><strong>Nothing is captured.</strong> The waveform reads the peak level of the audio outputs, without ever recording sound. The microphone and camera are detected through audio capture sessions and Windows' camera activity monitor.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    <div class="body">
+      <p class="fr">Pas encore d'installeur signé : on l'installe avec un script qui compile le projet. Les écrans à mise à l'échelle différente n'ont pas été testés, et les fenêtres natives de volume de Windows ne sont pas masquées.</p>
+      <p class="en">No signed installer yet: it is installed with a script that builds the project. Monitors with different scaling were not tested, and Windows' native volume flyouts are not hidden.</p>
+    </div>
+  </section>
+
+  <a class="next" href="hermes.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Hermes →</strong></a>
+
+  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
+</div>
+</body>
+</html>
