@@ -74,7 +74,7 @@ nav .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .grid .row { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; color: var(--mute); }
 .grid h3 { font: 400 clamp(2rem, 3vw, 2.8rem)/1.1 var(--display); margin: 8px 0; }
 .grid p, .cards p { color: var(--body); }
-.link { display: inline-block; margin-top: 14px; border-bottom: 1px solid var(--ink); color: var(--ink); }
+.link { display: inline-block; margin-top: 14px; padding-bottom: 3px; border-bottom: 1px solid var(--ink); color: var(--ink); }
 .grid > a:hover h3, .cards a:hover h3 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
 .grid > a:hover .link, .cards a:hover .link { border-bottom-width: 3px; }
 
