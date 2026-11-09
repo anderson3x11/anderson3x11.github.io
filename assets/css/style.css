@@ -113,7 +113,6 @@ nav .links a:hover { text-decoration: underline; text-underline-offset: 4px; }
 /* Contact */
 .contact { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1px solid var(--soft); }
 .contact a { padding: 26px 26px 28px; text-decoration: none; border-right: 1px solid var(--soft); transition: background .2s; }
-.contact a:first-child { padding-left: 0; }
 .contact a:last-child { border-right: 0; }
 .contact a:hover { background: var(--hover); }
 .contact .caps { color: var(--mute); }
@@ -169,7 +168,7 @@ pre .c { color: #8f8d86; }
   nav .links .hide-sm { display: none; }
   .hero, .grid, .cards, .cards.two, .cols, .contact, .others, .pair { grid-template-columns: 1fr; }
   .grid > a, .grid > a:nth-child(odd), .grid > a:nth-child(even) { padding: 28px 0; border-right: 0; }
-  .contact a, .contact a:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--soft); }
+  .contact a { padding: 22px 18px; border-right: 0; border-bottom: 1px solid var(--soft); }
   .tl .item, .stack div { grid-template-columns: 1fr; gap: 4px; }
   .case-head .lede, .facts, .block h2, .block .body { grid-column: 1 / -1; }
 }
