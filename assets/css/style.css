@@ -23,6 +23,7 @@
 
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; }
+body { overflow-x: clip; }
 body { background: var(--paper); color: var(--ink); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; transition: background .4s, color .4s; }
 a { color: inherit; }
 img { display: block; max-width: 100%; height: auto; }
@@ -36,7 +37,9 @@ html[data-lang="fr"] .en, html[data-lang="en"] .fr { display: none !important; }
 .it { font-style: italic; color: var(--mute); }
 
 /* Nav: links left, name centered like a house wordmark, settings right */
-nav { position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px 0; background: var(--paper); border-bottom: 1px solid var(--hair); box-shadow: 0 0 0 100vmax var(--paper); clip-path: inset(0 -100vmax); transition: background .4s; }
+nav { position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--hair); }
+/* Full-width background behind the bar, fading with the rest of the page on theme change */
+nav::before { content: ""; position: absolute; inset: 0 calc(50% - 50vw); z-index: -1; background: var(--paper); transition: background .4s; }
 nav .nl, nav .nr { display: flex; align-items: center; gap: 30px; font: 500 12px var(--sans); text-transform: uppercase; letter-spacing: .2em; }
 nav .nr { justify-content: flex-end; }
 nav .nl a { text-decoration: none; position: relative; }
