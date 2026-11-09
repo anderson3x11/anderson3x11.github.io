@@ -17,10 +17,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/i18n.js"></script>
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
+  </script>
 </head>
 <body>
 <div class="wrap">
@@ -121,11 +124,6 @@
 
   <footer class="caps"><span>Thomas C. · anderson3x11</span><a href="#top"><span class="fr">Haut de page</span><span class="en">Back to top</span> ↑</a></footer>
 </div>
-<script>
-  const lang = () => document.documentElement.lang === "en" ? "en-GB" : "fr-FR";
-  const setDate = () => { const s = new Date().toLocaleDateString(lang(), { weekday:"long", day:"numeric", month:"long", year:"numeric" }); date.textContent = s.charAt(0).toUpperCase() + s.slice(1); };
-  setDate(); new MutationObserver(setDate).observe(document.documentElement, { attributeFilter:["lang"] });
-</script>
 <script type="module" src="assets/js/hero3d.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   --gold: #a8844f;
   --gold-text: #7f6033; /* gold dark enough for text on ivory */
   --code-bg: #1b1a18;
-  --serif: 'Bodoni Moda', 'Didot', Georgia, serif;
+  --serif: 'DM Serif Display', 'Didot', Georgia, serif;
   --sans: 'Jost', 'Futura', system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
 }
@@ -70,7 +70,8 @@ nav .brand { font: 500 15px var(--sans); text-transform: uppercase; letter-spaci
 @keyframes cue { to { top: 100%; } }
 
 /* Section heads: a hairline, a small label, a fine serif title */
-.sec { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 16px; padding: 120px 0 34px; border-top: 1px solid var(--hair); margin-top: 0; }
+.sec { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 16px; padding: 64px 0 34px; border-top: 1px solid var(--hair); margin-top: 96px; }
+.hero + .sec { margin-top: 0; }
 .sec h2 { font: 400 clamp(2.4rem, 4vw, 3.6rem)/1 var(--serif); letter-spacing: -.01em; }
 
 /* Main projects: 2 x 2, no rules, lots of air */
@@ -171,7 +172,7 @@ pre .c { color: #8f887c; }
   .hero, .grid, .cards, .cards.two, .cols, .contact, .pair { grid-template-columns: 1fr; }
   .hero { min-height: 0; padding: 56px 0 64px; }
   .scroll-cue { display: none; }
-  .sec { padding-top: 80px; }
+  .sec { margin-top: 64px; padding-top: 48px; }
   .grid { gap: 56px; }
   .others a, .tl .item, .stack div { grid-template-columns: 1fr; gap: 4px; }
   .case-head .lede, .facts, .block h2, .block .body { grid-column: 1 / -1; }
