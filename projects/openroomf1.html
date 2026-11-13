@@ -9,92 +9,96 @@
   <link rel="canonical" href="https://anderson3x11.dev/projects/openroomf1.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/zoom.js" defer></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/openroomf1.html" />
+  <meta property="og:title" content="openroomf1 · Thomas C." />
+  <meta property="og:description" content="openroomf1: post-race Formula 1 analysis. Pace, strategy, teammate duels and a replay of every Grand Prix. Python, FastF1, SvelteKit and ECharts." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/openroomf1.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
 </head>
-<body>
-<div class="wrap">
+<body class="case">
 
-  <nav>
-    <div class="nl">
-      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
-      <a href="../#contact">Contact</a>
-    </div>
-    <a class="brand" href="../">anderson3x11</a>
-    <div class="nr">
-      <div class="lang" role="group" aria-label="Langue / Language">
-        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
-      </div>
-      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
-    </div>
-  </nav>
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
 
-  <header class="case-head">
-    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
-    <h1><span class="num">04</span>openroomf1</h1>
-    <p class="lede">
-      <span class="fr">L'analyse d'après-course de la Formule 1, façon salle des opérations : rythme, stratégie, duels entre coéquipiers et replay de chaque Grand Prix.</span>
-      <span class="en">Post-race Formula 1 analysis, styled as an operation room: pace, strategy, teammate duels and a replay of every Grand Prix.</span>
-    </p>
-    <dl class="facts">
-      <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
-      <div><dt class="m">Stack</dt><dd>Python, pandas, FastF1, SvelteKit, ECharts, Docker</dd></div>
-      <div><dt class="m"><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">40 Grands Prix, saisons 2025 et 2026</span><span class="en">40 Grands Prix, 2025 and 2026 seasons</span></dd></div>
-      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Maintenu, mis à jour après chaque course</span><span class="en">Maintained, updated after every race</span></dd></div>
-      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://openroomf1.anderson3x11.dev" target="_blank" rel="noopener">openroomf1.anderson3x11.dev</a></dd></div>
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>04 / 08</span></div>
+      <h1 class="title">openroomf1</h1>
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></span><span><span class="fr">Maintenu, mis à jour après chaque course</span><span class="en">Maintained, updated after every race</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>Python, pandas, FastF1, SvelteKit, ECharts, Docker</dd></div>
+      <div><dt class="mono"><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">40 Grands Prix, saisons 2025 et 2026</span><span class="en">40 Grands Prix, 2025 and 2026 seasons</span></dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Maintenu, mis à jour après chaque course</span><span class="en">Maintained, updated after every race</span></dd></div>
+      <div><dt class="mono"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://openroomf1.anderson3x11.dev" target="_blank" rel="noopener">openroomf1.anderson3x11.dev</a></dd></div>
     </dl>
-  </header>
+    </div>
+  </div>
 
-  <figure class="shot">
-    <img src="../assets/images/og/openroomf1.webp" alt="openroomf1" width="1200" height="630">
-  </figure>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">L'analyse d'après-course de la Formule 1, façon salle des opérations : rythme, stratégie, duels entre coéquipiers et replay de chaque Grand Prix.</span>
+      <span class="en">Post-race Formula 1 analysis, styled as an operation room: pace, strategy, teammate duels and a replay of every Grand Prix.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/openroomf1.webm" autoplay muted loop playsinline aria-label="openroomf1 demo"></video></div>
+  </div>
 
-  <section class="block">
-    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
-    <div class="body">
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Après une course, les chiffres qui expliquent vraiment le résultat sont éparpillés : temps au tour, relais, arrêts, écarts. openroomf1 les rassemble sur une page par Grand Prix, lisible comme un tableau de bord d'ingénieur.</p>
       <p class="en">After a race, the numbers that actually explain the result are scattered: lap times, stints, stops, gaps. openroomf1 brings them together on one page per Grand Prix, read like an engineer's dashboard.</p>
       <p class="fr">Des filtres globaux (pilotes, équipes, plage de tours), toujours à portée sur le côté de l'écran, s'appliquent à tous les onglets, et chaque graphique se lit en clair comme en sombre.</p>
       <p class="en">Global filters (drivers, teams, lap range), always within reach on the side of the screen, apply to every tab, and every chart works in light and dark mode.</p>
-      <div class="pair">
-        <img src="../assets/images/openroomf1/home.webp" alt="Les Grands Prix de la saison" width="1512" height="804" loading="lazy">
-        <img src="../assets/images/openroomf1/positions.webp" alt="Positions tour par tour" width="1512" height="804" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Rythme et stratégie</span><span class="en">Pace and strategy</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Rythme et stratégie</span><span class="en">Pace and strategy</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">La race trace compare chaque pilote à une voiture de référence qui boucle chaque tour au temps médian du peloton : la pluie et les voitures de sécurité ne faussent plus la lecture. On y trouve aussi l'écart à n'importe quel pilote, une heatmap des temps au tour, le tour idéal et les vitesses de pointe.</p>
       <p class="en">The race trace compares every driver to a reference car that laps at the field's median time: rain and safety cars no longer skew the picture. It also shows the gap to any driver, a lap time heatmap, the ideal lap and top speeds.</p>
       <p class="fr">Côté stratégie : les relais pneus, les arrêts avec le temps d'immobilisation officiel et les positions avant et après, et la dégradation de chaque relais corrigée de l'effet du carburant.</p>
       <p class="en">On the strategy side: tyre stints, pit stops with the official stationary time and positions before and after, and the degradation of each stint corrected for fuel load.</p>
-      <div class="pair">
-        <img src="../assets/images/openroomf1/pace.webp" alt="Race trace" width="1512" height="804" loading="lazy">
-        <img src="../assets/images/openroomf1/strategy.webp" alt="Relais pneus et arrêts" width="1512" height="804" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Duels et replay</span><span class="en">Duels and replay</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Duels et replay</span><span class="en">Duels and replay</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Chaque paire de coéquipiers est comparée : arrivée, grille, tours passés devant, rythme médian, meilleur tour, vitesse. Le replay rejoue toute la course sur le tracé, une position par seconde, avec l'ordre de course, les pneus, les écarts et des raccourcis clavier.</p>
       <p class="en">Every pair of teammates is compared: finish, grid, laps ahead, median pace, best lap, speed. The replay plays the whole race back on the track map, one position per second, with the running order, tyres, gaps and keyboard shortcuts.</p>
-      <div class="pair">
-        <img src="../assets/images/openroomf1/duels.webp" alt="Duels entre coéquipiers" width="1512" height="804" loading="lazy">
-        <img src="../assets/images/openroomf1/replay.webp" alt="Replay de la course" width="1512" height="804" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr"><strong>Tout est pré-calculé.</strong> Un pipeline Python (FastF1, pandas) récupère les données après la course, calcule les statistiques et écrit des fichiers JSON compacts, environ 1 Mo par Grand Prix. SvelteKit en fait un site entièrement statique : pas de base de données, et le navigateur n'appelle jamais les sources de données.</p>
       <p class="en"><strong>Everything is computed ahead of time.</strong> A Python pipeline (FastF1, pandas) fetches the data after the race, computes the statistics and writes compact JSON files, about 1 MB per Grand Prix. SvelteKit turns them into a fully static site: no database, and the browser never calls the data sources.</p>
       <p class="fr"><strong>Un déploiement contraint par la source.</strong> L'archive live timing de la F1 refuse les IP de datacenters, VPS comme runners GitHub Actions. Le pipeline tourne donc chez moi : un script traite la course et pousse les données, et Coolify reconstruit l'image Docker (build statique servi par Caddy) à chaque push.</p>
@@ -106,19 +110,48 @@ uv run python -m pipeline run --season "$SEASON" --latest
 git add data &amp;&amp; git commit -m "Data: $SEASON, latest race" -- data
 git push  <span class="c"># Coolify rebuilds the site</span></code></pre>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(F)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">C'est de l'analyse après course, pas du direct : le site est mis à jour le soir du Grand Prix. La F1 ne publie que les radios diffusées à l'antenne, et pas la position de la voiture de sécurité : le replay la place devant le leader pendant les neutralisations.</p>
       <p class="en">It's post-race analysis, not live: the site is updated on the evening of the Grand Prix. F1 only publishes the radios that were broadcast, and not the safety car's position: the replay places it ahead of the leader during neutralisations.</p>
     </div>
-  </section>
+  </div>
+</main>
 
-  <a class="next" href="sudoclue.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Sudoclue →</strong></a>
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
+  <canvas class="curve wide" id="gal" aria-label="openroomf1"></canvas>
+</section>
 
-  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
-</div>
+<a class="next" href="sudoclue.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 05</span><strong>Sudoclue</strong></span>
+  <span class="round" aria-hidden="true">→</span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js";
+  carousel(document.getElementById("gal"), ["../assets/demos/openroomf1-2.webm", "../assets/demos/openroomf1-3.webm", "../assets/demos/openroomf1-4.webm", "../assets/demos/openroomf1-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
 </body>
 </html>

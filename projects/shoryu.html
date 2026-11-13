@@ -9,105 +9,110 @@
   <link rel="canonical" href="https://anderson3x11.dev/projects/shoryu.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/zoom.js" defer></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/shoryu.html" />
+  <meta property="og:title" content="Shoryu · Thomas C." />
+  <meta property="og:description" content="Shoryu: Street Fighter 6 player stats, rankings and matchup charts, built with Next.js, TypeScript and Supabase." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/shoryu.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
 </head>
-<body>
-<div class="wrap">
+<body class="case">
 
-  <nav>
-    <div class="nl">
-      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
-      <a href="../#contact">Contact</a>
-    </div>
-    <a class="brand" href="../">anderson3x11</a>
-    <div class="nr">
-      <div class="lang" role="group" aria-label="Langue / Language">
-        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
-      </div>
-      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
-    </div>
-  </nav>
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
 
-  <header class="case-head">
-    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
-    <h1><span class="num">03</span>Shoryu</h1>
-    <p class="lede">
-      <span class="fr">Les stats Street Fighter 6, enfin lisibles : recherche par pseudo, profils joueurs, classements, matchups et fiches personnages.</span>
-      <span class="en">Street Fighter 6 stats, made readable: search by username, player profiles, rankings, matchups and character pages.</span>
-    </p>
-    <dl class="facts">
-      <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
-      <div><dt class="m">Stack</dt><dd>Next.js 16, TypeScript, Tailwind, Supabase, Recharts</dd></div>
-      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">En production, open source (MIT)</span><span class="en">In production, open source (MIT)</span></dd></div>
-      <div><dt class="m">Audience</dt><dd><span class="fr">1 500+ visiteurs par mois, 59 pays (sept. 2026)</span><span class="en">1,500+ visitors a month, 59 countries (Sept. 2026)</span></dd></div>
-      <div><dt class="m"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://www.shoryu.site/" target="_blank" rel="noopener">shoryu.site</a> · <a href="https://github.com/anderson3x11/shoryu" target="_blank" rel="noopener">GitHub</a></dd></div>
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>03 / 08</span></div>
+      <h1 class="title">Shoryu</h1>
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></span><span><span class="fr">En production, open source (MIT)</span><span class="en">In production, open source (MIT)</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>Next.js 16, TypeScript, Tailwind, Supabase, Recharts</dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">En production, open source (MIT)</span><span class="en">In production, open source (MIT)</span></dd></div>
+      <div><dt class="mono">Audience</dt><dd><span class="fr">1 500+ visiteurs par mois, 59 pays (sept. 2026)</span><span class="en">1,500+ visitors a month, 59 countries (Sept. 2026)</span></dd></div>
+      <div><dt class="mono"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://www.shoryu.site/" target="_blank" rel="noopener">shoryu.site</a> · <a href="https://github.com/anderson3x11/shoryu" target="_blank" rel="noopener">GitHub</a></dd></div>
     </dl>
-  </header>
+    </div>
+  </div>
 
-  <figure class="shot">
-    <img src="../assets/images/og/shoryu.webp" alt="Shoryu" width="1200" height="630">
-  </figure>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">Les stats Street Fighter 6, enfin lisibles : recherche par pseudo, profils joueurs, classements, matchups et fiches personnages.</span>
+      <span class="en">Street Fighter 6 stats, made readable: search by username, player profiles, rankings, matchups and character pages.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/shoryu.webm" autoplay muted loop playsinline aria-label="Shoryu demo"></video></div>
+  </div>
 
-  <section class="block">
-    <h2><span class="fr">Le point de départ</span><span class="en">Where it started</span></h2>
-    <div class="body">
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">Le point de départ</span><span class="en">Where it started</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Les données existent sur Buckler's Boot Camp, le site officiel de Capcom, mais elles sont difficiles à lire et il n'y a pas de recherche : pour trouver un joueur, il faut connaître son identifiant et le taper dans l'adresse. Et pas d'API publique non plus.</p>
       <p class="fr">Avant Shoryu, je me servais beaucoup de <a href="https://sfbuff.site/" target="_blank" rel="noopener">SFBUFF</a>, un site open source qui permet déjà de chercher un joueur par son pseudo et d'analyser ses matchs. Très utile, mais il me manquait beaucoup de choses. J'ai créé Shoryu pour moi et pour la communauté : une interface plus accueillante, une navigation plus claire, et plus de données.</p>
       <p class="en">The data exists on Buckler's Boot Camp, Capcom's official site, but it's hard to read and there's no search: to find a player, you need their ID and have to type it in the URL. And no public API either.</p>
       <p class="en">Before Shoryu, I used <a href="https://sfbuff.site/" target="_blank" rel="noopener">SFBUFF</a> a lot: an open source site that already lets you search a player by username and analyze their matches. Very useful, but a lot was missing for me. I built Shoryu for myself and for the community: a friendlier interface, clearer navigation, and more data.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Profils joueurs</span><span class="en">Player profiles</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Profils joueurs</span><span class="en">Player profiles</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">On cherche un pseudo CFN ou un ID et on tombe sur le profil : chaque personnage joué avec ses victoires, défaites et son rang, la répartition des matchs par mode et le temps de jeu. S'y ajoutent les derniers matchs et les rivaux.</p>
       <p class="en">Search a CFN name or ID and you land on the profile: every character played with its wins, losses and rank, matches split by mode and time played. Recent battles and rivals come on top.</p>
       <p class="fr">L'onglet Stats trace l'historique MR ou LP de chaque personnage, et le taux de victoire contre chaque personnage adverse, filtrable par mode. Tout ça se lit d'un coup d'œil.</p>
       <p class="en">The Stats tab plots the MR or LP history of each character, and the win rate against every opposing character, filterable by mode. All readable at a glance.</p>
       <p class="fr">C'est la fonctionnalité qui sert le plus : sur les 30 derniers jours, plus de 1 100 profils différents ont été consultés. Le Japon est le premier pays, devant le Brésil et les États-Unis.</p>
       <p class="en">It's the most used feature: over the last 30 days, more than 1,100 different profiles were viewed. Japan is the top country, ahead of Brazil and the United States.</p>
-      <div class="pair">
-        <img src="../assets/images/shoryu/profile.webp" alt="Profil joueur : personnages, rangs et matchs par mode" width="1456" height="822" loading="lazy">
-        <img src="../assets/images/shoryu/mr-history.webp" alt="Historique MR d'un personnage" width="1456" height="822" loading="lazy">
-      </div>
-      <img src="../assets/images/shoryu/matchups.webp" alt="Taux de victoire par matchup" width="1456" height="822" loading="lazy">
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Personnages</span><span class="en">Characters</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Personnages</span><span class="en">Characters</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Chaque personnage a sa fiche : présentation, statistiques de base (vie, vitesses, portée de choppe) et sa frame data complète, cherchable et filtrable par type de coup. Les données viennent du wiki SuperCombo, régénérées par un script après chaque patch d'équilibrage.</p>
       <p class="en">Every character has a page: overview, base stats (health, speeds, throw range) and full frame data, searchable and filterable by move type. The data comes from the SuperCombo wiki, regenerated by a script after each balance patch.</p>
-      <div class="pair">
-        <img src="../assets/images/shoryu/character.webp" alt="Fiche personnage de Ryu" width="1456" height="822" loading="lazy">
-        <img src="../assets/images/shoryu/frame-data.webp" alt="Frame data filtrable" width="1456" height="822" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Méta et tournois</span><span class="en">Meta and tournaments</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Méta et tournois</span><span class="en">Meta and tournaments</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Les taux d'utilisation des personnages par rang, en contrôles Classic ou Modern, avec l'évolution sur un mois. Le haut du classement Master, les résultats des tournois avec gagnants et dotations, les profils des pros, et Streetdle, un jeu quotidien pour deviner un personnage.</p>
       <p class="en">Character usage rates per rank, in Classic or Modern controls, with the change over a month. The top of the Master ranking, tournament results with winners and prize pools, pro profiles, and Streetdle, a daily guess-the-character game.</p>
-      <div class="pair">
-        <img src="../assets/images/shoryu/usage.webp" alt="Taux d'utilisation des personnages" width="1456" height="822" loading="lazy">
-        <img src="../assets/images/shoryu/tournaments.webp" alt="Résultats des tournois" width="1456" height="822" loading="lazy">
-      </div>
       <p class="fr">Tout est pensé mobile d'abord et fonctionne dès 375 px de large.</p>
       <p class="en">Everything is mobile first and works from 375 px wide.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(F)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr"><strong>Lire ce que Buckler rend déjà.</strong> Plutôt que deviner des endpoints non documentés, Shoryu lit le JSON <code>__NEXT_DATA__</code> embarqué dans les pages de Buckler, avec un cookie de session. Toutes les requêtes passent par une file qui les espace, pour ne jamais inonder le site de Capcom.</p>
       <p class="en"><strong>Read what Buckler already renders.</strong> Instead of guessing undocumented endpoints, Shoryu reads the <code>__NEXT_DATA__</code> JSON embedded in Buckler's pages, with a session cookie. Every request goes through a pacing queue so Capcom's site never gets flooded.</p>
       <p class="fr"><strong>Cacher pour limiter le trafic.</strong> Supabase garde les données et leur historique :</p>
@@ -121,19 +126,48 @@
       <p class="fr"><strong>Next.js côté serveur.</strong> App Router et Server Components : les données sont récupérées sur le serveur, le cookie Buckler et la clé Supabase ne quittent jamais le back.</p>
       <p class="en"><strong>Server-side Next.js.</strong> App Router and Server Components: data is fetched on the server, so the Buckler cookie and the Supabase key never leave the back end.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(G)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Tout dépend d'un cookie de session Buckler qui expire régulièrement. Quand les profils reviennent vides, il faut en récupérer un nouveau à la main.</p>
       <p class="en">Everything depends on a Buckler session cookie that expires regularly. When profiles come back empty, a fresh one has to be grabbed by hand.</p>
     </div>
-  </section>
+  </div>
+</main>
 
-  <a class="next" href="openroomf1.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>openroomf1 →</strong></a>
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>07</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Shoryu"></canvas>
+</section>
 
-  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
-</div>
+<a class="next" href="openroomf1.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 04</span><strong>openroomf1</strong></span>
+  <span class="round" aria-hidden="true">→</span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js";
+  carousel(document.getElementById("gal"), ["../assets/images/shoryu/profile.webp", "../assets/images/shoryu/mr-history.webp", "../assets/images/shoryu/matchups.webp", "../assets/images/shoryu/character.webp", "../assets/images/shoryu/frame-data.webp", "../assets/images/shoryu/usage.webp", "../assets/images/shoryu/tournaments.webp"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
 </body>
 </html>

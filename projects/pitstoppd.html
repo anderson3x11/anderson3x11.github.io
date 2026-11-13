@@ -9,90 +9,94 @@
   <link rel="canonical" href="https://anderson3x11.dev/projects/pitstoppd.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/zoom.js" defer></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/pitstoppd.html" />
+  <meta property="og:title" content="Pitstoppd · Thomas C." />
+  <meta property="og:description" content="Pitstoppd: Letterboxd for Formula 1 Grands Prix. Rate and review every race since 2000. React, Hono and SQLite." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/pitstoppd.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
 </head>
-<body>
-<div class="wrap">
+<body class="case">
 
-  <nav>
-    <div class="nl">
-      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
-      <a href="../#contact">Contact</a>
-    </div>
-    <a class="brand" href="../">anderson3x11</a>
-    <div class="nr">
-      <div class="lang" role="group" aria-label="Langue / Language">
-        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
-      </div>
-      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
-    </div>
-  </nav>
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
 
-  <header class="case-head">
-    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
-    <h1><span class="num">08</span>Pitstoppd</h1>
-    <p class="lede">
-      <span class="fr">Un Letterboxd pour la Formule 1 : chaque Grand Prix depuis 2000 a sa fiche, on le note, on le critique, et on suit ce qu'en pensent les autres.</span>
-      <span class="en">Letterboxd for Formula 1: every Grand Prix since 2000 has its page, you rate it, review it, and follow what others thought.</span>
-    </p>
-    <dl class="facts">
-      <div><dt class="m">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
-      <div><dt class="m">Stack</dt><dd>React 19, Vite, Tailwind 4, Hono, SQLite</dd></div>
-      <div><dt class="m"><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">550+ courses, 130 pilotes, de 2000 à 2026</span><span class="en">550+ races, 130 drivers, 2000 to 2026</span></dd></div>
-      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Preuve de concept, terminée</span><span class="en">Proof of concept, complete</span></dd></div>
-      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://pitstoppd.anderson3x11.dev" target="_blank" rel="noopener">pitstoppd.anderson3x11.dev</a></dd></div>
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>08 / 08</span></div>
+      <h1 class="title">Pitstoppd</h1>
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></span><span><span class="fr">Preuve de concept, terminée</span><span class="en">Proof of concept, complete</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>React 19, Vite, Tailwind 4, Hono, SQLite</dd></div>
+      <div><dt class="mono"><span class="fr">Données</span><span class="en">Data</span></dt><dd><span class="fr">550+ courses, 130 pilotes, de 2000 à 2026</span><span class="en">550+ races, 130 drivers, 2000 to 2026</span></dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Preuve de concept, terminée</span><span class="en">Proof of concept, complete</span></dd></div>
+      <div><dt class="mono"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://pitstoppd.anderson3x11.dev" target="_blank" rel="noopener">pitstoppd.anderson3x11.dev</a></dd></div>
     </dl>
-  </header>
+    </div>
+  </div>
 
-  <figure class="shot">
-    <img src="../assets/images/og/pitstoppd.webp" alt="Pitstoppd" width="1200" height="630">
-  </figure>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">Un Letterboxd pour la Formule 1 : chaque Grand Prix depuis 2000 a sa fiche, on le note, on le critique, et on suit ce qu'en pensent les autres.</span>
+      <span class="en">Letterboxd for Formula 1: every Grand Prix since 2000 has its page, you rate it, review it, and follow what others thought.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/pitstoppd.webm" autoplay muted loop playsinline aria-label="Pitstoppd demo"></video></div>
+  </div>
 
-  <section class="block">
-    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
-    <div class="body">
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Letterboxd a changé la façon de parler de films : on note, on écrit trois lignes, on voit ce qu'en pensent ses amis. Pitstoppd applique la même boucle aux Grands Prix. Chaque course est traitée comme un film, avec une affiche, une note moyenne et des avis.</p>
       <p class="en">Letterboxd changed how people talk about films: you rate, write three lines, see what your friends thought. Pitstoppd applies the same loop to Grands Prix. Every race is treated like a film, with a poster, an average score and reviews.</p>
       <p class="fr">Tout se lit sans compte. On n'en demande un qu'au moment d'agir : noter, critiquer, liker ou suivre quelqu'un.</p>
       <p class="en">Everything can be read without an account. One is only asked for when acting: rating, reviewing, liking or following someone.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Les Grands Prix</span><span class="en">Grands Prix</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Les Grands Prix</span><span class="en">Grands Prix</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Chaque course a sa fiche : résultat complet, grille de départ, note moyenne et avis, triés par popularité ou par date. On note de 0,5 à 5 étoiles, une critique par course, et une critique peut être marquée « spoiler » : elle reste masquée jusqu'à ce qu'on clique.</p>
       <p class="en">Every race has its page: full result, starting grid, average score and reviews, sorted by popularity or date. Ratings go from 0.5 to 5 stars, one review per race, and a review can be flagged as a spoiler: it stays hidden until you click.</p>
-      <div class="pair">
-        <img src="../assets/images/pitstoppd/grand-prix.webp" alt="Fiche d'un Grand Prix" width="1512" height="804" loading="lazy">
-        <img src="../assets/images/pitstoppd/reviews.webp" alt="Avis et résultat de la course" width="1512" height="803" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Saisons, pilotes, profils</span><span class="en">Seasons, drivers, profiles</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Saisons, pilotes, profils</span><span class="en">Seasons, drivers, profiles</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Chaque saison depuis 2000 avec son champion, les classements pilotes et constructeurs, et la note que lui donnent les fans. Une fiche par pilote avec sa carrière et ses dernières courses. Et des profils à la Letterboxd : pilotes et écurie préférés, répartition des notes, critiques récentes, abonnés et abonnements, avec un fil d'activité de ceux qu'on suit.</p>
       <p class="en">Every season since 2000 with its champion, driver and constructor standings, and the score fans give it. A page per driver with their career and recent races. And Letterboxd-style profiles: favorite drivers and team, rating distribution, recent reviews, followers and following, with an activity feed of the people you follow.</p>
-      <div class="pair">
-        <img src="../assets/images/pitstoppd/seasons.webp" alt="Toutes les saisons depuis 2000" width="1512" height="804" loading="lazy">
-        <img src="../assets/images/pitstoppd/drivers.webp" alt="Les pilotes de la grille" width="1512" height="804" loading="lazy">
-      </div>
-      <div class="pair">
-        <img src="../assets/images/pitstoppd/driver.webp" alt="Fiche pilote" width="1512" height="804" loading="lazy">
-        <img src="../assets/images/pitstoppd/profile.webp" alt="Profil utilisateur" width="1512" height="803" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr"><strong>De Supabase à mon propre back-end.</strong> La première version reposait sur Supabase pour l'authentification, la base et le stockage. Je l'ai remplacé par une API Hono et le SQLite intégré à Node (<code>node:sqlite</code>), qui sert aussi le front. Résultat : plus aucun service externe, une seule image Docker et un volume persistant, déployés sur mon serveur avec Coolify.</p>
       <p class="en"><strong>From Supabase to my own back end.</strong> The first version relied on Supabase for auth, database and storage. I replaced it with a Hono API and Node's built-in SQLite (<code>node:sqlite</code>), which also serves the front. The result: no external service, one Docker image and a persistent volume, deployed on my server with Coolify.</p>
       <p class="fr"><strong>L'authentification faite à la main, proprement.</strong> Mots de passe hachés avec scrypt et un sel aléatoire, comparés en temps constant. Sessions dans un cookie <code>httpOnly</code>, <code>SameSite=Lax</code>, <code>Secure</code> en production. Les règles métier sont dans la base : une seule note et une seule critique par personne et par course, suppression en cascade quand un compte est supprimé.</p>
@@ -106,19 +110,48 @@ return `${salt}:${scryptSync(password, salt, 64).toString('hex')}`
       <p class="fr"><strong>Testé de bout en bout.</strong> <code>npm run check</code> démarre l'API sur une base jetable et rejoue tout le parcours : inscription, note, critique, like, abonnement. La CI le lance à chaque push.</p>
       <p class="en"><strong>Tested end to end.</strong> <code>npm run check</code> starts the API on a throwaway database and replays the whole journey: sign-up, rating, review, like, follow. CI runs it on every push.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(F)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">C'est une preuve de concept : les comptes et les avis visibles sur le site sont des données de démonstration. Et les photos des pilotes, chargées depuis Wikipedia, peuvent mettre quelques secondes à apparaître.</p>
       <p class="en">It's a proof of concept: the accounts and reviews visible on the site are demo data. And driver photos, loaded from Wikipedia, can take a few seconds to show up.</p>
     </div>
-  </section>
+  </div>
+</main>
 
-  <a class="next" href="cascades.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Cascades →</strong></a>
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>06</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Pitstoppd"></canvas>
+</section>
 
-  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
-</div>
+<a class="next" href="cascades.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 01</span><strong>Cascades</strong></span>
+  <span class="round" aria-hidden="true">→</span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js";
+  carousel(document.getElementById("gal"), ["../assets/images/pitstoppd/grand-prix.webp", "../assets/images/pitstoppd/reviews.webp", "../assets/images/pitstoppd/seasons.webp", "../assets/images/pitstoppd/drivers.webp", "../assets/images/pitstoppd/driver.webp", "../assets/images/pitstoppd/profile.webp"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
 </body>
 </html>

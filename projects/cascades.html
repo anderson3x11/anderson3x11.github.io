@@ -9,86 +9,95 @@
   <link rel="canonical" href="https://anderson3x11.dev/projects/cascades.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/zoom.js" defer></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/cascades.html" />
+  <meta property="og:title" content="Cascades · Thomas C." />
+  <meta property="og:description" content="Cascades: a light note-taking text editor for Windows, macOS and Linux, built with Tauri, Rust and Svelte." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/cascades.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
 </head>
-<body>
-<div class="wrap">
+<body class="case">
 
-  <nav>
-    <div class="nl">
-      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
-      <a href="../#contact">Contact</a>
-    </div>
-    <a class="brand" href="../">anderson3x11</a>
-    <div class="nr">
-      <div class="lang" role="group" aria-label="Langue / Language">
-        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
-      </div>
-      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
-    </div>
-  </nav>
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
 
-  <header class="case-head">
-    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
-    <h1><span class="num">01</span>Cascades</h1>
-    <p class="lede">
-      <span class="fr">Un éditeur de texte léger pour prendre des notes, qui ouvre aussi n'importe quel fichier texte ou code. La simplicité de Notepad++, la personnalisation de Vim.</span>
-      <span class="en">A light text editor for taking notes that still opens any text or code file. The simplicity of Notepad++, the customization of Vim.</span>
-    </p>
-    <dl class="facts">
-      <div><dt class="m">Type</dt><dd><span class="fr">App desktop, Windows · macOS · Linux</span><span class="en">Desktop app, Windows · macOS · Linux</span></dd></div>
-      <div><dt class="m">Stack</dt><dd>Tauri 2, Rust, Svelte 5, TypeScript, CodeMirror 6</dd></div>
-      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Version 1.0, open source (MIT)</span><span class="en">Version 1.0, open source (MIT)</span></dd></div>
-      <div><dt class="m"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://anderson3x11.dev/cascades-site/" target="_blank" rel="noopener">Site</a> · <a href="https://github.com/anderson3x11/cascades" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/anderson3x11/cascades/releases/latest" target="_blank" rel="noopener"><span class="fr">Télécharger</span><span class="en">Download</span></a></dd></div>
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>01 / 08</span></div>
+      <h1 class="title">Cascades</h1>
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">App desktop, Windows · macOS · Linux</span><span class="en">Desktop app, Windows · macOS · Linux</span></span><span><span class="fr">Version 1.0, open source (MIT)</span><span class="en">Version 1.0, open source (MIT)</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">App desktop, Windows · macOS · Linux</span><span class="en">Desktop app, Windows · macOS · Linux</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>Tauri 2, Rust, Svelte 5, TypeScript, CodeMirror 6</dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Version 1.0, open source (MIT)</span><span class="en">Version 1.0, open source (MIT)</span></dd></div>
+      <div><dt class="mono"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://anderson3x11.dev/cascades-site/" target="_blank" rel="noopener">Site</a> · <a href="https://github.com/anderson3x11/cascades" target="_blank" rel="noopener">GitHub</a> · <a href="https://github.com/anderson3x11/cascades/releases/latest" target="_blank" rel="noopener"><span class="fr">Télécharger</span><span class="en">Download</span></a></dd></div>
     </dl>
-  </header>
+    </div>
+  </div>
 
-  <figure class="shot">
-    <img src="../assets/images/og/cascades.webp" alt="Cascades" width="1200" height="630">
-  </figure>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">Un éditeur de texte léger pour prendre des notes, qui ouvre aussi n'importe quel fichier texte ou code. La simplicité de Notepad++, la personnalisation de Vim.</span>
+      <span class="en">A light text editor for taking notes that still opens any text or code file. The simplicity of Notepad++, the customization of Vim.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/cascades.webm" autoplay muted loop playsinline aria-label="Cascades demo"></video></div>
+  </div>
 
-  <section class="block">
-    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
-    <div class="body">
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">J'écris mes notes ligne par ligne, et j'indente une ligne quand elle découle de celle du dessus. Aucun éditeur ne montrait ce lien. Cascades le dessine.</p>
       <p class="en">I write notes line by line, and indent a line when it follows from the one above. No editor showed that link. Cascades draws it.</p>
-      <img src="../assets/images/cascades/cascades.gif" alt="" width="760" height="330" loading="lazy">
       <p class="fr">Le fichier ne contient que des tabulations : les traits sont tracés à l'affichage, jamais écrits. Copier le texte copie les tabulations, et le fichier reste lisible partout. Chaque ligne parent se replie, la branche courante est surlignée, et il y a huit styles de traits.</p>
       <p class="en">The file only holds tabs: the lines are drawn on screen, never written. Copying text copies the tabs, and the file stays readable anywhere. Every parent line folds, the current branch is highlighted, and there are eight line styles.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
-    <div class="body">
-      <ul class="fr">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
+    </div>
+    <div class="cell prose">
+      <ol class="num-list fr">
         <li>Onglets, jusqu'à quatre vues côte à côte, et une session restaurée au démarrage, onglets non enregistrés compris.</li>
         <li>Listes intelligentes, paires de parenthèses, tableaux Markdown alignés au Tab, correcteur orthographique.</li>
         <li>Aperçu Markdown, HTML, CSV et JSON à côté de l'éditeur. Images et PDF dans un onglet.</li>
         <li>Recherche et remplacement dans tout un dossier, encodages et fins de ligne conservés.</li>
         <li>Sept thèmes, une touche leader, une palette de commandes, des raccourcis modifiables.</li>
-      </ul>
-      <ul class="en">
+      </ol>
+      <ol class="num-list en">
         <li>Tabs, up to four side-by-side views, and a session restored on start, unsaved tabs included.</li>
         <li>Smart lists, auto pairs, Markdown tables aligned with Tab, spell checking.</li>
         <li>Markdown, HTML, CSV and JSON preview next to the editor. Images and PDFs in a tab.</li>
         <li>Search and replace across a folder, encodings and line endings kept on save.</li>
         <li>Seven themes, a leader key, a command palette, remappable shortcuts.</li>
-      </ul>
-      <div class="pair">
-        <img src="../assets/images/cascades/preview.png" alt="" width="1920" height="1140" loading="lazy">
-        <img src="../assets/images/cascades/preferences.png" alt="" width="1920" height="1140" loading="lazy">
-      </div>
+      </ol>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr"><strong>Tout est une extension.</strong> Chaque fonctionnalité s'active avec <code>activate(ctx)</code> et ne peut importer que <code>src/api</code>, une règle de lint l'impose. Les fonctions de base passent donc par la même API que les plugins, qui est testée en permanence. Un fichier <code>init.js</code> reçoit le même objet <code>ctx</code>.</p>
       <p class="en"><strong>Everything is an extension.</strong> Every feature is activated with <code>activate(ctx)</code> and may only import <code>src/api</code>, enforced by a lint rule. Built-in features go through the same API as plugins, so that API is tested all the time. An <code>init.js</code> file gets the same <code>ctx</code> object.</p>
       <pre><code><span class="c">// init.js, loaded on start like any extension</span>
@@ -101,19 +110,48 @@ export default function (ctx) {
       <p class="fr"><strong>Mises à jour intégrées.</strong> L'app propose chaque nouvelle version au démarrage et l'installe elle-même, avec des mises à jour signées.</p>
       <p class="en"><strong>Built-in updates.</strong> The app offers each new version at start and installs it itself, with signed updates.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Les installeurs ne sont pas encore signés avec un certificat payant : Windows et macOS affichent un avertissement à la première installation.</p>
       <p class="en">The installers are not signed with a paid certificate yet: Windows and macOS show a warning on first install.</p>
     </div>
-  </section>
+  </div>
+</main>
 
-  <a class="next" href="mora.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Mora →</strong></a>
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Cascades"></canvas>
+</section>
 
-  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
-</div>
+<a class="next" href="mora.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 02</span><strong>Mora</strong></span>
+  <span class="round" aria-hidden="true">→</span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js";
+  carousel(document.getElementById("gal"), ["../assets/demos/cascades-2.webm", "../assets/demos/cascades-3.webm", "../assets/demos/cascades-4.webm", "../assets/demos/cascades-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
 </body>
 </html>

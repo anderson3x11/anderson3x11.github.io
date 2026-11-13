@@ -9,91 +9,97 @@
   <link rel="canonical" href="https://anderson3x11.dev/projects/mora.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/i18n.js"></script>
-  <script src="../assets/js/zoom.js" defer></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/mora.html" />
+  <meta property="og:title" content="Mora · Thomas C." />
+  <meta property="og:description" content="Mora: a Dynamic Island for Windows 10 and 11. Music, timers, a file shelf and clipboard history in a pill at the top of the screen, which never takes your keyboard. C#, WinUI 3." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/mora.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
 </head>
-<body>
-<div class="wrap">
+<body class="case">
 
-  <nav>
-    <div class="nl">
-      <a href="../#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
-      <a href="../#contact">Contact</a>
-    </div>
-    <a class="brand" href="../">anderson3x11</a>
-    <div class="nr">
-      <div class="lang" role="group" aria-label="Langue / Language">
-        <button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button>
-      </div>
-      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
-    </div>
-  </nav>
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
 
-  <header class="case-head">
-    <a class="back m" href="../#projects">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
-    <h1><span class="num">02</span>Mora</h1>
-    <p class="lede">
-      <span class="fr">Une Dynamic Island pour Windows : la musique, les minuteurs, une étagère de fichiers et l'historique du presse-papiers dans une pilule en haut de l'écran, qui ne prend jamais le clavier.</span>
-      <span class="en">A Dynamic Island for Windows: music, timers, a file shelf and clipboard history in a pill at the top of the screen, which never takes your keyboard.</span>
-    </p>
-    <dl class="facts">
-      <div><dt class="m">Type</dt><dd><span class="fr">App desktop, Windows 10 · 11</span><span class="en">Desktop app, Windows 10 · 11</span></dd></div>
-      <div><dt class="m">Stack</dt><dd>C#, WinUI 3 (Windows App SDK), .NET 10, Win32, Core Audio</dd></div>
-      <div><dt class="m"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Open source (MIT), utilisée au quotidien</span><span class="en">Open source (MIT), in daily use</span></dd></div>
-      <div><dt class="m"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://github.com/anderson3x11/mora" target="_blank" rel="noopener">GitHub</a></dd></div>
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>02 / 08</span></div>
+      <h1 class="title">Mora</h1>
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">App desktop, Windows 10 · 11</span><span class="en">Desktop app, Windows 10 · 11</span></span><span><span class="fr">Open source (MIT), utilisée au quotidien</span><span class="en">Open source (MIT), in daily use</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">App desktop, Windows 10 · 11</span><span class="en">Desktop app, Windows 10 · 11</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>C#, WinUI 3 (Windows App SDK), .NET 10, Win32, Core Audio</dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Open source (MIT), utilisée au quotidien</span><span class="en">Open source (MIT), in daily use</span></dd></div>
+      <div><dt class="mono"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://github.com/anderson3x11/mora" target="_blank" rel="noopener">GitHub</a></dd></div>
     </dl>
-  </header>
+    </div>
+  </div>
 
-  <figure class="shot">
-    <img src="../assets/images/og/mora.webp" alt="Mora" width="1200" height="630">
-  </figure>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">Une Dynamic Island pour Windows : la musique, les minuteurs, une étagère de fichiers et l'historique du presse-papiers dans une pilule en haut de l'écran, qui ne prend jamais le clavier.</span>
+      <span class="en">A Dynamic Island for Windows: music, timers, a file shelf and clipboard history in a pill at the top of the screen, which never takes your keyboard.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/mora.webm" autoplay muted loop playsinline aria-label="Mora demo"></video></div>
+  </div>
 
-  <section class="block">
-    <h2><span class="fr">L'idée</span><span class="en">The idea</span></h2>
-    <div class="body">
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Sur Mac, des apps comme NotchNook transforment l'encoche en un petit centre de contrôle. Sur Windows, rien d'équivalent qui respecte deux choses : le clavier et les jeux. Une fenêtre qui vole le focus pendant qu'on tape, ou qui surgit en pleine partie, est pire que pas de fenêtre du tout.</p>
       <p class="en">On a Mac, apps like NotchNook turn the notch into a small control center. On Windows, nothing equivalent respects two things: the keyboard and games. A window that steals focus while you type, or pops up mid-game, is worse than no window at all.</p>
       <p class="fr">Mora affiche ce qui se passe maintenant (morceau en cours, minuteur, téléchargement terminé, casque connecté, micro ou caméra utilisés), s'ouvre avec un raccourci, puis s'efface. Son nom vient du malgache « mora mora » : doucement, tranquillement.</p>
       <p class="en">Mora shows what is happening right now (the current track, a timer, a finished download, headphones connected, the microphone or camera in use), opens with a shortcut, then gets out of the way. Its name comes from the Malagasy "mora mora": easy, gently.</p>
-      <div class="pair">
-        <img src="../assets/images/mora/notch-panel.webp" alt="" width="760" height="230" loading="lazy">
-        <img src="../assets/images/mora/notch-alert.webp" alt="" width="760" height="230" loading="lazy">
-      </div>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
-    <div class="body">
-      <ul class="fr">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Ce qu'il fait</span><span class="en">What it does</span></h2>
+    </div>
+    <div class="cell prose">
+      <ol class="num-list fr">
         <li>La musique de n'importe quelle app (Spotify, navigateurs, lecteurs), avec une pochette qui prend la forme de la source et une waveform qui suit le son réel.</li>
         <li>Minuteurs et sessions de concentration, avec une pilule de décompte à côté de l'île.</li>
         <li>Une étagère : on y glisse des fichiers, même en les tirant vers le haut de l'écran, puis on les ressort dans n'importe quelle app.</li>
         <li>L'historique du presse-papiers, textes et images, gardé en mémoire uniquement.</li>
         <li>En jeu, Mora se tait. Un profil par jeu choisit ce qui peut s'afficher, et une carte musique se pilote aux flèches.</li>
         <li>Trois thèmes, chacun avec sa forme et son mouvement : une île flottante, une encoche de MacBook, une carte Windows 11.</li>
-      </ul>
-      <ul class="en">
+      </ol>
+      <ol class="num-list en">
         <li>Music from any app (Spotify, browsers, players), with artwork shaped by the source and a waveform that follows the actual sound.</li>
         <li>Timers and focus sessions, with a countdown pill beside the island.</li>
         <li>A shelf: drop files on it, even by dragging them toward the top of the screen, then drag them out into any app.</li>
         <li>Clipboard history, text and images, kept in memory only.</li>
         <li>In games, Mora keeps quiet. A profile per game picks what may show, and a music card is driven with the arrow keys.</li>
         <li>Three themes, each with its own shape and motion: a floating island, a MacBook notch, a Windows 11 card.</li>
-      </ul>
-      <div class="pair">
-        <img src="../assets/images/mora/island-timer.webp" alt="" width="760" height="230" loading="lazy">
-        <img src="../assets/images/mora/fluent-timer.webp" alt="" width="760" height="230" loading="lazy">
-      </div>
+      </ol>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr"><strong>Ne jamais prendre le clavier.</strong> La fenêtre ne s'active jamais (<code>WS_EX_NOACTIVATE</code>, <code>MA_NOACTIVATE</code>), et une région de fenêtre suit la forme de l'île pour que tout autour reste cliquable. Un test automatique tape plus de 3 000 caractères dans sa propre fenêtre pendant qu'il fait passer l'île par tous ses états : il ne passe que si chaque caractère arrive.</p>
       <p class="en"><strong>Never take the keyboard.</strong> The window never activates (<code>WS_EX_NOACTIVATE</code>, <code>MA_NOACTIVATE</code>), and a window region follows the island's shape so everything around it stays clickable. An automated test types over 3,000 characters into its own window while it drives the island through every state: it passes only if every character arrives.</p>
       <p class="fr"><strong>Une forme dessinée par le compositeur.</strong> L'île est un rectangle arrondi de la couche de composition, animé par des ressorts : la redimensionner ne déclenche aucune mise en page XAML. Une ouverture plus une fermeture sont passées de 0,53 s à 0,24 s de CPU.</p>
@@ -103,19 +109,48 @@
       <p class="fr"><strong>Rien n'est capturé.</strong> La waveform lit le niveau de crête des sorties audio, sans jamais enregistrer le son. Le micro et la caméra se détectent par les sessions de capture audio et le moniteur d'activité caméra de Windows.</p>
       <p class="en"><strong>Nothing is captured.</strong> The waveform reads the peak level of the audio outputs, without ever recording sound. The microphone and camera are detected through audio capture sessions and Windows' camera activity monitor.</p>
     </div>
-  </section>
-
-  <section class="block">
-    <h2><span class="fr">Limites</span><span class="en">Limits</span></h2>
-    <div class="body">
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
       <p class="fr">Pas encore d'installeur signé : on l'installe avec un script qui compile le projet. Les écrans à mise à l'échelle différente n'ont pas été testés, et les fenêtres natives de volume de Windows ne sont pas masquées.</p>
       <p class="en">No signed installer yet: it is installed with a script that builds the project. Monitors with different scaling were not tested, and Windows' native volume flyouts are not hidden.</p>
     </div>
-  </section>
+  </div>
+</main>
 
-  <a class="next" href="shoryu.html"><span class="m"><span class="fr">Projet suivant</span><span class="en">Next project</span></span><strong>Shoryu →</strong></a>
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Mora"></canvas>
+</section>
 
-  <footer class="m"><span>Thomas C. · anderson3x11</span><a href="../">← <span class="fr">Accueil</span><span class="en">Home</span></a></footer>
-</div>
+<a class="next" href="shoryu.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 03</span><strong>Shoryu</strong></span>
+  <span class="round" aria-hidden="true">→</span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js";
+  carousel(document.getElementById("gal"), ["../assets/demos/mora-2.webm", "../assets/demos/mora-3.webm", "../assets/demos/mora-4.webm", "../assets/demos/mora-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
 </body>
 </html>

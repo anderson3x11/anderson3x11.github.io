@@ -3,127 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-fr="Thomas C. · Développeur web" data-en="Thomas C. · Web developer">Thomas C. · Développeur web</title>
+  <title data-fr="Thomas C. - Portfolio" data-en="Thomas C. - Portfolio">Thomas C. - Portfolio</title>
   <meta name="description" content="Thomas C. (anderson3x11), web developer based in France. Desktop, web and CLI apps, front to back, with a background in cybersecurity. Open to CDI / CDD." />
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
   <link rel="canonical" href="https://anderson3x11.dev/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://anderson3x11.dev/" />
-  <meta property="og:title" content="Thomas C. · Web developer" />
+  <meta property="og:title" content="Thomas C. - Portfolio" />
   <meta property="og:description" content="Desktop, web and CLI apps, front to back, with a background in cybersecurity. Open to CDI / CDD." />
   <meta property="og:image" content="https://anderson3x11.dev/assets/images/logo.png" />
   <meta name="twitter:card" content="summary" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/theme.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
   </script>
 </head>
 <body>
-<div class="wrap">
 
-  <nav>
-    <div class="nl">
-      <a href="#projects"><span class="fr">Projets</span><span class="en">Projects</span></a>
-      <a href="#about"><span class="fr">À propos</span><span class="en">About</span></a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a class="brand" href="#top">anderson3x11</a>
-    <div class="nr">
+<header class="hero" id="top">
+  <nav class="mono">
+    <div class="l">
       <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
-      <button class="theme" type="button" data-theme-btn aria-label="Mode sombre / Dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glass" d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V17h6v-1.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/><path d="M9.5 20h5M10.5 22.5h3"/></svg></button>
+    </div>
+    <a class="me" href="#top"><b>Thomas C.</b><span class="fr">Dev web &amp; cybersécurité</span><span class="en">Web dev &amp; cybersecurity</span></a>
+    <div class="r">
+      <a href="#work"><span class="fr">Projets</span><span class="en">Work</span></a>
+      <a href="#about"><span class="fr">À propos</span><span class="en">About</span></a>
+      <a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a>
     </div>
   </nav>
 
-  <header class="hero" id="top">
+  <div class="ascii" aria-hidden="true"></div>
+  <div class="marquee" aria-hidden="true"><span>Thomas C. ✦</span><span>anderson3x11 ✦</span><span>Thomas C. ✦</span><span>anderson3x11 ✦</span></div>
+
+
+  <div aria-hidden="true">
+    <img class="sticker" style="left:13%;top:19%;rotate:-9deg" src="assets/stickers/kuro-laptop.svg" alt="">
+    <img class="sticker" style="right:15%;top:17%;rotate:10deg;--r2:-3deg" src="assets/stickers/eye-splat.svg" alt="">
+    <img class="sticker" style="left:23%;bottom:30%;rotate:7deg" src="assets/stickers/sparkletrio.svg" alt="">
+    <img class="sticker" style="right:22%;bottom:34%;rotate:-12deg;--r2:5deg" src="assets/stickers/flame.svg" alt="">
+  </div>
+</header>
+
+<main>
+  <section class="work" id="work" aria-label="Projets">
+    <div class="panel">
+      <div class="head mono"><span class="fr">Projets principaux</span><span class="en">Main work</span><span>2025 — 2026</span></div>
+      <div class="infos">
+        <div class="info"><span class="kind mono"><span class="fr">App desktop</span><span class="en">Desktop app</span></span><h2>Cascades</h2><p><span class="fr">Un éditeur de notes où les lignes indentées sont reliées par des cascades dessinées. Le fichier reste du texte brut.</span><span class="en">A note-taking editor where indented lines are linked by drawn cascades. The file stays plain text.</span></p><span class="stack mono">Tauri · Rust · Svelte</span><a class="pill mono" href="projects/cascades.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
+        <div class="info"><span class="kind mono"><span class="fr">App desktop</span><span class="en">Desktop app</span></span><h2>Mora</h2><p><span class="fr">Une Dynamic Island pour Windows : musique, minuteurs, étagère de fichiers et presse-papiers dans une pilule.</span><span class="en">A Dynamic Island for Windows: music, timers, a file shelf and clipboard history in a pill.</span></p><span class="stack mono">C# · WinUI 3 · Win32</span><a class="pill mono" href="projects/mora.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
+        <div class="info"><span class="kind mono"><span class="fr">App web</span><span class="en">Web app</span></span><h2>Shoryu</h2><p><span class="fr">Les stats Street Fighter 6, enfin lisibles. Plus de 1 500 visiteurs par mois, dans 59 pays.</span><span class="en">Street Fighter 6 stats, made readable. Over 1,500 visitors a month, in 59 countries.</span></p><span class="stack mono">Next.js · Supabase · Recharts</span><a class="pill mono" href="projects/shoryu.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
+        <div class="info"><span class="kind mono"><span class="fr">App web</span><span class="en">Web app</span></span><h2>openroomf1</h2><p><span class="fr">L'analyse d'après-course de la F1 : rythme, stratégie, duels et replay de chaque Grand Prix.</span><span class="en">Post-race F1 analysis: pace, strategy, duels and a replay of every Grand Prix.</span></p><span class="stack mono">Python · FastF1 · SvelteKit</span><a class="pill mono" href="projects/openroomf1.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
+      </div>
+      <div class="ctrl">
+        <button class="round fill" type="button" data-main="1" aria-label="Projet suivant / Next project">↓</button>
+        <button class="round" type="button" data-main="-1" aria-label="Projet précédent / Previous project">↑</button>
+        <span class="count mono"><b>01</b> / 04</span>
+      </div>
+    </div>
+    <canvas class="curve" id="main-curve" aria-label="Démos des projets principaux / Main project demos"></canvas>
+  </section>
+
+  <section class="others" aria-label="Autres projets">
+    <div class="ohead">
+      <h3><span class="fr">Autres projets</span><span class="en">Other work</span></h3>
+      <span class="mono"><span class="fr">Projets secondaires et preuves de concept</span><span class="en">Side projects and proofs of concept</span></span>
+    </div>
+    <canvas class="curve wide" id="side-curve" aria-label="Démos des autres projets / Other project demos"></canvas>
+    <div class="obottom">
+      <button class="round" type="button" data-side="-1" aria-label="Projet précédent / Previous project">←</button>
+      <div class="infos">
+        <a class="info" href="projects/sudoclue.html"><strong>Sudoclue</strong><span><span class="fr">Un jeu de déduction entre sudoku et Cluedo, avec un défi du jour et un classement.</span><span class="en">A deduction game between sudoku and Cluedo, with a daily challenge and a leaderboard.</span></span><span class="mono">React · Supabase ↗</span></a>
+        <a class="info" href="projects/catena.html"><strong>Catena</strong><span><span class="fr">Un duel de cartes en un contre un avec le « juice » de Balatro.</span><span class="en">A one-on-one card duel with Balatro's juice.</span></span><span class="mono">Node.js · PostgreSQL ↗</span></a>
+        <a class="info" href="projects/hermes.html"><strong>Hermes</strong><span><span class="fr">Un chasseur de pseudos en Go : plus de 400 sites vérifiés en parallèle.</span><span class="en">A username hunter in Go: over 400 sites checked in parallel.</span></span><span class="mono">Go · OSINT ↗</span></a>
+        <a class="info" href="projects/pitstoppd.html"><strong>Pitstoppd</strong><span><span class="fr">Un Letterboxd pour la Formule 1 : noter et critiquer chaque Grand Prix.</span><span class="en">Letterboxd for Formula 1: rate and review every Grand Prix.</span></span><span class="mono">React · Hono · SQLite ↗</span></a>
+        <a class="info" href="https://nooks.anderson3x11.dev" target="_blank" rel="noopener"><strong>Nooks</strong><span><span class="fr">Carte collaborative de lieux insolites, avec détection des doublons.</span><span class="en">A crowdsourced map of unusual places, with duplicate detection.</span></span><span class="mono">ASP.NET · PostGIS ↗</span></a>
+      </div>
+      <button class="round fill" type="button" data-side="1" aria-label="Projet suivant / Next project">→</button>
+    </div>
+  </section>
+
+  <section class="also" aria-label="Outils">
+    <h3><span class="fr">Et aussi</span><span class="en">Also</span></h3>
+    <a href="https://github.com/anderson3x11/fcbt" target="_blank" rel="noopener"><strong>FCBT</strong><span><span class="fr">Gestionnaire de mots de passe local, coffre chiffré en AES-256.</span><span class="en">Local password manager, AES-256 encrypted vault.</span></span><span class="mono">Python ↗</span></a>
+    <a href="https://github.com/anderson3x11/theme-selector.nvim" target="_blank" rel="noopener"><strong>theme-selector.nvim</strong><span><span class="fr">Changer de thème Neovim avec aperçu en direct.</span><span class="en">Switch Neovim themes with a live preview.</span></span><span class="mono">Lua ↗</span></a>
+    <a href="https://github.com/anderson3x11/respawn" target="_blank" rel="noopener"><strong>respawn</strong><span><span class="fr">Post-install Arch Linux : paquets, AUR et dotfiles en une commande.</span><span class="en">Arch Linux post-install: packages, AUR and dotfiles in one command.</span></span><span class="mono">Bash ↗</span></a>
+    <a href="https://github.com/anderson3x11/beekeep" target="_blank" rel="noopener"><strong>beekeep</strong><span><span class="fr">Jeu incrémental dans le navigateur, en JavaScript pur.</span><span class="en">Browser idle game in plain JavaScript.</span></span><span class="mono">JavaScript ↗</span></a>
+  </section>
+
+  <section class="about bp" id="about">
+    <div class="head mono"><span>(A) <span class="fr">À propos</span><span class="en">About</span></span><span>Ynov · 2023 — 2026</span></div>
+    <h2><span class="fr">À propos</span><span class="en">About</span></h2>
+    <div class="row">
+      <div class="cell">
+        <span class="lab mono">(B) <span class="fr">En bref</span><span class="en">In short</span></span>
+        <p class="big fr">J'ai commencé l'informatique par le développement et je n'ai jamais arrêté. J'aime construire des outils complets, de la base à l'interface, et m'en servir moi-même.</p>
+        <p class="big en">I got into IT through development and never stopped. I like building complete tools, from the database to the interface, and using them myself.</p>
+        <p style="margin-top:22px" class="fr">Bachelor informatique à Ynov, option cybersécurité, après un premier cursus data analyst. La sécurité reste un réflexe dans ce que je code, et je continue les challenges sur <a href="https://www.root-me.org/Anderson-924191" target="_blank" rel="noopener">Root-Me</a>.</p>
+        <p style="margin-top:22px" class="en">Computer science bachelor at Ynov, cybersecurity track, after an earlier data analyst program. Security stays a reflex in what I write, and I keep doing challenges on <a href="https://www.root-me.org/Anderson-924191" target="_blank" rel="noopener">Root-Me</a>.</p>
+      </div>
+      <div class="cell">
+        <span class="lab mono">(C) Stack</span>
+        <dl>
+          <div><dt class="mono"><span class="fr">Langages</span><span class="en">Languages</span></dt><dd>TypeScript, JavaScript, C#, Rust, Go, Python, Bash, SQL</dd></div>
+          <div><dt class="mono">Front</dt><dd>React, Next.js, Svelte, SvelteKit, Angular, WebGL</dd></div>
+          <div><dt class="mono">Back</dt><dd>Node.js, ASP.NET Core, PostgreSQL, PostGIS, Supabase</dd></div>
+          <div><dt class="mono">Desktop</dt><dd>Tauri, WinUI 3</dd></div>
+          <div><dt class="mono"><span class="fr">Outils</span><span class="en">Tools</span></dt><dd>Linux, Git, Docker, Coolify, GitHub Actions, Burp Suite</dd></div>
+        </dl>
+      </div>
+    </div>
+    <div class="row full">
+      <div class="cell">
+        <span class="lab mono">(D) <span class="fr">Parcours</span><span class="en">Timeline</span></span>
+        <div class="tl-row"><span class="mono"><span class="fr">Automne 2026</span><span class="en">Fall 2026</span></span><span>Mora, openroomf1, Sudoclue, Catena</span></div>
+        <div class="tl-row"><span class="mono"><span class="fr">Été 2026</span><span class="en">Summer 2026</span></span><span>Cascades, Nooks</span></div>
+        <div class="tl-row"><span class="mono"><span class="fr">Printemps 2026</span><span class="en">Spring 2026</span></span><span>Shoryu, Hermes, Pitstoppd, FCBT</span></div>
+        <div class="tl-row"><span class="mono">2025</span><span><span class="fr">Premiers outils : respawn, beekeep</span><span class="en">First tools: respawn, beekeep</span></span></div>
+        <div class="tl-row"><span class="mono">2023 — 2026</span><span><span class="fr">Bachelor informatique, Ynov, option cybersécurité</span><span class="en">Computer science bachelor, Ynov, cybersecurity track</span></span></div>
+        <div class="tl-row"><span class="mono"><span class="fr">Avant</span><span class="en">Before</span></span><span><span class="fr">Cursus data analyst</span><span class="en">Data analyst program</span></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="assets/stickers/peace-hand.svg" alt="">
     <div>
-      <span class="m"><span class="fr">Développeur web · France</span><span class="en">Web developer · France</span></span>
-      <h1>Thomas <em>C.</em></h1>
-      <p class="role"><span class="fr">Développeur web, avec un bagage en cybersécurité.</span><span class="en">Web developer with a background in cybersecurity.</span></p>
-      <p class="intro"><span class="fr">Je construis des apps desktop, web et des outils en ligne de commande, du front au back. La sécurité fait partie de ma façon de coder, du chiffrement d'un coffre de mots de passe à l'OSINT.</span><span class="en">I build desktop apps, web apps and command-line tools, front to back. Security is part of how I code, from encrypting a password vault to OSINT.</span></p>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
     </div>
-    <canvas class="hero-3d" aria-hidden="true"></canvas>
-    <a class="scroll-cue" href="#projects"><span class="m"><span class="fr">Défiler</span><span class="en">Scroll</span></span><i></i></a>
-  </header>
-
-  <div class="sec" id="projects"><h2><span class="fr">Projets</span><span class="en">Projects</span></h2><span class="caps it"><span class="fr">4 principaux</span><span class="en">4 main</span></span></div>
-  <div class="grid">
-    <a href="projects/cascades.html"><div class="frame"><img src="assets/images/og/cascades.webp" alt="Cascades"></div><div class="row caps"><span>01 — <span class="fr">App desktop</span><span class="en">Desktop app</span></span><span>Tauri · Rust · Svelte</span></div>
-      <h3>Cascades</h3><p><span class="fr">Un éditeur de notes où les lignes indentées sont reliées par des cascades dessinées. Le fichier reste du texte brut.</span><span class="en">A note-taking editor where indented lines are linked by drawn cascades. The file stays plain text.</span></p>
-      <span class="link caps"><span class="fr">Lire l'étude de cas</span><span class="en">Read the case study</span> →</span></a>
-    <a href="projects/mora.html"><div class="frame"><img src="assets/images/og/mora.webp" alt="Mora"></div><div class="row caps"><span>02 — <span class="fr">App desktop</span><span class="en">Desktop app</span></span><span>C# · WinUI 3</span></div>
-      <h3>Mora</h3><p><span class="fr">Une Dynamic Island pour Windows : musique, minuteurs, étagère de fichiers et presse-papiers dans une pilule qui ne prend jamais le clavier.</span><span class="en">A Dynamic Island for Windows: music, timers, a file shelf and clipboard history in a pill that never takes your keyboard.</span></p>
-      <span class="link caps"><span class="fr">Lire l'étude de cas</span><span class="en">Read the case study</span> →</span></a>
-    <a href="projects/shoryu.html"><div class="frame"><img src="assets/images/og/shoryu.webp" alt="Shoryu"></div><div class="row caps"><span>03 — <span class="fr">App web</span><span class="en">Web app</span></span><span>Next.js · TypeScript</span></div>
-      <h3>Shoryu</h3><p><span class="fr">Les stats Street Fighter 6, enfin lisibles : profils, classements, matchups. Plus de 1 500 visiteurs par mois, dans 59 pays.</span><span class="en">Street Fighter 6 stats, made readable: profiles, rankings, matchups. Over 1,500 visitors a month, in 59 countries.</span></p>
-      <span class="link caps"><span class="fr">Lire l'étude de cas</span><span class="en">Read the case study</span> →</span></a>
-    <a href="projects/openroomf1.html"><div class="frame"><img src="assets/images/og/openroomf1.webp" alt="openroomf1"></div><div class="row caps"><span>04 — <span class="fr">App web</span><span class="en">Web app</span></span><span>Python · SvelteKit</span></div>
-      <h3>openroomf1</h3><p><span class="fr">L'analyse d'après-course de la F1 : rythme, stratégie, duels et replay de chaque Grand Prix. Mis à jour après chaque course.</span><span class="en">Post-race F1 analysis: pace, strategy, duels and a replay of every Grand Prix. Updated after every race.</span></p>
-      <span class="link caps"><span class="fr">Lire l'étude de cas</span><span class="en">Read the case study</span> →</span></a>
-  </div>
-
-  <div class="sec"><h2><span class="fr">Projets secondaires</span><span class="en">Side projects</span></h2></div>
-  <div class="cards">
-    <a href="projects/sudoclue.html"><div class="frame"><img src="assets/images/og/sudoclue.webp" alt="Sudoclue"></div><h3>Sudoclue</h3><div class="m caps">React · Supabase</div><p><span class="fr">Un jeu de déduction entre sudoku et Cluedo, avec un défi du jour et un classement.</span><span class="en">A deduction game between sudoku and Cluedo, with a daily challenge and a leaderboard.</span></p></a>
-    <a href="projects/catena.html"><div class="frame"><img src="assets/images/og/catena.webp" alt="Catena"></div><h3>Catena</h3><div class="m caps">Node.js · PostgreSQL</div><p><span class="fr">Un duel de cartes en un contre un avec le « juice » de Balatro. Parties classées et entre amis.</span><span class="en">A one-on-one card duel with Balatro's juice. Ranked and friend matches.</span></p></a>
-    <a href="projects/hermes.html"><div class="frame"><img src="assets/images/og/hermes.webp" alt="Hermes"></div><h3>Hermes</h3><div class="m caps">Go · OSINT</div><p><span class="fr">Un chasseur de pseudos en Go : plus de 400 sites vérifiés en parallèle.</span><span class="en">A username hunter in Go: over 400 sites checked in parallel.</span></p></a>
-  </div>
-
-  <div class="sec"><h2><span class="fr">Preuves de concept</span><span class="en">Proofs of concept</span></h2><span class="caps it"><span class="fr">Fonctionnels, non maintenus</span><span class="en">Working, not maintained</span></span></div>
-  <div class="cards two">
-    <a href="https://nooks.anderson3x11.dev" target="_blank" rel="noopener"><div class="frame"><img src="assets/images/og/nooks.webp" alt="Nooks"></div><h3>Nooks</h3><div class="m caps">ASP.NET Core · Angular · PostGIS</div><p><span class="fr">Carte collaborative de lieux insolites, avec détection des doublons.</span><span class="en">A crowdsourced map of unusual places, with duplicate detection.</span></p></a>
-    <a href="projects/pitstoppd.html"><div class="frame"><img src="assets/images/og/pitstoppd.webp" alt="Pitstoppd"></div><h3>Pitstoppd</h3><div class="m caps">React · Hono · SQLite</div><p><span class="fr">Un Letterboxd pour la Formule 1 : noter et critiquer chaque Grand Prix depuis 2000.</span><span class="en">Letterboxd for Formula 1: rate and review every Grand Prix since 2000.</span></p></a>
-  </div>
-
-  <div class="sec"><h2><span class="fr">Autres projets</span><span class="en">Other projects</span></h2><span class="caps it"><span class="fr">Outils et scripts</span><span class="en">Tools and scripts</span></span></div>
-  <div class="others">
-    <a href="https://github.com/anderson3x11/fcbt" target="_blank" rel="noopener"><strong>FCBT</strong><p><span class="fr">Gestionnaire de mots de passe local, coffre chiffré en AES-256.</span><span class="en">Local password manager, AES-256 encrypted vault.</span></p><span class="m caps">Python</span></a>
-    <a href="https://github.com/anderson3x11/theme-selector.nvim" target="_blank" rel="noopener"><strong>theme-selector.nvim</strong><p><span class="fr">Changer de thème Neovim avec aperçu en direct.</span><span class="en">Switch Neovim colorschemes with a live preview.</span></p><span class="m caps">Lua</span></a>
-    <a href="https://github.com/anderson3x11/respawn" target="_blank" rel="noopener"><strong>respawn</strong><p><span class="fr">Post-install Arch Linux : paquets, AUR et dotfiles en une commande.</span><span class="en">Arch Linux post-install: packages, AUR and dotfiles in one run.</span></p><span class="m caps">Bash</span></a>
-    <a href="https://github.com/anderson3x11/beekeep" target="_blank" rel="noopener"><strong>beekeep</strong><p><span class="fr">Jeu incrémental dans le navigateur, en JavaScript pur.</span><span class="en">Browser incremental game in plain JavaScript.</span></p><span class="m caps">JavaScript</span></a>
-  </div>
-
-  <div class="sec" id="about"><h2><span class="fr">À propos</span><span class="en">About</span></h2></div>
-  <div class="cols">
-    <div class="text">
-      <p class="first fr">J'ai commencé l'informatique par le développement et je n'ai jamais arrêté. Ce que j'aime, c'est construire des outils complets, de la base de données à l'interface, et m'en servir moi-même.</p>
-      <p class="first en">I got into IT through development and never stopped. What I like is building complete tools, from the database to the interface, and using them myself.</p>
-      <p class="fr">Bachelor informatique à Ynov (2023–2026), option cybersécurité, après un premier cursus data analyst. La sécurité reste un réflexe dans ce que je code, et je continue les challenges sur <a href="https://www.root-me.org/Anderson-924191" target="_blank" rel="noopener">Root-Me</a> (writeups dans <a href="https://github.com/anderson3x11/voynich" target="_blank" rel="noopener">voynich</a>).</p>
-      <p class="en">Computer science bachelor at Ynov (2023–2026), cybersecurity track, after an earlier data analyst program. Security stays a reflex in what I write, and I keep doing challenges on <a href="https://www.root-me.org/Anderson-924191" target="_blank" rel="noopener">Root-Me</a> (writeups in <a href="https://github.com/anderson3x11/voynich" target="_blank" rel="noopener">voynich</a>).</p>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
     </div>
-    <dl class="stack">
-      <div><dt class="caps"><span class="fr">Langages</span><span class="en">Languages</span></dt><dd>TypeScript, JavaScript, C#, Rust, Go, Python, Bash, SQL</dd></div>
-      <div><dt class="caps">Front</dt><dd>React, Next.js, Svelte, SvelteKit, Angular, Zustand, WebGL</dd></div>
-      <div><dt class="caps">Back</dt><dd>Node.js, ASP.NET Core, PostgreSQL, PostGIS, Supabase, pandas</dd></div>
-      <div><dt class="caps">Desktop</dt><dd>Tauri, WinUI 3</dd></div>
-      <div><dt class="caps"><span class="fr">Outils</span><span class="en">Tools</span></dt><dd>Linux, Git, Docker, Coolify, GitHub Actions, Burp Suite</dd></div>
-    </dl>
   </div>
-  <div class="tl">
-    <h3><span class="fr">Parcours</span><span class="en">Timeline</span></h3>
-    <div class="item"><div class="y"><span class="fr">Automne 2026</span><span class="en">Fall 2026</span><small class="caps"><span class="fr">Projets</span><span class="en">Projects</span></small></div><div><b>Mora, openroomf1, Sudoclue, Catena</b><p><span class="fr">Une app desktop en C#, une plateforme de données F1 en Python, deux jeux web avec classements.</span><span class="en">A C# desktop app, an F1 data platform in Python, two web games with leaderboards.</span></p></div></div>
-    <div class="item"><div class="y"><span class="fr">Été 2026</span><span class="en">Summer 2026</span><small class="caps"><span class="fr">Projets</span><span class="en">Projects</span></small></div><div><b>Cascades, Nooks</b><p><span class="fr">Un éditeur multiplateforme en Tauri et Rust, une carte collaborative en ASP.NET Core et PostGIS.</span><span class="en">A cross-platform editor in Tauri and Rust, a crowdsourced map in ASP.NET Core and PostGIS.</span></p></div></div>
-    <div class="item"><div class="y"><span class="fr">Printemps 2026</span><span class="en">Spring 2026</span><small class="caps"><span class="fr">Projets</span><span class="en">Projects</span></small></div><div><b>Shoryu, Hermes, Pitstoppd, FCBT</b><p><span class="fr">Un site de stats qui trouve son public, un outil OSINT en Go, un Letterboxd F1, un gestionnaire de mots de passe.</span><span class="en">A stats site that found its audience, an OSINT tool in Go, a Letterboxd for F1, a password manager.</span></p></div></div>
-    <div class="item"><div class="y">2025<small class="caps"><span class="fr">Projets</span><span class="en">Projects</span></small></div><div><b><span class="fr">Premiers outils</span><span class="en">First tools</span></b><p><span class="fr">respawn, un post-install Arch Linux, et beekeep, un jeu en JavaScript pur.</span><span class="en">respawn, an Arch Linux post-install, and beekeep, a plain JavaScript game.</span></p></div></div>
-    <div class="item"><div class="y">2023 — 2026<small class="caps"><span class="fr">Formation</span><span class="en">Education</span></small></div><div><b><span class="fr">Bachelor informatique, Ynov</span><span class="en">Computer science bachelor, Ynov</span></b><p><span class="fr">Option cybersécurité : sécurité web, réseau et exploitation binaire.</span><span class="en">Cybersecurity track: web, network and binary exploitation.</span></p></div></div>
-    <div class="item"><div class="y"><span class="fr">Avant</span><span class="en">Before</span><small class="caps"><span class="fr">Formation</span><span class="en">Education</span></small></div><div><b><span class="fr">Cursus data analyst</span><span class="en">Data analyst program</span></b><p><span class="fr">Une première formation dans la donnée, avant le développement.</span><span class="en">A first program in data, before development.</span></p></div></div>
-  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="#top"><span class="fr">Haut de page</span><span class="en">Back to top</span> ↑</a></footer>
+</footer>
 
-  <div class="sec" id="contact"><h2>Contact</h2><span class="caps it"><span class="fr">Écrivez-moi</span><span class="en">Get in touch</span></span></div>
-  <div class="contact">
-    <a href="mailto:contact@anderson3x11.dev"><span class="caps it">Email</span><strong>contact@anderson3x11.dev</strong></a>
-    <a href="https://www.linkedin.com/in/thomas-crecy-728b99219/" target="_blank" rel="noopener"><span class="caps it">LinkedIn</span><strong><span class="fr">Profil pro</span><span class="en">Profile</span></strong></a>
-    <a href="https://github.com/anderson3x11" target="_blank" rel="noopener"><span class="caps it">GitHub</span><strong>anderson3x11</strong></a>
-  </div>
+<script type="module">
+  import { carousel } from "./assets/js/curve.js";
+  const pad = (i) => String(i + 1).padStart(2, "0");
+  const mainInfos = [...document.querySelectorAll(".work .info")];
+  const mainLinks = mainInfos.map((i) => i.querySelector("a").href);
+  const main = carousel(document.getElementById("main-curve"),
+    ["cascades", "mora", "shoryu", "openroomf1"].map((n) => `assets/demos/${n}.webm`),
+    { axis: "x", onChange: (i) => { mainInfos.forEach((el, k) => el.classList.toggle("on", k === i)); document.querySelector(".count b").textContent = pad(i); }, onPick: (i) => (location.href = mainLinks[i]) });
+  document.querySelectorAll("[data-main]").forEach((b) => b.addEventListener("click", () => main.go(+b.dataset.main)));
 
-  <footer class="caps"><span>Thomas C. · anderson3x11</span><a href="#top"><span class="fr">Haut de page</span><span class="en">Back to top</span> ↑</a></footer>
-</div>
-<script type="module" src="assets/js/hero3d.js"></script>
+  const sideInfos = [...document.querySelectorAll(".others .info")];
+  const side = carousel(document.getElementById("side-curve"),
+    ["sudoclue", "catena", "hermes", "pitstoppd", "nooks"].map((n) => `assets/demos/${n}.webm`),
+    { axis: "y", R: 3, camZ: 1.4, gap: 0.22, onChange: (i) => sideInfos.forEach((el, k) => el.classList.toggle("on", k === i)), onPick: (i) => sideInfos[i].click() });
+  document.querySelectorAll("[data-side]").forEach((b) => b.addEventListener("click", () => side.go(+b.dataset.side)));
+</script>
+<script type="module" src="assets/js/ascii.js"></script>
 </body>
 </html>
