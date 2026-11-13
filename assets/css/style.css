@@ -90,9 +90,11 @@ nav .r a:not(.pill):hover::after { transform: scaleX(1); }
 /* Also */
 .also { padding: 90px 56px 110px; border-top: 1px solid var(--line); }
 .also h3 { font: 64px/.9 var(--display); color: var(--lime); text-transform: uppercase; margin-bottom: 30px; }
-.also a { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr) 150px; gap: 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); transition: padding .3s, color .3s; }
+.also a { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 2fr) 150px; gap: 24px; align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); transition: color .3s; }
+.also a > * { transition: transform .3s; }
 .also a:last-child { border-bottom: 1px solid var(--line); }
-.also a:hover { color: var(--lime); padding-left: 12px; }
+.also a:hover { color: var(--lime); }
+.also a:hover > * { transform: translateX(12px); }
 .also strong { font: 34px/1 var(--display); text-transform: uppercase; letter-spacing: .01em; }
 .also a span:last-child { color: var(--cream-mute); text-align: right; }
 
