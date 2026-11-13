@@ -124,7 +124,7 @@ return `${salt}:${scryptSync(password, salt, 64).toString('hex')}`
 </main>
 
 <section class="gallery" aria-label="Galerie / Gallery">
-  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>06</span></div>
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
   <canvas class="curve wide" id="gal" aria-label="Pitstoppd"></canvas>
 </section>
 
@@ -151,7 +151,7 @@ return `${salt}:${scryptSync(password, salt, 64).toString('hex')}`
 
 <script type="module">
   import { carousel } from "../assets/js/curve.js";
-  carousel(document.getElementById("gal"), ["../assets/images/pitstoppd/grand-prix.webp", "../assets/images/pitstoppd/reviews.webp", "../assets/images/pitstoppd/seasons.webp", "../assets/images/pitstoppd/drivers.webp", "../assets/images/pitstoppd/driver.webp", "../assets/images/pitstoppd/profile.webp"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+  carousel(document.getElementById("gal"), ["../assets/demos/pitstoppd-2.webm", "../assets/demos/pitstoppd-3.webm", "../assets/demos/pitstoppd-4.webm", "../assets/demos/pitstoppd-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
 </script>
 </body>
 </html>
