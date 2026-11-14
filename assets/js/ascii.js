@@ -1,5 +1,5 @@
 // Hero mark: the tall star extruded in 3D and drawn as 0/1 characters, turning slowly.
-// Lit faces read as "0", the shaded sides as "1". One still frame under reduced motion.
+// Lit faces read as "0", the shaded sides as "1". Turns slower under reduced motion.
 import * as THREE from "three";
 import { AsciiEffect } from "three/addons/effects/AsciiEffect.js";
 
@@ -42,9 +42,12 @@ function resize() {
   camera.updateProjectionMatrix();
 }
 
+// Reduced motion keeps a slow, steady turn instead of stopping
+const speed = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0.35 : 1;
+
 function frame(t = 0) {
-  mark.rotation.y = t * 0.0006;
-  mark.rotation.x = Math.sin(t * 0.0004) * 0.12;
+  mark.rotation.y = 0.6 + t * 0.0006 * speed;
+  mark.rotation.x = Math.sin(t * 0.0004 * speed) * 0.12 * speed;
   effect.render(scene, camera);
 }
 
@@ -53,11 +56,9 @@ mark.rotation.y = 0.6;
 effect.render(scene, camera);
 new ResizeObserver(() => { resize(); effect.render(scene, camera); }).observe(host);
 
-if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  let raf = 0;
-  const loop = (t) => { frame(t); raf = requestAnimationFrame(loop); };
-  new IntersectionObserver(([e]) => {
-    cancelAnimationFrame(raf);
-    if (e.isIntersecting) raf = requestAnimationFrame(loop);
-  }).observe(host);
-}
+let raf = 0;
+const loop = (t) => { frame(t); raf = requestAnimationFrame(loop); };
+new IntersectionObserver(([e]) => {
+  cancelAnimationFrame(raf);
+  if (e.isIntersecting) raf = requestAnimationFrame(loop);
+}).observe(host);

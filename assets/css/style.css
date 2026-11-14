@@ -177,7 +177,9 @@ pre .c { color: var(--cream-mute); }
 .next .round { background: var(--lime); border-color: var(--lime); color: var(--ink); width: 64px; height: 64px; font-size: 22px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee, .sticker { animation: none; }
+  /* The name keeps drifting, just much slower */
+  .marquee { animation-duration: 120s; }
+  .sticker { animation: none; }
   html { scroll-behavior: auto; }
 }
 
