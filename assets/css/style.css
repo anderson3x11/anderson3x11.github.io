@@ -88,6 +88,7 @@ nav .r a:not(.pill):hover::after { transform: scaleX(1); }
 .obottom .info strong { display: block; font: 52px/.95 var(--display); color: var(--lime); text-transform: uppercase; }
 .obottom .info > span:not(.mono) { display: block; margin: 8px 0 6px; }
 .obottom .info .mono { color: var(--cream-mute); }
+.mtop, .mbottom { display: none; }
 
 /* Also */
 .also { padding: 90px 56px 110px; border-top: 1px solid var(--line); }
@@ -193,11 +194,13 @@ pre .c { color: var(--cream-mute); }
   .ascii { width: 92vw; height: 66vh; top: 46%; }
   .sticker { width: 54px !important; }
   .ohead .sticker { display: none; }
-  .work { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: auto; min-height: 0; }
-  .work .curve { height: 62vw; margin-bottom: 40px; }
-  .work .ctrl svg { transform: rotate(-90deg); }
-  .work .ctrl .round.fill { order: 2; }
-  .work .ctrl .count { order: 3; }
+  .work { display: block; height: auto; min-height: 0; padding: 56px 0 50px; }
+  .work .panel { display: none; }
+  .work .curve { height: 62vw; }
+  .mtop { display: block; padding: 0 16px 6px; }
+  .mtop .kind { display: block; color: var(--lime); margin-bottom: 8px; }
+  .mtop h2 { font: 64px/.9 var(--display); color: var(--lime); text-transform: uppercase; }
+  .mbottom { display: flex; }
   .panel { padding: 40px 16px 10px; }
   .panel .head { display: none; }
   .info h2 { font-size: 72px; }

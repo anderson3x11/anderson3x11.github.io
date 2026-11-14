@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
   <script src="assets/js/i18n.js"></script>
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
@@ -67,7 +67,14 @@
         <span class="count mono"><b>01</b> / 04</span>
       </div>
     </div>
+    <!-- Phones: name above the carousel, details and arrows below, like the other work section -->
+    <div class="mtop"><span class="kind mono" data-m="kind"></span><h2 data-m="name"></h2></div>
     <canvas class="curve" id="main-curve" aria-label="Démos des projets principaux / Main project demos"></canvas>
+    <div class="obottom mbottom">
+      <button class="round" type="button" data-main="-1" aria-label="Projet précédent / Previous project"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <div class="infos"><a class="info on" data-m="link" href="#"><span data-m="desc"></span><span class="mono" data-m="stack"></span></a></div>
+      <button class="round fill" type="button" data-main="1" aria-label="Projet suivant / Next project"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
   </section>
 
   <section class="others" aria-label="Autres projets">
@@ -154,14 +161,24 @@
 </footer>
 
 <script type="module">
-  import { carousel } from "./assets/js/curve.js";
+  import { carousel } from "./assets/js/curve.js?v=3";
   const pad = (i) => String(i + 1).padStart(2, "0");
-  const mainInfos = [...document.querySelectorAll(".work .info")];
+  const mainInfos = [...document.querySelectorAll(".work .panel .info")];
   const mainLinks = mainInfos.map((i) => i.querySelector("a").href);
   const main = carousel(document.getElementById("main-curve"),
     ["cascades", "mora", "shoryu", "openroomf1"].map((n) => `assets/demos/${n}.webm`),
     // Phones get the horizontal version, like the other carousel
-    { ...(matchMedia("(max-width: 860px)").matches ? { axis: "y", R: 3, camZ: 1.4, gap: 0.22 } : { axis: "x" }), onChange: (i) => { mainInfos.forEach((el, k) => el.classList.toggle("on", k === i)); document.querySelector(".count b").textContent = pad(i); }, onPick: (i) => (location.href = mainLinks[i]) });
+    { ...(matchMedia("(max-width: 860px)").matches ? { axis: "y", R: 3, camZ: 1.4, gap: 0.22 } : { axis: "x" }), onChange: (i) => {
+      mainInfos.forEach((el, k) => el.classList.toggle("on", k === i));
+      document.querySelector(".count b").textContent = pad(i);
+      // Mirror the active project into the phone layout (both languages are copied)
+      const info = mainInfos[i], m = (k) => document.querySelector(`[data-m="${k}"]`);
+      m("kind").innerHTML = info.querySelector(".kind").innerHTML;
+      m("name").innerHTML = info.querySelector("h2").innerHTML;
+      m("desc").innerHTML = info.querySelector("p").innerHTML;
+      m("stack").innerHTML = info.querySelector(".stack").innerHTML + " ↗";
+      m("link").href = info.querySelector("a").href;
+    }, onPick: (i) => (location.href = mainLinks[i]) });
   document.querySelectorAll("[data-main]").forEach((b) => b.addEventListener("click", () => main.go(+b.dataset.main)));
 
   const sideInfos = [...document.querySelectorAll(".others .info")];
@@ -170,6 +187,6 @@
     { axis: "y", R: 3, camZ: 1.4, gap: 0.22, onChange: (i) => sideInfos.forEach((el, k) => el.classList.toggle("on", k === i)), onPick: (i) => sideInfos[i].click() });
   document.querySelectorAll("[data-side]").forEach((b) => b.addEventListener("click", () => side.go(+b.dataset.side)));
 </script>
-<script type="module" src="assets/js/ascii.js"></script>
+<script type="module" src="assets/js/ascii.js?v=3"></script>
 </body>
 </html>
