@@ -106,7 +106,7 @@ export function carousel(canvas, srcs, { axis = "x", R = 1.9, camZ = 1.5, fov = 
     // Frame the centered card: vertical carousel keeps side margins on narrow canvases,
     // horizontal one makes the card about half the width (or 70% of the height)
     const deg = (share) => (2 * Math.atan(share / 2 / (R + camZ)) * 180) / Math.PI;
-    camera.fov = axis === "x" ? Math.max(fov, deg(W / 0.84 / camera.aspect)) : Math.max(deg(W / (camera.aspect < 1.8 ? 0.74 : 0.56) / camera.aspect), deg(H / 0.82));
+    camera.fov = axis === "x" ? Math.max(fov, deg(W / 0.84 / camera.aspect)) : Math.max(deg(W / (camera.aspect < 1.8 ? 0.64 : 0.56) / camera.aspect), deg(H / 0.82));
     camera.updateProjectionMatrix();
   }
 

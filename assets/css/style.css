@@ -192,7 +192,10 @@ pre .c { color: var(--cream-mute); }
   .sticker { width: 54px !important; }
   .ohead .sticker { display: none; }
   .work { grid-template-columns: 1fr; grid-template-rows: auto 1fr; height: auto; min-height: 0; }
-  .work .curve { height: 62vh; }
+  .work .curve { height: 62vw; margin-bottom: 40px; }
+  .work .ctrl svg { transform: rotate(-90deg); }
+  .work .ctrl .round.fill { order: 2; }
+  .work .ctrl .count { order: 3; }
   .panel { padding: 40px 16px 10px; }
   .panel .head { display: none; }
   .info h2 { font-size: 72px; }

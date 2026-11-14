@@ -160,7 +160,8 @@
   const mainLinks = mainInfos.map((i) => i.querySelector("a").href);
   const main = carousel(document.getElementById("main-curve"),
     ["cascades", "mora", "shoryu", "openroomf1"].map((n) => `assets/demos/${n}.webm`),
-    { axis: "x", onChange: (i) => { mainInfos.forEach((el, k) => el.classList.toggle("on", k === i)); document.querySelector(".count b").textContent = pad(i); }, onPick: (i) => (location.href = mainLinks[i]) });
+    // Phones get the horizontal version, like the other carousel
+    { ...(matchMedia("(max-width: 860px)").matches ? { axis: "y", R: 3, camZ: 1.4, gap: 0.22 } : { axis: "x" }), onChange: (i) => { mainInfos.forEach((el, k) => el.classList.toggle("on", k === i)); document.querySelector(".count b").textContent = pad(i); }, onPick: (i) => (location.href = mainLinks[i]) });
   document.querySelectorAll("[data-main]").forEach((b) => b.addEventListener("click", () => main.go(+b.dataset.main)));
 
   const sideInfos = [...document.querySelectorAll(".others .info")];
