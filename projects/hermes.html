@@ -104,6 +104,11 @@ case "message":      <span class="c">// "user not found" in the first MB of the 
   </div>
 </main>
 
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Hermes"></canvas>
+</section>
+
 <a class="next" href="pitstoppd.html">
   <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 08</span><strong>Pitstoppd</strong></span>
   <span class="round" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -125,5 +130,9 @@ case "message":      <span class="c">// "user not found" in the first MB of the 
   <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
 </footer>
 
+<script type="module">
+  import { carousel } from "../assets/js/curve.js?v=3";
+  carousel(document.getElementById("gal"), ["../assets/demos/hermes-2.webm", "../assets/demos/hermes-3.webm", "../assets/demos/hermes-4.webm", "../assets/demos/hermes-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
 </body>
 </html>
