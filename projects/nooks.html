@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Nooks · Thomas C." data-en="Nooks · Thomas C.">Nooks · Thomas C.</title>
+  <meta name="description" content="Nooks: a crowdsourced map of unusual places, with duplicate detection and PostGIS spatial search. ASP.NET Core, PostGIS and Angular." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="canonical" href="https://anderson3x11.dev/projects/nooks.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=4">
+  <script src="../assets/js/i18n.js"></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/nooks.html" />
+  <meta property="og:title" content="Nooks · Thomas C." />
+  <meta property="og:description" content="Nooks: a crowdsourced map of unusual places, with duplicate detection and PostGIS spatial search. ASP.NET Core, PostGIS and Angular." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/nooks.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
+</head>
+<body class="case">
+
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
+
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>09 / 09</span></div>
+      <h1 class="title">Nooks</h1>
+      <img class="sticker" style="right:40px;bottom:36px;rotate:9deg" src="../assets/stickers/globe.svg" alt="" aria-hidden="true">
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></span><span><span class="fr">Preuve de concept</span><span class="en">Proof of concept</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">App web, en ligne</span><span class="en">Web app, live</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>ASP.NET Core 10, PostgreSQL + PostGIS, Angular 21, Leaflet</dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Preuve de concept, open source</span><span class="en">Proof of concept, open source</span></dd></div>
+      <div><dt class="mono"><span class="fr">Liens</span><span class="en">Links</span></dt><dd><a href="https://nooks.anderson3x11.dev" target="_blank" rel="noopener">nooks.anderson3x11.dev</a> · <a href="https://github.com/anderson3x11/nooks" target="_blank" rel="noopener">GitHub</a></dd></div>
+    </dl>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">Une carte de lieux insolites remplie par ceux qui les connaissent : points de vue oubliés, boutiques bizarres, cabinets de curiosités, passages couverts.</span>
+      <span class="en">A map of unusual places filled in by the people who know them: forgotten viewpoints, odd shops, cabinets of curiosities, covered passages.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/nooks.webm" autoplay muted loop playsinline aria-label="Nooks demo"></video></div>
+  </div>
+
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    </div>
+    <div class="cell prose">
+      <p class="fr">On cherche une ville, on filtre, et on tombe sur des endroits qui ne sont dans aucun guide. Chaque lieu est proposé par quelqu'un qui le connaît, avec une photo obligatoire : c'est elle qui devient le marqueur sur la carte.</p>
+      <p class="en">You search for a city, filter, and land on places that are in no guidebook. Every place is suggested by someone who knows it, with a mandatory photo: it becomes the marker on the map.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Ce qu'on y fait</span><span class="en">What you can do</span></h2>
+    </div>
+    <div class="cell prose">
+      <ol class="num-list fr">
+        <li>Chercher une ville, filtrer par catégorie et par note.</li>
+        <li>Proposer un lieu en cliquant sur la carte, photo à l'appui.</li>
+        <li>Noter de 1 à 5 avec un avis : un seul par personne et par lieu, modifiable.</li>
+        <li>Mettre des lieux en favori et remplir une page de profil.</li>
+        <li>Côté admin : file de modération, suppression de lieux et d'avis.</li>
+      </ol>
+      <ol class="num-list en">
+        <li>Search for a city, filter by category and rating.</li>
+        <li>Suggest a place by clicking on the map, with a photo.</li>
+        <li>Rate from 1 to 5 with a review: one per person and per place, editable.</li>
+        <li>Save places as favorites and fill in a profile page.</li>
+        <li>Admin side: moderation queue, removing places and reviews.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
+      <p class="fr"><strong>Les doublons.</strong> Sur une carte ouverte à tous, le même endroit finit posté cinq fois. Le formulaire prévient dès qu'il repère un lieu du même nom à moins de 500 m, ou de la même catégorie à moins de 75 m, et propose de noter l'existant plutôt que d'en créer un second. Si on insiste quand même, le lieu part en modération.</p>
+      <p class="en"><strong>Duplicates.</strong> On a map open to everyone, the same spot ends up posted five times. The form warns as soon as it finds a place with the same name within 500 m, or the same category within 75 m, and offers to rate the existing one instead of creating a second. If you insist anyway, the place goes to moderation.</p>
+      <p class="fr"><strong>La recherche spatiale.</strong> La carte envoie le rectangle qu'elle affiche, l'API en fait un polygone PostGIS interrogé sur l'index GiST. Le rectangle est borné côté serveur, pour qu'une requête trop large ne ramène pas toute la base.</p>
+      <p class="en"><strong>Spatial search.</strong> The map sends the rectangle it shows, and the API turns it into a PostGIS polygon queried on the GiST index. The rectangle is capped on the server, so an overly wide request can't pull the whole database.</p>
+      <pre><code>var polygon = query.Bounds.ToPolygon();
+var places = context.Places
+    .Where(p =&gt; p.Status == PlaceStatus.Approved)
+    .Where(p =&gt; p.Location.Intersects(polygon));   <span class="c">// ST_Intersects, GiST index</span></code></pre>
+      <p class="fr"><strong>Le métier au centre.</strong> Les règles (une note par personne, moyenne recalculée, bornes des coordonnées) vivent dans l'agrégat <code>Place</code>, pas dans les endpoints. Une seule image Docker : l'API ASP.NET Core sert aussi le front Angular. Tests unitaires, plus des tests d'intégration sur un PostGIS jetable avec Testcontainers.</p>
+      <p class="en"><strong>Domain first.</strong> The rules (one rating per person, recomputed average, coordinate bounds) live in the <code>Place</code> aggregate, not in the endpoints. One Docker image: the ASP.NET Core API also serves the Angular front. Unit tests, plus integration tests on a throwaway PostGIS with Testcontainers.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
+      <p class="fr">C'est une preuve de concept, pas un service en production. Le jeton JWT est stocké dans le navigateur, donc exposé au XSS : un cookie <code>HttpOnly</code> serait mieux. Pas de limitation de débit sur l'API, photos stockées en base, fonds de carte sur des offres gratuites. Et la détection de doublons compare des noms : deux noms très différents pour le même endroit passeront à travers.</p>
+      <p class="en">It's a proof of concept, not a production service. The JWT is stored in the browser, so exposed to XSS: an <code>HttpOnly</code> cookie would be better. No rate limiting on the API, photos stored in the database, map tiles on free plans. And duplicate detection compares names: two very different names for the same spot will slip through.</p>
+    </div>
+  </div>
+</main>
+
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Nooks"></canvas>
+</section>
+
+<a class="next" href="cascades.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 01</span><strong>Cascades</strong></span>
+  <span class="round" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-c-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js?v=3";
+  carousel(document.getElementById("gal"), ["../assets/demos/nooks-2.webm", "../assets/demos/nooks-3.webm", "../assets/demos/nooks-4.webm", "../assets/demos/nooks-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
+</body>
+</html>
