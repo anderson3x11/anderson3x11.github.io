@@ -17,10 +17,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
   <script src="assets/js/i18n.js"></script>
   <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
   </script>
 </head>
 <body>
@@ -29,6 +29,7 @@
   <nav class="mono">
     <div class="l">
       <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+      <button class="anim" type="button" data-anim aria-pressed="true" aria-label="Animation du logo / Logo animation"><svg class="i-on" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="i-off" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg><span>Animation</span></button>
     </div>
     <a class="me" href="#top"><b>Thomas C.</b><span class="fr">Dev web &amp; cybersécurité</span><span class="en">Web dev &amp; cybersecurity</span></a>
     <div class="r">
@@ -38,7 +39,8 @@
     </div>
   </nav>
 
-  <div class="ascii" aria-hidden="true"></div>
+  <canvas class="trame" aria-hidden="true"></canvas>
+  <img class="still" src="assets/images/star-chrome.webp" alt="" aria-hidden="true" width="390" height="1013">
   <div class="marquee" aria-hidden="true"><span>Thomas C. ✦</span><span>anderson3x11 ✦</span><span>Thomas C. ✦</span><span>anderson3x11 ✦</span></div>
 
 
@@ -188,6 +190,31 @@
     { axis: "y", R: 3, camZ: 1.4, gap: 0.22, onChange: (i) => sideInfos.forEach((el, k) => el.classList.toggle("on", k === i)), onPick: (i) => sideInfos[i].click() });
   document.querySelectorAll("[data-side]").forEach((b) => b.addEventListener("click", () => side.go(+b.dataset.side)));
 </script>
-<script type="module" src="assets/js/ascii.js?v=3"></script>
+<script type="module">
+  // Hero logo: animated halftone (on) or a clean still of the chrome star (off).
+  // Off by default for reduced motion; the visitor's choice is remembered. three.js only loads when on.
+  const KEY = "hero-anim";
+  const hero = document.querySelector(".hero"), btn = document.querySelector("[data-anim]"), canvas = hero.querySelector(".trame");
+  let saved = null;
+  try { saved = localStorage.getItem(KEY); } catch (e) {}
+  let on = saved ? saved === "on" : !matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let stop = null;
+  async function apply() {
+    hero.classList.toggle("anim-off", !on);
+    btn.setAttribute("aria-pressed", String(on));
+    if (on && !stop) {
+      try {
+        const { start } = await import("./assets/js/hero-trame.js?v=5");
+        if (on && !stop) stop = start(canvas);
+      } catch (e) { on = false; hero.classList.add("anim-off"); btn.setAttribute("aria-pressed", "false"); }
+    } else if (!on && stop) { stop(); stop = null; }
+  }
+  btn.addEventListener("click", () => {
+    on = !on;
+    try { localStorage.setItem(KEY, on ? "on" : "off"); } catch (e) {}
+    apply();
+  });
+  apply();
+</script>
 </body>
 </html>
