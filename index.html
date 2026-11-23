@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
   <script src="assets/js/i18n.js"></script>
   <script type="importmap">
     { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
@@ -40,7 +40,7 @@
   </nav>
 
   <canvas class="trame" aria-hidden="true"></canvas>
-  <img class="still" src="assets/images/star-chrome.webp" alt="" aria-hidden="true" width="390" height="1013">
+  <img class="still" src="assets/images/star-trame.webp" alt="" aria-hidden="true" width="840" height="1161">
   <div class="marquee" aria-hidden="true"><span>Thomas C. ✦</span><span>anderson3x11 ✦</span><span>Thomas C. ✦</span><span>anderson3x11 ✦</span></div>
 
 
@@ -191,7 +191,7 @@
   document.querySelectorAll("[data-side]").forEach((b) => b.addEventListener("click", () => side.go(+b.dataset.side)));
 </script>
 <script type="module">
-  // Hero logo: animated halftone (on) or a clean still of the chrome star (off).
+  // Hero logo: animated halftone (on) or one still frame of the same halftone (off).
   // Off by default for reduced motion; the visitor's choice is remembered. three.js only loads when on.
   const KEY = "hero-anim";
   const hero = document.querySelector(".hero"), btn = document.querySelector("[data-anim]"), canvas = hero.querySelector(".trame");
