@@ -60,11 +60,12 @@
         <div class="info"><span class="kind mono"><span class="fr">App desktop</span><span class="en">Desktop app</span></span><h2>Mora</h2><p><span class="fr">Une Dynamic Island pour Windows : musique, minuteurs, étagère de fichiers et presse-papiers dans une pilule.</span><span class="en">A Dynamic Island for Windows: music, timers, a file shelf and clipboard history in a pill.</span></p><span class="stack mono">C# · WinUI 3 · Win32</span><a class="pill mono" href="projects/mora.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
         <div class="info"><span class="kind mono"><span class="fr">App web</span><span class="en">Web app</span></span><h2>Shoryu</h2><p><span class="fr">Les stats Street Fighter 6, enfin lisibles. Plus de 1 500 visiteurs par mois, dans 59 pays.</span><span class="en">Street Fighter 6 stats, made readable. Over 1,500 visitors a month, in 59 countries.</span></p><span class="stack mono">Next.js · Supabase · Recharts</span><a class="pill mono" href="projects/shoryu.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
         <div class="info"><span class="kind mono"><span class="fr">App web</span><span class="en">Web app</span></span><h2>openroomf1</h2><p><span class="fr">L'analyse d'après-course de la F1 : rythme, stratégie, duels et replay de chaque Grand Prix.</span><span class="en">Post-race F1 analysis: pace, strategy, duels and a replay of every Grand Prix.</span></p><span class="stack mono">Python · FastF1 · SvelteKit</span><a class="pill mono" href="projects/openroomf1.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
+        <div class="info"><span class="kind mono"><span class="fr">Site vitrine 3D</span><span class="en">3D showcase site</span></span><h2>Red Bull</h2><p><span class="fr">Un site produit en 3D temps réel : la canette et neuf éditions, générées en code, à faire tourner et ouvrir une par une.</span><span class="en">A real-time 3D product site: the can and nine editions, generated in code, to spin and open one by one.</span></p><span class="stack mono">Three.js · GSAP · Lenis</span><a class="pill mono" href="projects/redbull.html"><span class="fr">Étude de cas</span><span class="en">Case study</span> ↗</a></div>
       </div>
       <div class="ctrl">
         <button class="round fill" type="button" data-main="1" aria-label="Projet suivant / Next project"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></button>
         <button class="round" type="button" data-main="-1" aria-label="Projet précédent / Previous project"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
-        <span class="count mono"><b>01</b> / 04</span>
+        <span class="count mono"><b>01</b> / 05</span>
       </div>
     </div>
     <!-- Phones: name above the carousel, details and arrows below, like the other work section -->
@@ -133,7 +134,7 @@
       <div class="cell">
         <span class="lab mono">(D) <span class="fr">Parcours</span><span class="en">Timeline</span></span>
       <img class="sticker" style="right:8%;top:24px;width:80px;rotate:-10deg" src="assets/stickers/star.svg" alt="" aria-hidden="true">
-        <div class="tl-row"><span class="mono"><span class="fr">Automne 2026</span><span class="en">Fall 2026</span></span><span>Mora, openroomf1, Sudoclue, Catena</span></div>
+        <div class="tl-row"><span class="mono"><span class="fr">Automne 2026</span><span class="en">Fall 2026</span></span><span>Mora, openroomf1, Red Bull, Sudoclue, Catena</span></div>
         <div class="tl-row"><span class="mono"><span class="fr">Été 2026</span><span class="en">Summer 2026</span></span><span>Cascades, Nooks</span></div>
         <div class="tl-row"><span class="mono"><span class="fr">Printemps 2026</span><span class="en">Spring 2026</span></span><span>Shoryu, Hermes, Pitstoppd, FCBT</span></div>
         <div class="tl-row"><span class="mono">2025</span><span><span class="fr">Premiers outils : respawn, beekeep</span><span class="en">First tools: respawn, beekeep</span></span></div>
@@ -166,7 +167,7 @@
   const mainInfos = [...document.querySelectorAll(".work .panel .info")];
   const mainLinks = mainInfos.map((i) => i.querySelector("a").href);
   const main = carousel(document.getElementById("main-curve"),
-    ["cascades", "mora", "shoryu", "openroomf1"].map((n) => `assets/demos/${n}.webm`),
+    ["cascades", "mora", "shoryu", "openroomf1", "redbull"].map((n) => `assets/demos/${n}.webm`),
     // Phones get the horizontal version, like the other carousel
     { ...(matchMedia("(max-width: 860px)").matches ? { axis: "y", R: 3, camZ: 1.4, gap: 0.22 } : { axis: "x" }), onChange: (i) => {
       mainInfos.forEach((el, k) => el.classList.toggle("on", k === i));

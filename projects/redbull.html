@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-fr="Red Bull · Thomas C." data-en="Red Bull · Thomas C.">Red Bull · Thomas C.</title>
+  <meta name="description" content="Red Bull: a real-time 3D product site, the can and nine editions generated in code. Three.js, GSAP ScrollTrigger and Lenis. Unofficial fan site." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg" />
+  <link rel="canonical" href="https://anderson3x11.dev/projects/redbull.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic:wdth@75..100&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css?v=4">
+  <script src="../assets/js/i18n.js"></script>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://anderson3x11.dev/projects/redbull.html" />
+  <meta property="og:title" content="Red Bull · Thomas C." />
+  <meta property="og:description" content="Red Bull: a real-time 3D product site, the can and nine editions generated in code. Three.js, GSAP ScrollTrigger and Lenis. Unofficial fan site." />
+  <meta property="og:image" content="https://anderson3x11.dev/assets/images/og/redbull.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js" } }
+  </script>
+</head>
+<body class="case">
+
+<nav class="mono solid">
+  <div class="l">
+    <a class="back" href="../#work">← <span class="fr">Tous les projets</span><span class="en">All projects</span></a>
+    <div class="lang" role="group" aria-label="Langue / Language"><button type="button" data-lang-btn="fr">FR</button><button type="button" data-lang-btn="en">EN</button></div>
+  </div>
+  <div class="r"><a class="pill" href="#contact"><span class="fr">On en parle</span><span class="en">Let's talk</span></a></div>
+</nav>
+
+<main class="bp">
+  <div class="row" style="border-top:0">
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Étude de cas</span><span class="en">Case study</span></span><span>05 / 10</span></div>
+      <h1 class="title">Red Bull</h1>
+      <img class="sticker" style="right:28px;bottom:-40px;rotate:9deg" src="../assets/stickers/kuro-rocket.svg" alt="" aria-hidden="true">
+    </div>
+    <div class="cell">
+      <div class="cap mono"><span><span class="fr">Site vitrine 3D, en ligne</span><span class="en">3D showcase site, live</span></span><span><span class="fr">Fan site non officiel</span><span class="en">Unofficial fan site</span></span></div>
+      <dl class="facts">
+      <div><dt class="mono">Type</dt><dd><span class="fr">Site vitrine 3D, en ligne</span><span class="en">3D showcase site, live</span></dd></div>
+      <div><dt class="mono">Stack</dt><dd>Three.js, GSAP ScrollTrigger, Lenis, Vite</dd></div>
+      <div><dt class="mono"><span class="fr">Statut</span><span class="en">Status</span></dt><dd><span class="fr">Projet perso, fan site non officiel</span><span class="en">Personal project, unofficial fan site</span></dd></div>
+      <div><dt class="mono"><span class="fr">Lien</span><span class="en">Link</span></dt><dd><a href="https://redbull-rho-six.vercel.app/" target="_blank" rel="noopener">redbull-rho-six.vercel.app</a></dd></div>
+    </dl>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(A) <span class="fr">Aperçu</span><span class="en">Overview</span></span>
+      <p class="big"><span class="fr">Un site produit pour Red Bull, en 3D temps réel : la canette originale et neuf éditions, à faire tourner, comparer et ouvrir une par une.</span>
+      <span class="en">A product site for Red Bull in real-time 3D: the original can and nine editions, to spin, compare and open one by one.</span></p>
+    </div>
+    <div class="cell media"><video src="../assets/demos/redbull.webm" autoplay muted loop playsinline aria-label="Red Bull demo"></video></div>
+  </div>
+
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(B)</span>
+      <h2 class="sect"><span class="fr">L'idée</span><span class="en">The idea</span></h2>
+    </div>
+    <div class="cell prose">
+      <p class="fr">Un exercice de site produit premium, dans l'esprit des sites de marques de boissons qui misent tout sur la canette en 3D. Pas de photo ni de modèle 3D acheté : la canette et ses étiquettes sont générées en code, et l'objectif était qu'on les confonde avec les vraies.</p>
+      <p class="en">An exercise in premium product sites, in the spirit of drink brands that bet everything on a 3D can. No photos and no bought 3D model: the can and its labels are generated in code, and the goal was for them to pass for the real thing.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(C)</span>
+      <h2 class="sect"><span class="fr">Ce qu'on y fait</span><span class="en">What you can do</span></h2>
+    </div>
+    <div class="cell prose">
+      <ol class="num-list fr">
+        <li>Faire défiler le site section par section : un geste de molette ou de swipe passe exactement à la section suivante.</li>
+        <li>Suivre l'anatomie de la canette, qui pivote pour présenter une info à chaque geste : caféine, taurine, vitamines B, aluminium recyclable.</li>
+        <li>Faire glisser le carrousel des 10 éditions : couleurs, fond, éclairage et décor changent avec chaque saveur.</li>
+        <li>Cliquer sur une canette pour ouvrir sa page dédiée (zoom, goût, description, valeurs), puis passer à l'édition suivante sans en sortir.</li>
+        <li>Un décor 3D par saveur : fruits modélisés en code (pastèque, abricot, pêche, myrtille, coco, pistache…) et particules de saison (neige, chaleur, bulles, pétales).</li>
+      </ol>
+      <ol class="num-list en">
+        <li>Scroll the site section by section: one wheel or swipe gesture lands exactly on the next section.</li>
+        <li>Follow the can's anatomy as it turns to show one fact per gesture: caffeine, taurine, B vitamins, recyclable aluminium.</li>
+        <li>Drag the carousel of the 10 editions: colors, background, lighting and scenery change with each flavor.</li>
+        <li>Click a can to open its own page (zoom, taste, description, nutrition), then move on to the next edition without leaving it.</li>
+        <li>A 3D scene per flavor: fruit modeled in code (watermelon, apricot, peach, blueberry, coconut, pistachio…) and seasonal particles (snow, heat, bubbles, petals).</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(D)</span>
+      <h2 class="sect"><span class="fr">Choix techniques</span><span class="en">Technical choices</span></h2>
+    </div>
+    <div class="cell prose">
+      <p class="fr"><strong>Des étiquettes mesurées, pas dessinées à l'œil.</strong> Chaque étiquette est dessinée dans un canvas, puis plaquée sur la canette. Les positions viennent de vraies références : photos officielles et étiquettes à plat, avec une correction de la courbure du cylindre pour retrouver les vraies distances en millimètres. Le logo et les taureaux sont recolorés à la volée, et leur placement a été calé par recherche automatique sur l'étiquette de référence.</p>
+      <p class="en"><strong>Labels measured, not eyeballed.</strong> Each label is drawn in a canvas, then wrapped onto the can. Positions come from real references: official photos and flat labels, corrected for the cylinder's curvature to get the true distances in millimeters. The logo and bulls are recolored on the fly, and their placement was tuned by automated search against the reference label.</p>
+      <p class="fr"><strong>Une canette procédurale.</strong> Le profil (53 × 136 mm, format slim) est tourné en géométrie de révolution. L'aluminium est un matériau physique avec vernis et reflets anisotropes, éclairé par une HDRI de studio. Une normal map générée en code ajoute les gouttes de condensation.</p>
+      <p class="en"><strong>A procedural can.</strong> The profile (53 × 136 mm, slim format) is lathed into a revolution geometry. The aluminium is a physical material with clearcoat and anisotropic reflections, lit by a studio HDRI. A normal map generated in code adds the condensation drops.</p>
+      <p class="fr"><strong>Un scroll qui ne s'arrête jamais entre deux sections.</strong> Le scroll natif est désactivé : chaque geste est capté puis converti en un seul pas vers la section suivante, animé par Lenis. Les sections épinglées de GSAP ScrollTrigger (anatomie, éditions) ont leurs propres arrêts, un par info.</p>
+      <p class="en"><strong>Scrolling that never stops between sections.</strong> Native scrolling is disabled: each gesture is caught and turned into a single step to the next section, animated by Lenis. The GSAP ScrollTrigger pinned sections (anatomy, editions) have their own stops, one per fact.</p>
+      <p class="fr"><strong>Une seule scène pour tout le site.</strong> Le canvas WebGL transparent passe au-dessus d'un fond CSS qui change de teinte avec l'édition. Le socle holographique utilise un shader maison, réglé pour fonctionner en mélange additif sur canvas transparent.</p>
+      <p class="en"><strong>One scene for the whole site.</strong> The transparent WebGL canvas sits over a CSS background that changes hue with the edition. The holographic pedestal uses a custom shader, tuned to work with additive blending on a transparent canvas.</p>
+      <p class="fr"><strong>Des démos générées par script.</strong> Un script Puppeteer pilote Chrome sur le vrai site (molette, glisser, clics), puis ffmpeg encode les vidéos de démo en VP9.</p>
+      <p class="en"><strong>Demos generated by script.</strong> A Puppeteer script drives Chrome on the real site (wheel, drag, clicks), then ffmpeg encodes the demo videos in VP9.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <span class="lab mono">(E)</span>
+      <h2 class="sect"><span class="fr">Limites</span><span class="en">Limits</span></h2>
+    </div>
+    <div class="cell prose">
+      <p class="fr">Fan site non officiel : la marque, le logo et les visuels appartiennent à Red Bull, et le bouton « Trouver un point de vente » est factice. Les étiquettes sont des reconstitutions, pas les fichiers d'origine. La transmission du verre ne marche pas sur un canvas transparent, donc les glaçons et les bulles sont simulés par des reflets. Le site demande un GPU correct : sur un téléphone d'entrée de gamme, le décor 3D peut ralentir. Le JavaScript tient en un seul fichier de 760 Ko, sans découpage, et le site est en français uniquement.</p>
+      <p class="en">Unofficial fan site: the brand, logo and visuals belong to Red Bull, and the "Find a store" button is a dummy. The labels are reconstructions, not the original files. Glass transmission doesn't work on a transparent canvas, so ice cubes and bubbles are faked with reflections. The site needs a decent GPU: on an entry-level phone the 3D scenery can slow down. The JavaScript ships as a single 760 KB file with no code splitting, and the site is French only.</p>
+    </div>
+  </div>
+</main>
+
+<section class="gallery" aria-label="Galerie / Gallery">
+  <div class="ghead mono"><span><span class="fr">Galerie</span><span class="en">Gallery</span></span><span>04</span></div>
+  <canvas class="curve wide" id="gal" aria-label="Red Bull"></canvas>
+</section>
+
+<a class="next" href="sudoclue.html">
+  <span><span class="mono"><span class="fr">Projet suivant</span><span class="en">Next project</span> · 06</span><strong>Sudoclue</strong></span>
+  <span class="round" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+</a>
+
+<footer class="contact" id="contact">
+  <div class="top">
+    <img class="sticker" src="../assets/stickers/peace-hand.svg" alt="">
+    <div>
+      <h2><span class="fr">On en parle&nbsp;?</span><span class="en">Let's talk!</span></h2>
+      <span class="mono"><span class="fr">Ouvert aux CDI et CDD · France</span><span class="en">Open to full-time and fixed-term roles · France</span></span>
+    </div>
+    <div class="links">
+      <a class="round" href="mailto:contact@anderson3x11.dev" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a class="round" href="https://www.linkedin.com/in/thomas-c-728b99219/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 9h3v11h-3zM6 3.5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h2.9v1.5h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.61 2 3.61 4.6V20h-3v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V20H10z"/></svg></a>
+      <a class="round" href="https://github.com/anderson3x11" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+    </div>
+  </div>
+  <footer class="mono"><span>© 2026 Thomas C. · anderson3x11</span><a href="../"><span class="fr">Accueil</span><span class="en">Home</span> ↑</a></footer>
+</footer>
+
+<script type="module">
+  import { carousel } from "../assets/js/curve.js?v=3";
+  carousel(document.getElementById("gal"), ["../assets/demos/redbull-2.webm", "../assets/demos/redbull-3.webm", "../assets/demos/redbull-4.webm", "../assets/demos/redbull-5.webm"], { axis: "y", R: 3, camZ: 1.4, gap: 0.22, auto: 4000 });
+</script>
+</body>
+</html>
